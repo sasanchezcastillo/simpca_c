@@ -1,0 +1,217 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30/08/2016, 08:25:20 AM
+    Author     : LUIS
+*/
+*{
+	padding:0;
+	margin:0;
+	}
+
+        div#toplogo {
+	position:fixed;
+	float:left;
+	z-index:1001;
+}
+
+div#toplogo h1#logo a {
+	display:block;
+	text-indent:-10000px;
+	width:290px;
+	height:160px;
+	margin-left:0%;
+	background:url(../imagenes/logo.png) no-repeat center -4px;
+	-webkit-transition: background-position .2s ease;
+	-moz-transition: background-position .2s ease;
+	-o-transition: background-position .2s ease;
+	transition: background-position .2s ease;
+}
+
+div#toplogo h1#logo a:hover {
+	background-position:center top;
+}
+
+div#wrapper {
+	width:980px;
+	margin:0 auto;
+	min-height:400px; 
+} 
+
+.wrapper2 {
+	width:1000px;
+	height:100%;
+	margin:0 auto;
+}
+
+div#toplogo {
+	position:fixed;
+	float:left;
+	z-index:1001;
+}
+
+
+.logo {
+	text-indent:-10000px;
+	width:290px ;
+	height:160px ;
+	position:fixed;
+	z-index:101;
+	left:150px;
+	}
+        
+    header {
+	background:url(../imagenes/bg-nav.png) repeat-x ;
+	min-height:70px;
+	width:100%;
+	position:fixed;
+	z-index:100;
+	left:0px;
+	}
+
+
+nav{
+	float:right;
+	color:white;
+	margin:11px 0;
+	height:30px;	
+	
+}
+nav ul{
+	 list-style:none outside;
+	 overflow:hidden;
+	
+}
+
+nav ul li {
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	text-decoration:none;
+	 
+}
+
+nav ul li a {
+	display:block;
+	padding:20px;
+	color:#FFF;
+	text-decoration:none;
+	font-size: 14px;
+	text-align: justify;
+    	
+}
+nav ul li :hover {
+	background:#CCC;
+	
+}
+ 
+
+ .fondo{
+
+	background:url(../imagenes/bg-body.jpg)  center top repeat-y;
+	position:absolute;
+	left:0px;
+	height:1000px;
+	width:100%;
+	margin:0px  auto;
+
+}
+
+#cuerpo{
+	height:90%;
+	padding-top:5%;
+	width:95%;
+	margin:15px;
+	text-align:center;
+	float:center;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#contenedor { 
+width:810px;
+height:99%; 
+margin:15% auto;
+margin-top: 32%;
+background-color: RGBA(245,178,53,0.2);
+font-family:Arial, Helvetica, sans-serif;
+border:solid 1.5px;
+border-radius: 50px;
+} 
+
+h1{
+	text-align:center;
+	font-size:36px;
+	padding-top:0px;
+}
+
+h5{
+	text-align:right;
+	padding-right:160px;
+}
+
+#fecha{
+	padding-top:70px;
+}
+
+#tabla{
+	padding-top:50px;
+}
+
+#tabla1{
+	padding-top:70px;
+        
+}
+
+#total{
+        position: absolute;
+	margin-top:4%;
+	margin-left:36%;
+}
+
+#agregar{
+    width: 158px;
+    height: 25px;
+    font-weight: bold;
+    background-color: aliceblue;
+    border-radius: 8px;
+    margin-top: 6%;
+    margin-left: 70%;
+    text-align: center;
+}
+
+#tabla2{
+    margin-left: 3%;
+    height: 150px;
+    overflow-x: auto;
+    margin-top: 4%;
+    width: 760px;
+}
+
+#pie_pagina{
+        background:url(../imagenes/bg-footer.png) repeat-x;
+        margin-top: 10%;
+        height: 200px;
+}
+
+.contenedor-a_insumoF{
+    margin-top: -200px;
+    margin-right: 20%;
+}
+
+.cont-inputsF{
+    margin-top: 120px;
+    text-align: center;  
+    margin-left: -1%;
+    position: relative;
+    padding-bottom: 20px;
+}
+.cont-inputsF input:first-of-type{
+    margin-right: 5em;
+}
+.cont-inputsF input:last-of-type{
+    margin-left:1em;
+}

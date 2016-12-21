@@ -1,0 +1,372 @@
+  *{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+  }
+ 
+ div#toplogo {
+	position:fixed;
+	float:left;
+	z-index:1001;
+}
+
+div#toplogo h1#logo a {
+	display:block;
+	text-indent:-10000px;
+	width:290px;
+	height:160px;
+	margin-left:0%;
+	background:url(../..//imagenes/logo.png) no-repeat center -4px;
+	-webkit-transition: background-position .2s ease;
+	-moz-transition: background-position .2s ease;
+	-o-transition: background-position .2s ease;
+	transition: background-position .2s ease;
+}
+
+div#toplogo h1#logo a:hover {
+	background-position:center top;
+}
+
+
+
+
+div#toplogo {
+	position:fixed;
+	float:left;
+	z-index:1002;
+        left: 18%;
+        top: -20px;
+        
+}
+
+.fondo{
+   background:url(../..//imagenes/bg-body.jpg) center top repeat-y;
+	position:absolute;
+	left:0px;
+	height:120%;
+	width:100%;
+	margin:0px  auto;
+}
+
+.logo {
+	text-indent:-10000px;
+	width:290px ;
+	height:160px ;
+	position:fixed;
+	
+}
+
+header {
+	background:url(../..//imagenes/bg-nav.png) repeat-x ;
+	min-height:70px;
+	width:100%;
+	position:fixed;
+	z-index:1001;
+	left:0px;
+	}
+
+
+nav{
+	float:right;
+	color:white;
+	margin:11px 0;
+	height:30px;	
+	
+}
+nav ul{
+	 list-style:none outside;
+	 overflow:hidden;
+	
+}
+
+nav ul li {
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	text-decoration:none;
+	 
+}
+
+nav ul li a {
+	display:block;
+	padding:20px;
+	color:#FFF;
+	text-decoration:none;
+	font-size: 14px;
+	text-align: justify;
+}
+
+nav ul li :hover {
+	background:#CCC;
+}
+
+
+
+.img-fondo{
+    background: no-repeat;
+    width: 100%;
+    z-index: 1000;
+    position: absolute;
+    top: 0px;
+    margin: 0px;
+   left: -0px;
+}
+
+  .flexsearch{
+    transition: all 0.3s;
+}
+
+.flexsearch--wrapper {
+    z-index: 1005;
+    height: 100%;
+    width: 19.5%;
+    top: 96px;
+    max-width: 30%;
+    background:url(../..//img-admin/fondo2.png);
+    position: fixed;
+    margin-left: -15%;
+    margin-top: -30px;
+    
+    border-radius: 1px;
+    transition: all 0.3s;
+}
+
+.flexsearch--form {
+   
+    position: relative;
+}
+
+.flexsearch--input-wrapper {
+    padding: 0 66px 0 0; /* Right padding for submit button width */
+    
+}
+
+.flexsearch--input {
+    width: 110%;
+}
+
+/***********************
+ * Configurable Styles *
+ ***********************/
+.flexsearch {
+    padding: 0 25px 0 200px; /* Padding for other horizontal elements */
+}
+
+.flexsearch--input {
+
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 30px;
+    padding: 0 50px 0 10px;
+    border-color: #ec971f;
+    border-radius: 30px; /* (height/2) + border-width */
+    border-style: solid;
+    border-width: 3px;
+    margin-top: 75px;
+    color: #888;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin-left: 20px
+}
+
+.flexsearch--submit {
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 50px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    top: 70px; 
+    margin-right: 20px; 
+    background: transparent;
+    color: #537949;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 30px;
+    line-height: 10px;
+}
+
+.flexsearch--input:focus {
+    outline: none;
+    border-color: #ec971f;
+}
+
+.flexsearch--input:focus.flexsearch--submit {
+    color: #ec971f; 
+}
+
+.flexsearch--submit:hover {
+    color: #ec971f;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+    color: #537949;
+    opacity: 5.0;
+}
+
+.input:-moz-placeholder {
+    color: #000;
+}
+
+.flexs-admin{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 30%;
+    padding-bottom: 40px;
+}
+.felexs-acciones{
+    top: 60%;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    background: url(../..//img-admin/fondo2.png);
+    border: none;
+    color: white;
+    font-family: cursive;
+    font-size: 15px;
+    text-align: left;
+    
+
+}
+
+.felexs-acciones:hover{
+    background: rgba(239, 122,0, 0.92);
+    border-color: rgb(255, 197, 0);
+    transition: all 0.4s ;
+    border-left: 15px solid #537949;
+    color: black;
+
+}
+
+.img-perfil{
+
+    width: 100px;
+    border-radius: 10px;
+    margin-left: 80px;
+    position: relative;
+    top: 40px;
+}
+
+.img-icono{
+    width: 40px;
+    height: auto;
+    margin-left:-35px;
+    margin-top: 11%;
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+
+    padding: 0px;
+}
+.contenedor{
+    position: absolute;
+    margin-top:10%; 
+    width: 80%;
+    height: auto;
+    box-sizing: border-box;
+    margin-left: 22%;
+    
+
+}
+
+.cont-usuarios{
+    width: 10%;
+    height: auto;
+    position:relative;
+    margin-left: 2%;
+    background:#EAECE9;
+    border: solid #0f0f0f 1px;
+    padding: 0px;
+    border-radius: 15px;
+}
+.cont-usuarios b{
+    margin-left: 27px;
+    font-size: 20px;
+    padding-bottom: 20px;
+
+}
+.database{
+    width: 100px;
+    border: solid #0f0f0f 1px;
+    border-radius: 40px;
+
+    margin-left: 15px;
+}
+.cont-usuarios input{
+    position: relative;
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding-bottom:  1px;
+    font-size: 20px;
+    color: #ec971f;
+    text-align: center;
+
+
+
+}
+
+
+.user{
+    padding: 0px;
+    padding-bottom:  0px;
+    position: relative;
+    margin-left: 50px;
+
+
+}
+.titulo{
+    position:absolute;
+    font-family: cursive;
+    margin-left: 25%;
+    z-index: 1003;
+    margin-top: 25%;
+  
+    color: white;
+}
+.agregar-insumoa{ 
+    background-color: rgb(254, 177, 0);
+    color: white;
+    border-radius: 5px;
+    border-color: rgb(255, 197, 0);
+    padding: 22px;
+    width: 17%;
+    cursor: pointer; 
+    position: absolute;
+    margin-left: 33%;
+    margin-top: -12%;
+    font-family: sans-serif;
+    font-size:16px;
+}
+.agregar-insumob{ 
+    background-color: rgb(254, 177, 0);
+    color: white;
+    border-radius: 5px;
+    border-color: rgb(255, 197, 0);
+    padding: 22px;
+    width: 17%;
+    cursor: pointer; 
+    position: absolute;
+    margin-left: 54%;
+    margin-top: -12%;
+    font-family: sans-serif;
+    font-size:16px;
+}
+
+
+
+.contenedor-cont{
+    position: absolute;
+    width: 74%;
+    height: 150%;
+    margin-left: 20%;
+    background: #EAECE9;
+    margin-top: 5%;
+}

@@ -1,0 +1,302 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.form-responsive{
+    width: 95%;
+    max-width: 500px;
+    margin: auto;
+}
+
+div#toplogo {
+	position:fixed;
+	float:left;
+	z-index:1001;
+}
+
+div#toplogo h1#logo a {
+	display:block;
+	text-indent:-10000px;
+	width:290px;
+	height:160px;
+	margin-left:0%;
+	background:url(../imagenes/logo.png) no-repeat center -5px;
+	-webkit-transition: background-position .2s ease;
+	-moz-transition: background-position .2s ease;
+	-o-transition: background-position .2s ease;
+	transition: background-position .2s ease;
+}
+
+div#toplogo h1#logo a:hover {
+	background-position:center top;
+}
+
+div#wrapper {
+	width:980px;
+	margin:0 auto;
+	min-height:400px; 
+} 
+
+.wrapper2 {
+	width:1000px;
+	height:100%;
+	margin:0 auto;
+}
+
+div#toplogo {
+	position:fixed;
+	float:left;
+	z-index:1001;
+}
+
+
+.fondo{
+	background: url(../imagenes/bg-body.jpg)  center top repeat-y;
+	position:absolute;
+	left:0px;
+	height:1300px;
+	width:100%;
+	margin:0px  auto;
+
+}
+
+.logo {
+	text-indent:-10000px;
+	width:290px ;
+	height:160px ;
+	position:fixed;
+	z-index:101;
+	left:150px;
+	}
+	
+header {
+    background: url(../imagenes/bg-nav.png) repeat-x;
+    min-height:70px;
+    width:100%;
+    position:fixed;
+    z-index:100;
+    left:0px;
+    }
+
+
+nav{
+	float:right;
+	color:white;
+	margin:11px 0;
+	height:30px;	
+	
+}
+nav ul{
+	 list-style:none outside;
+	 overflow:hidden;
+	
+}
+
+nav ul li {
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	text-decoration:none;
+	 
+}
+
+nav ul li a {
+	display:block;
+	padding:20px;
+	color:#FFF;
+	text-decoration:none;
+	font-size: 14px;
+	text-align: justify;
+    	
+}
+nav ul li :hover {
+	background:#CCC;
+	
+}
+
+Cuerpo de la pagina pagina
+#cuerpo{
+	height:100%;
+	padding-top:50%;
+	width:80%;
+	margin:15px;
+	text-align:center;
+	float:left;
+}
+
+
+h1 {
+	text-align:center;
+	font-size:36px;
+	font-weight:bold;
+	margin-bottom:65px;
+	font:Arial, Helvetica, sans-serif;
+}
+
+h4{
+	text-align:right;
+	margin-right:25%;
+	font-size:24px;
+	font-weight:bold;
+}
+
+#footer {
+	background: url(../imagenes/bg-footer.png) repeat-x;
+	position:absolute;
+	width:100%;
+	top:100%;
+	height:200px;
+	z-index:102;
+}
+
+
+/*********************/
+ /*Riego*/
+/********************/
+ 
+ #contenedorPajareo {
+	width:755px; 
+	height:850px;
+	margin-top:22%;
+	margin-left:12%;
+	background-color:RGBA(245,178,53,0.2);
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000;
+	border-color:#000;
+	border-style:solid;
+	border-radius:150px;
+}
+
+
+    
+    
+#tabla{
+	width:583px;
+	height:150px;
+	border:thin;
+	margin-top:2%;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:16px;
+	font-weight: bold;
+}
+
+
+
+.fondo table tr td div {
+	font-weight: normal;
+
+}
+.fondo table {
+	font-weight: bold;
+}
+ñ {
+	font-weight: bold;
+}
+.fondo table {
+	font-weight: bold;
+}
+.fondo table tr td {
+	font-weight: normal;
+}
+
+#textfield {
+    width:80px;
+    height:20px;
+	
+}
+
+#textfield1 {
+    width:80px;
+    height:20px;
+    margin-top:10px;
+}
+#imgGuardar {
+    margin-right:127px;
+    margin-top: 60px;
+}
+ 
+#botonGuardar {
+	width:80px;
+	height:25px;
+	font-size:13px;
+        margin-left:275px;
+        
+}
+
+#imgcerrar {
+    margin-left:167px;
+    margin-top: -83px;
+}
+
+#botoncerrar {
+	width:80px;
+	height:25px;
+	font-size:13px;
+        margin-left:421px;    
+}
+/*estilo del menu horizontal*/
+#texto-letra {
+    text-align:center;
+    margin:auto;
+    width:600px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+}
+		
+		ul, ol { /*le quita el estilo de los puntos al menu */
+			list-style:none;
+			}
+			
+		.menu-horizontal li a	{
+			height:1px;
+			width:162px;
+			background-color:#E0E0E0;
+			color:#FFF;
+			text-decoration:none;
+			padding:10px 15px;
+			display:block;
+			border-radius:50px;
+                        
+						}
+		.menu-horizontal li a:hover {
+			background-color:rgb(117,210,232);
+		}
+		
+		.menu-horizontal > li {
+			float:left;
+			}
+/*fin del estylo del menu para tipo de riego*/
+
+input[type=submit]:hover, input[type=button]:hover {
+    background-color:rgb(117,210,232);
+    color: black;
+}
+
+#contenedorNotificacionExito {
+	width:700px; 
+	height:300px;
+	margin-top:30%;
+	margin-left:12%;
+	background-color:RGBA(245,178,53,0.2);
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000;
+	border-color:#000;
+	border-style:solid;
+	border-radius:80px;
+}
+
+
+
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03-ago-2016, 15:24:30
+    Author     : DAYA
+*/
+

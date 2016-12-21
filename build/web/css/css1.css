@@ -1,0 +1,130 @@
+
+.fondoInicio{
+	background:url(../imagenes/bg-body.jpg)  center top repeat-y;
+	position:absolute;
+	left:0px;
+	height:1700px;
+	width:100%;
+	margin:0px  auto;
+}
+
+#pie_paginaInicio{
+        background:url(../imagenes/bg-footer.png) repeat-x;
+        margin-top: 120%;
+        height: 200px;
+}
+
+.htitulos{
+    color: #000000;
+    font-family: Times New Roman;
+    font-size: 25px;
+    position: relative;
+    text-decoration: none; 
+    list-style: none outside;
+    text-align: center;
+   
+}
+.cont-pl{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    left: 16%;
+}
+.pl-img {
+    position:relative;
+    display: inline-block;
+    left: 10px;
+    
+}
+
+
+.pl-img img {
+margin-top: 15px;
+padding-right: 20px;
+}
+
+.cont-c{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    left: 16%;
+    margin-top: 5%;
+    
+}
+.c-img img{
+
+padding-right: 25px;
+padding-left: 20px;
+}
+
+
+.cont-ct{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    left: 16%;
+    
+}
+.ct-img img{
+
+
+padding-right: 25px;
+padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper-inicio{
+    width:100%;
+    height: auto;
+    margin: auto;
+    color:#333;
+    margin-top: 10%;
+    margin-left: auto;
+    position: absolute;
+    text-align: center;
+}
+.contenedor-a_insumo{
+    width: 73%;
+    height: auto;
+    background: url(../imagenes/contenedor-productos.png) no-repeat center top;
+    position: relative;
+    margin-left: 14%;
+}
+
+
+.img-productos{
+    display: inline-block;
+    width:calc(14% - 5px);   
+    padding-top: 9em; 
+    position: relative;
+    
+}
+.img-productos:hover{
+    transform: scale(1.1);
+}
+.contenedor-a_insumo{
+    position: relative;
+}
+.cuerpo{
+       position: relative;
+       margin-top: 5%;
+       width: 700px;
+       right: 11%;	
+}

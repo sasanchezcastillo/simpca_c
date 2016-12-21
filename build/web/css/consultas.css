@@ -1,0 +1,305 @@
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+.cont-consultas{
+    background: white;
+    position: absolute;
+    width: 95%;
+    height:auto;
+    margin-top: 280px;
+    margin-left: 40px;
+}
+.pri-set{
+    position: relative;
+    width: 95%;
+    margin-left: 24px;  
+    margin-bottom: 50px;
+    margin-top: 90px;
+
+}
+
+.seg-set{
+    position: relative;
+    width: 95%;
+    margin-left: 24px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.ter-set{
+    position: relative;
+    width: 95%;
+    margin-left: -10px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.cuar-set{
+    position: relative;
+    width: 95%;
+    margin-left: 24px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.quin-set{
+    position: relative;
+    width: 95%;
+}
+.con-quema-quimica{
+    width: 21%;
+    margin-top: 30px;
+    margin-left: 20px;
+    position: relative;
+    height: auto;
+   border: solid 2.0px;
+   border-radius: 10px;
+   left: 0;
+   right: 0;
+
+    
+}
+
+
+.detalles{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 54px;
+    background-color: rgb(105, 138, 94);
+    color: white;
+    border-radius: 8px;
+    padding: 7px ;
+     width: 60%;
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+}
+
+.detalles2{
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 40px;
+    background-color: rgb(105, 138, 94);
+    color: white;
+    border-radius: 8px;
+    padding: 7px ;
+     width: 50%;
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+}
+
+
+/*
+.con-quema-quimica:after{
+ top: -100%;
+ left: 0px;
+ width: 100%;
+ position: absolute;
+ background: #3a9999;
+ border-radius: 5px;
+ content: 'Flipped';
+ transform-origin: left bottom;
+ transform: rotateX(90deg);
+}
+.con-quema-quimica{
+    transform-origin: center bottom;
+ transform: rotateX(-10deg) translateY(-2%);
+
+}*/
+.con-quema-fisica{
+    width: 21%;
+    margin-top: -267px;
+    margin-left:330px;
+    position: relative;
+    height: auto;
+    border: solid 2.0px;
+   border-radius: 10px;
+    
+}
+.con-nivelacion{
+     width: 21%;
+    margin-top: -268px;
+    margin-left:640px;
+    position: relative;
+    height: auto;
+     border: solid 2.0px;
+   border-radius: 10px;
+}
+
+.con-cortamaleza{
+    width: 21%;
+    margin-top: -268px;
+    margin-left:940px;
+    position: relative;
+    height: auto;
+    border: solid 2.0px;
+   border-radius: 10px;
+}
+
+
+
+
+.con-siembra-mecanizada{
+    width: 21%;
+    margin-top: 30px;
+    margin-left: 20px;
+    position: relative;
+    height: auto;
+     border: solid 2.0px;
+   border-radius: 10px;
+    
+}
+.con-siembra{
+    width: 21%;
+    margin-top: -267px;
+    margin-left:330px;
+    position: relative;
+    height: auto;
+     border: solid 2.0px;
+   border-radius: 10px;
+    
+}
+.con-abonadas{
+     width: 21%;
+    margin-top: -267px;
+    margin-left:640px;
+    position: relative;
+    height: auto;
+    border: solid 2.0px;
+   border-radius: 10px
+}
+
+.con-despalille{
+    width: 22%;
+    margin-top: 30px;
+    margin-left: 30px;
+    position: relative;
+    height: auto;
+    border: solid 2.0px;
+   border-radius: 10px
+}
+.con-entresaque{
+    width: 22%;
+    margin-top: -262px;
+    margin-left:340px;
+    position: relative;
+    height: auto;
+    border: solid 2.0px;
+    border-radius: 10px
+    
+}
+
+.con-fumigas{
+    width: 21%;
+    margin-top: -267px;
+    margin-left:940px;
+    position: relative;
+    height: auto;
+    border: solid 2.0px;
+    border-radius: 10px
+}
+
+.con-macheteada{
+     width: 22%;
+    margin-top: -265px;
+    margin-left:655px;
+    position: relative;
+    height: auto;
+    border: solid 2.0px;
+    border-radius: 10px
+}
+
+.con-pajareo{
+    width: 22%;
+    margin-top: -268px;
+    margin-left:953px;
+    position: relative;
+    height: auto;
+      border: solid 2.0px;
+    border-radius: 10px
+}
+
+
+
+.con-riego{
+    width: 21%;
+    margin-top: 30px;
+    margin-left: 0px;
+    position: relative;
+    height: auto;
+     border: solid 2.0px;
+    border-radius: 10px
+    
+}
+.con-corta-bultos{
+    width: 22%;
+    margin-top: -267px;
+    margin-left:310px;
+    position: relative;
+    height: auto;
+     border: solid 2.0px;
+    border-radius: 10px
+    
+}
+
+.con-corta-granel{
+     width: 22%;
+    margin-top: -268px;
+    margin-left:620px;
+    position: relative;
+    height: auto;
+     border: solid 2.0px;
+    border-radius: 10px
+}
+
+.con-mantenimiento-lote{
+    width: 22%;
+    margin-top: -268px;
+    margin-left:925px;
+    position: relative;
+    height: auto;
+    border: solid 2.0px;
+    border-radius: 10px
+}
+
+.con-liquidacion{
+    width: 22%;
+    margin-top: 0px;
+    margin-left:20px;
+    position: relative;
+    height: auto;
+    border: solid 2.0px;
+    border-radius: 10px
+}
+.con-estadisticas{
+    width: 30%;
+    margin-top: -210px;
+    margin-left:410px;
+    position: relative;
+    height:auto;
+    padding: 50px;
+    
+  }
+
+.textbox{
+  width: 60%;
+  text-align: center;
+  content: "$";
+  margin-bottom: 50px;
+  position: relative;
+  border: 0;
+  display: flex;
+  font-size: 14px;
+  font-family: Arial, Verdana;
+  padding: 8px 30px 10px 10px;
+  border-radius: 5px;
+  background:url(../imagenes/input-bg.png) #fff;
+  background-color: #f9f9f9;
+  margin-left: 52px;
+  border-bottom: 20px;
+  padding: 5px;
+  margin-top: 15px;
+   }
+   
+.textbox:focus{
+  color: #2E3133;
+  border-color: #FBFFAD;
+  }

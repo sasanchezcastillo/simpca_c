@@ -1,0 +1,36 @@
+#contenedor-detalles { 
+        position: absolute;
+	color:#333;
+	border-color:#666;
+        border: solid;
+	background: RGBA(245,178,53,0.2);
+	margin-top: 160px;
+        margin-left: 70px;
+	width: 80%;
+	height: 30%;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 50px;
+}
+
+.agregar-insumoC{ 
+      margin-top: 5%; 
+      margin-bottom:10px;
+      background-color: rgb(254, 177, 0);
+      color: white;
+      width: 10%;
+      border-radius: 5px;
+      border-color: rgb(255, 197, 0);
+      padding: 6px;
+      cursor: pointer;
+  }
+  
+.fondoC{
+	background:url(../imagenes/bg-body.jpg)  center top repeat-y;
+	position:absolute;
+	left:0px;
+	height:130%;
+	width:100%;
+	margin:0px  auto;
+
+}

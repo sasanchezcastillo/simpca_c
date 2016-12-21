@@ -1,0 +1,71 @@
+html {
+    background: url(../..//imagenes/bg-body.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.navegacionp{
+   background: url(../..//img-admin/fondo2.png);
+    
+    color:white;
+}
+
+.img-fondo{
+    background: no-repeat;
+    width: 100%;
+    z-index: 1000;
+    position: absolute;
+    top: 0px;
+    margin: 0px;
+    left: -0px;
+}
+.titulo{
+    position:absolute;
+    font-family: cursive;
+    margin-left: 25%;
+    z-index: 1003;
+    margin-top: 25%;
+    color: white;
+}
+
+
+.contenedores{
+    position: absolute;
+   z-index: 1002;
+   padding-right: 0px;
+   padding-left: 0px;
+   
+}
+.contenedor-buscadores{
+    position: fixed;
+    margin-top: 25%;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0px;
+    left: 25%;
+    transition: all 0.3s;
+}
+
+
+
+
+@media screen and (max-width: 700px){
+    .body{
+        font-size:12px;
+    }
+    .titulo{
+        font-size:18px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .body{
+        font-size:10px;
+    }
+    .titulo{
+        font-size:16px;
+    }
+}
