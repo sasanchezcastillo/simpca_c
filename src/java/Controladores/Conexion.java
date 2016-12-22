@@ -484,7 +484,7 @@ public  ArrayList<Residuos> gettotal_residuos(String num_lote){
 public ArrayList<PreparacionSuelo> gettotal_preparacion_suelo(String num_lote){
     
     lista = new ArrayList<>();
-    String sql="select total_preparacions from preparacion_suelo where num_lote ='"+num_lote+"' limit 1";
+    String sql="select total_preparacions from preparacion_suelo where num_lote ='"+num_lote+"'limit 1";
     try {
         resultado = Consultar(sql);
         while(resultado.next()){

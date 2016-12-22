@@ -309,6 +309,7 @@ background: white;
   margin: auto;
   border-bottom: 20px;
   padding: 5px;
+  text-align: center;
    }
    
 .textbox:focus{
