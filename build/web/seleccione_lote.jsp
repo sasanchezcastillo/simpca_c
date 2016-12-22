@@ -74,15 +74,5 @@
                 </form>
             </div>
         </div>
-<<<<<<< HEAD
-           
-=======
-                        <br>
-             <footer>
-                <!--Pie de Pagina-->
-                <div id="pie_paginaSesion" >
-                
-         </footer>
->>>>>>> 01e41b19a96a7c5c86520633aaab13ca1604f535
     </body>
 </html>
