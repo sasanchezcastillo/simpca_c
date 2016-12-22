@@ -17,7 +17,7 @@ import java.sql.Statement;
 public class ConexionBD {
     
    private String USERNAME = "root";
-    private String PASSWORD = "1234";
+    private String PASSWORD = "9510";
     private String HOST = "localhost";
     private String PORT = "3306";
     private String DATABASE = "simpca";
