@@ -47,6 +47,7 @@ import Modelos.total_residuos;
 import Modelos.total_riego;
 import Modelos.total_siembra_manual;
 import Modelos.total_siembra_mecanizada;
+import Modelos.valor_totales;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -66,7 +67,7 @@ public class Conexion {
 public Conexion() {
     try {
         Class.forName("com.mysql.jdbc.Driver");
-        conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/simpca?user=root&password=9510");
+        conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/simpca?user=root&password=1234");
         consulta = conexion.createStatement();        
     } catch (SQLException e) {
         e.printStackTrace();
@@ -720,5 +721,55 @@ public ArrayList<liquidacion> getLiquidaciontotalDetalles(String num_lote){
    return lista;
 }
 
+       public ArrayList<valor_totales> getValortotal(String num_lote) {
+
+        lista = new ArrayList<>();
+        String sql = "select  sum(total1) as total  from (   "
+                    + "select  ifnull(sum(valor_total_abonada),0)    as total1  from abonada     where num_lote = '"+num_lote+"' "
+                    + "union "
+                    + "select ifnull(sum(valor_total_qf),0)          as total1  from quema_fisica where num_lote = '"+num_lote+"' "
+                    + "union "
+                    + "select ifnull(sum(valor_total_quemaq),0)      as total1  from quema_quimica where num_lote = '"+num_lote+"' "
+                    + "union "
+                    + "select ifnull(sum(valor_total_mrc),0)         as total1  from manejo_residuos_cosecha where num_lote = '"+num_lote+"' "
+                    + "union "
+                    + "select ifnull(sum(total_preparacions),0)      as total1  from preparacion_suelo where num_lote = '"+num_lote+"' "
+                    + "union "
+                    + "select ifnull(sum(valor_total_mntlote),0)     as total1  from mantenimiento_lote where num_lote = '"+num_lote+"' "
+                    + "union "
+                    + "select ifnull(sum(valor_total_riego),0)       as total1  from riego where num_lote = '"+num_lote+"' "
+                    + "union  "
+                    + "select ifnull(sum(valor_total_sim),0)         as total1  from siembra_manual where num_lote = '"+num_lote+"' "
+                    + "union "
+                    + "select ifnull(sum(valor_total_smzd),0)        as total1  from siembra_mecanizada where num_lote = '"+num_lote+"' "
+                    + "union "
+                    + "select ifnull(sum(valor_total_pcp),0)         as total1  from pajareo_celaduria_patos where num_lote = '"+num_lote+"' "
+                    + "union "
+                    + "select ifnull(sum(valor_total_fumiga),0)      as total1  from fumiga where num_lote = '"+num_lote+"' "
+                    + "union "
+                    + "select ifnull(sum(total_mano_obra_dsp),0)     as total1  from despalille where num_lote = '"+num_lote+"' "
+                    + "union  "
+                    + "select ifnull(sum(total_mano_obra_etsq),0)    as total1  from entresaque where num_lote = '"+num_lote+"' "
+                    + "union  "
+                    + "select ifnull(sum(total_mano_obra_mchd),0)    as total1  from macheteada  where num_lote = '"+num_lote+"' "
+                    + "union "
+                    + "select ifnull(sum(valor_total_crg),0)         as total1  from corta_granel where num_lote = '"+num_lote+"' "
+                    + "union "
+                    + "select ifnull(sum(valor_total_crb),0)         as total1  from corta_bultos where num_lote = '"+num_lote+"' "
+                    + "union "
+                    + "select ifnull(sum(valor_total_mrc),0)         as total1  from manejo_residuos_cosecha where num_lote = '"+num_lote+"'  "
+                    + "union "
+                    + "select ifnull(sum(valor_total_liquidacion),0) as total1  from liquidacion where num_lote = '"+num_lote+"' ) "
+                    + "as resultado ";
+        try {
+            resultado = Consultar(sql);
+            while (resultado.next()) {
+                lista.add(new valor_totales(resultado.getString("total")));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return lista;
+}
 
 }

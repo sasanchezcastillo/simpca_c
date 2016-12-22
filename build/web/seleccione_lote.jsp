@@ -70,6 +70,7 @@
                 </form>
             </div>
         </div>
+                        
              <footer>
                 <!--Pie de Pagina-->
                 <div id="pie_paginaSesion" align="center">

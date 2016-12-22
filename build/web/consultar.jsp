@@ -23,10 +23,12 @@
 
     <head>
         <script src="Js/newjavascript.js" type="text/javascript"></script>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" charset=UTF-8" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <link href="css/general_simpca.css" rel="stylesheet" type="text/css"/>
-        <link href="css/consultas.css" rel="stylesheet" type="text/css"/>
+        <link href="css/consultas_1.css" rel="stylesheet" type="text/css"/>        
         <script src="Js/Consultas.js" type="text/javascript"></script>
+        <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+
         <link href="imagenes/favicon.ico" rel="icon"/>
         <title>consultas</title>
     </head>
@@ -37,6 +39,7 @@
                 <a href="Inicio.jsp" title="Coagronorte-Cooperativa Agropecuaria Norte de Santander"></a>
             </h1>
         </div>
+
         <header>
             <section>
                 <nav>
@@ -53,188 +56,308 @@
             </section>
         </header>
         <div class="cont-consultas">
-            <h3 style="font-size: 22px; font-family: Times New Roman; margin-left: 1000px; margin-top: 40px;">Lote: <input type="text" id="lote" name="num_lote" style="font-size: 20px; font-family: Times New Roman; width:50px; height: 30px; background: none; border:none" value="<%=lote%>" readonly="<%=lote%>"/></h3>           
-            <h2 style="text-align: center; margin-top: 20px; font-size: 28px;">COSTOS DE PRODUCCIÓN</h2>
-            <div class="pri-set">
-                <div class="con-quema-quimica">
-                    <h3 style="margin-left: 35px;">QUEMA QUÍMICA</h3>
-                    <c:forEach items="${total_quema_quimica}" var="lista">
-                        <div class="div-img hidden">
-                            <img class="img"src="img-con/quema_fi.jpg" width="225px" height="140px;" style="margin-left: 14px; margin-top: 5px; border-radius: 10px; "/>
-                        </div> 
-                        <div class="text"><form action="ServletQuemaQuimica" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles"></form></div>
-                        <input type="text" id="Quemaquimica"  value=" $ ${lista.valor_total_quemaq}" readonly=""  placeholder="$ 0.0"class="textbox" > 
-                    </c:forEach>
-                </div>
-                <div class="  con-quema-fisica">
-                    <h3 style="margin-left: 45px;"> QUEMA FÍSICA</h3>
-                    <c:forEach items="${total_quema_fisica}" var="lista">
-                        <img src="img-con/u56.jpg" width="225px" height="140px;" style="margin-left: 14px; margin-top: 5px; border-radius: 10px;"/>
-                        <form action="ServletQuemaFisica" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><div class="text"><input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles"></form></div>
-                            <input type="text" readonly="" id="Quemafisica" placeholder="$"class="textbox" value=" $ ${lista.total_qf}"> 
-                        </c:forEach>
-                </div>
-                <div class="con-nivelacion">
-                    <h3 style="text-align: center;">PREPARACIÓN DE SUELO</h3>
-                    <c:forEach items="${total_preparacion_suelo}" var="lista">
-                        <img src="img-con/u58.jpg" width="225px" height="140px;" style="margin-left: 14px; margin-top: 5px; border-radius: 10px;"/>
-                        <div class="text"><form action="ServletPreparacionSuelo" method="post"><input type="text" id="Suelo" readonly="" placeholder="$" class="textbox" name="total_n" value=" ${lista.total_preparacion_suelo}"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><input type="submit" value="Ver Detalles" style="margin-top: -40px; font-size: 15px; font-family: Times New Roman;" class="detalles"></form></div>
-                    </c:forEach>
-                </div>
-                <div class="con-cortamaleza">
-                    <h3 style="text-align: center;">MANEJO RESIDUOS DE COSECHA</h3>
-                    <c:forEach items="${valor_total_mrc}" var="lista">
-                        <img src="img-con/u62.jpg" width="225px" height="140px;" style="margin-left: 14px; margin-top: 5px; border-radius: 10px;"/>
-                        <div class="text"><form action="Detalles_corta_maleza" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles"></form></div>
-                        <input type="text" id="Residuos"  readonly="" placeholder="$" class="textbox" value="$  ${lista.valor_total_mrc}"> 
-                    </c:forEach>
-                </div>
-            </div> 
-            <div class="seg-set">
-                <div class="con-siembra-mecanizada">
-                    <c:forEach items="${total_siembra_mecanizada}" var="lista">
-                        <h3 style="margin-left: 20px;">SIEMBRA MECANIZADA</h3>
-                        <img src="img-con/u60.jpg" width="225px" height="140px;" style="margin-left: 14px; margin-top: 5px; border-radius: 10px;"/>
-                        <div class="text"><form action="ServletSiembraMecanizada" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles"></form></div>
-                        <input type="text" readonly="" id="Siembramecanizada" placeholder="$ 0.0"class="textbox" value="$  ${lista.total_smzd}"> 
-                    </c:forEach>
-                </div>
-                <div class="con-siembra">
-                    <c:forEach items="${total_siembra_manual}" var="lista">
-                        <h3 style="margin-left: 33px;">SIEMBRA MANUAL</h3>
-                        <img src="img-con/u30.png" width="225px" height="140px;" style="margin-left: 14px; margin-top: 5px; border-radius: 10px;"/>
-                        <div class="text"><form action="ServletSiembraManual" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles"></form></div>
-                        <input type="text" readonly="" id="Siembramanual" placeholder="$"class="textbox" value="$  ${lista.total_siembra_manual}">                                 
-                    </c:forEach>
-                </div>        
-                <div class="con-abonadas">
-                    <c:forEach items="${Valor_total_abonada}" var="lista">
-                        <h3 style="margin-left: 75px;">ABONADAS</h3>
-                        <img src="img-con/u42.jpg" width="225px" height="140px;" style="margin-left: 14px; margin-top: 5px; border-radius: 10px;"/>
-                        <div class="text"><form action="ServletAbonada_insumos" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>" ><input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles"></form></div>
-                        <input type="text" readonly="" id="Abonada" placeholder="$"class="textbox" value="$  ${lista.total_abonada}" >    
-                    </c:forEach>
-                </div>
-                <div class="con-fumigas">
-                    <c:forEach items="${total_fumiga}" var="lista">
-                        <h3 style="margin-left: 85px;">FUMIGAS</h3>
-                        <img src="img-con/u44.jpg" width="225px" height="140px;" style="margin-left: 14px; margin-top: 5px; border-radius: 10px;"/>
-                        <div class="text"><form action="ServletFumigas" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><input type="text" readonly="" id="Fumiga" placeholder="$"class="textbox" name="total_f" value=" ${lista.total_fumiga}"><input type="submit" value="Ver Detalles" class="detalles"style="margin-top: -40px; font-size: 15px; font-family: Times New Roman;" /></form></div>
-                    </c:forEach>
-                </div>    
-                <div class="ter-set">
-                    <div class="con-despalille">
-                        <c:forEach items="${total_despalille}" var="lista">
-                            <h3 style="margin-left: 75px;">DESPALILLE</h3>
-                            <img src="img-con/u56 (1).jpg" width="225px" height="140px;" style="margin-left: 12px; margin-top: 5px; border-radius: 10px;"/>
-                            <div class="text"><form action="ServletDespalille" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles"></form></div>
-                            <input type="text" readonly="" id="Despalille" placeholder="$"class="textbox" value="$  ${lista.total_despalille}">    
-                        </c:forEach>
-                    </div>
-                    <div class="con-entresaque">
-                        <c:forEach items="${total_entresaque}" var="lista">
-                            <h3 style="margin-left: 65px;">ENTRESAQUE</h3>
-                            <img src="img-con/u56 (1).jpg" width="225px" height="140px;" style="margin-left: 12px; margin-top: 5px; border-radius: 10px;"/>
-                            <div class="text"><form action="ServletEntresaque" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles"></form></div>
-                            <input type="text" readonly="" id="Entresaque" placeholder="$"class="textbox" value="$  ${lista.total_entresaque}"> 
-                        </c:forEach>
-                    </div>
-                    <div class="con-macheteada">
-                        <c:forEach items="${total_macheteada}" var="lista">
-                            <h3 style="margin-left: 59px;">MACHETEADA</h3>
-                            <img src="img-con/u56 (1).jpg" width="225px" height="140px;" style="margin-left: 12px; margin-top: 5px; border-radius: 10px;"/>
-                            <div class="text"><form action="ServletMacheteada" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles"></form></div>
-                            <input type="text" readonly="" id="Macheteada" placeholder="$"class="textbox" value="$  ${lista.total_macheteada}"> 
-                        </c:forEach>
-                    </div>  
-                    <div class="con-pajareo">
-                        <c:forEach items="${total_pajareo}" var="lista">
-                            <h3 style="margin-left: 78px;">PAJAREO</h3>
-                            <img src="img-con/u62 (1).jpg" width="225px" height="140px;" style="margin-left: 12px; margin-top: 5px; border-radius: 10px;"/>
-                            <div class="text"><form action="ServletPajareoCeladuria" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles"></form></div>
-                            <input type="text" readonly="" id="Pajareo" placeholder="$"class="textbox"value="$  ${lista.total_pajareo}"> 
-                        </c:forEach>
-                    </div>
-                </div> 
+            <h3 class="info-lote" style="font-size: 22px; font-family: Times New Roman; float: right; 
+                position: relative;">Lote: 
+                <input type="text" id="lote" name="num_lote" style="font-size: 20px; font-family: Times New Roman; width:50px; height: 30px; background: none; border:none;position: relative;" value="<%=lote%>" readonly="<%=lote%>"/>
+            </h3><br/>           
+            <h2 id="h2costosdeproduccion" style="width: 100%;">COSTOS DE PRODUCCIÓN</h2>
+
+            <div class="class-consulta">
+                <h3>QUEMA QUÍMICA</h3>
+                <c:forEach items="${total_quema_quimica}" var="lista">
+                    <div class="class-cont-consulta">
+                        <img src="img-con/quema_fi.jpg" class="img-consultas"/>
+
+                        <form action="ServletQuemaQuimica" method="post">
+                            <input type="text" id="Quemaquimica"  value="$${lista.valor_total_quemaq}" readonly=""  placeholder="$ 0.0"class="textbox" > 
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles">
+                        </form>
+
+                    </div> 
+                </c:forEach>
+            </div>
+            <div class="class-consulta">
+                <h3>QUEMA FÍSICA</h3>
+                <c:forEach items="${total_quema_fisica}" var="lista">
+                    <div class="class-cont-consulta">
+                        <img src="img-con/u56.jpg" class="img-consultas"/>
 
 
-                <div class="cuar-set">
+                        <form action="ServletQuemaFisica" method="post">
+                            <input type="text" readonly="" id="Quemafisica" placeholder="$"class="textbox" value="$${lista.total_qf}"> 
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input type="submit" value="Ver Detalles" style="text-align: center" class="detalles">
+                        </form>
 
-                    <div class="con-riego">
-                        <c:forEach items="${total_riego}" var="lista"> 
-                            <h3 style="margin-left: 78px;">RIEGO</h3>
-                            <img src="img-con/u54.png" width="225px" height="140px;" style="margin-left: 12px; margin-top: 5px; border-radius: 10px;"/>
-                            <div class="text"><form action="ServletRiego" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles"></form></div>
-                            <input type="text" readonly="" id="Riego" placeholder="$"class="textbox"value="$  ${lista.total_riego}">
-                        </c:forEach>
-                    </div>
-                    <div class="con-corta-bultos">
-                        <c:forEach items="${total_corta_bultos}" var="lista">
-                            <h3 style="margin-left: 58px;">CORTA BULTOS</h3>
-                            <img src="img-con/u48.jpg" width="225px" height="140px;" style="margin-left: 12px; margin-top: 5px; border-radius: 10px;"/>
-                            <div class="text"><form action="ServletCortaBultos" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles"></form></div>
-                            <input type="text" readonly="" id="Bultos" placeholder="$"class="textbox"  value="$ ${lista.total_corta_bultos}"> 
-                        </c:forEach>
 
                     </div>
-                    <div class="con-corta-granel">
-                        <c:forEach items="${total_corta_granel}" var="lista">
-                            <h3 style="margin-left: 58px;">CORTA GRANEL</h3>
-                            <img src="img-con/u49.jpg" width="225px" height="140px;" style="margin-left: 12px; margin-top: 5px; border-radius: 10px;"/>
-                            <div class="text"><form action="ServletCortaGranel" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles"></form></div>
-                            <input type="text" readonly="" id="Granel" placeholder="$"class="textbox"value="$  ${lista.total_corta_granel}"> 
-                        </c:forEach>
+                </c:forEach>
+            </div>
+            <div class="class-consulta">
+                <h3>PREPARACIÓN DE SUELO</h3>
+                <c:forEach items="${total_preparacion_suelo}" var="lista">
+                    <div class="class-cont-consulta">
+                        <img src="img-con/u58.jpg" class="img-consultas"/>
+                        <form action="ServletPreparacionSuelo" method="post">
+                            <input type="text" id="Suelo" readonly="" placeholder="$" class="textbox" name="total_n" value=" $${lista.total_preparacion_suelo}">
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input type="submit" value="Ver Detalles" class="detalles">
+                        </form>
                     </div>
-                    <div class="con-mantenimiento-lote">
-                        <c:forEach items="${total_mantenimiento_lote}" var="lista">
-                            <h3 style="margin-left: 58px;">MANTENIMIENTO</h3>
-                            <img src="img-con/u60.jpg" width="225px" height="140px;" style="margin-left: 12px; margin-top: 5px; border-radius: 10px;"/>
-                            <div class="text"><form action="ServletMantenimiento" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles"></form></div>
-                            <input type="text" id="Mantenimiento" readonly="" placeholder="$" class="textbox" value="$  ${lista.total_mntlote}"> 
-                        </c:forEach>
+                </c:forEach>
+            </div>
+            <div class="class-consulta">
+                <h3>MANEJO RESIDUOS DE COSECHA</h3>
+                <c:forEach items="${valor_total_mrc}" var="lista">
+                    <div class="class-cont-consulta">
+                        <img src="img-con/u62.jpg" class="img-consultas"/>
+                        <div class="class-cont-consulta">
+                            <form action="Detalles_corta_maleza" method="post">
+                                <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                                <input type="text" id="Residuos"  readonly="" placeholder="$" class="textbox" value=" $${lista.valor_total_mrc}"> 
+                                <input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles">
+                            </form>
+                        </div>
                     </div>
-                </div>
-                <div class="quin-set">
-                    <div class="con-liquidacion">
-                        <c:forEach items="${valor_total_liquidacion}" var="lista">
-                            <h3 style="margin-left: 58px;">LIQUIDACIÓN</h3>
-                            <img src="img-con/u61.jpg" width="225px" height="140px;" style="margin-left: 12px; margin-top: 5px; border-radius: 10px;"/>
-                            <div class="text"><form action="LiquidacionDetalles" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles"></form></div>
-                            <input type="text" readonly="" id="liquidacion" placeholder="$" class="textbox" value="$  ${lista.valor_total_liquidacion}"> 
-                        </c:forEach>
+                </c:forEach>
+            </div>
+
+            <div class="class-consulta">
+                <c:forEach items="${total_siembra_mecanizada}" var="lista">
+                    <h3>SIEMBRA MECANIZADA</h3>
+                    <img src="img-con/u60.jpg" class="img-consultas"/>
+                    <div class="class-cont-consulta">
+                        <form action="ServletSiembraMecanizada" method="post">
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input type="text" readonly="" id="Siembramecanizada" placeholder="$ 0.0"class="textbox" value=" $${lista.total_smzd}"> 
+                            <input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles">
+                        </form>
                     </div>
-                    <div class="con-estadisticas">
-                        <label style="font-size: 30px; margin-left: 45px; font-family: Times New Roman;">Gastos Totales</label>
-                        <input type="text" id="valorTotal" readonly="readonly" class="textbox">
-                        <input type="button" style="font-size: 15px; font-family: Times New Roman;" name="Ver total" class="detalles2" value="CALCULAR" onclick="sumar()" >
+
+                </c:forEach>
+            </div>
+            <div class="class-consulta">
+                <c:forEach items="${total_siembra_manual}" var="lista">
+                    <h3 >SIEMBRA MANUAL</h3>
+                    <img src="img-con/u30.png" class="img-consultas"/>
+                    <div class="class-cont-consulta">
+                        <form action="ServletSiembraManual" method="post">
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input type="text" readonly="" id="Siembramanual" placeholder="$"class="textbox" value=" $${lista.total_siembra_manual}">                                 
+                            <input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles">
+                        </form>
                     </div>
-                    <input type="button" style="width: 170px; margin-left: 500px; font-size: 15px; font-family: Times New Roman;" name="" class="detalles2" value="VOLVER" onclick="location.href = 'Inicio.jsp'">
-                </div>  
+
+                </c:forEach>
+            </div>        
+            <div class="class-consulta">
+                <c:forEach items="${Valor_total_abonada}" var="lista">
+                    <h3>ABONADAS</h3>
+                    <img src="img-con/u42.jpg" class="img-consultas"/>
+                    <div class="class-cont-consulta">
+                        <form action="ServletAbonada_insumos" method="post">
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>" >
+                            <input type="text" readonly="" id="Abonada" placeholder="$"class="textbox" value=" $${lista.total_abonada}" >    
+                            <input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles">
+                        </form>
+                    </div>
+
+                </c:forEach>
+            </div>
+            <div class="class-consulta">
+                <c:forEach items="${total_fumiga}" var="lista">
+                    <h3>FUMIGAS</h3>
+                    <img src="img-con/u44.jpg" class="img-consultas"/>
+                    <div class="class-cont-consulta">
+                        <form action="ServletFumigas" method="post">
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input type="text" readonly="" id="Fumiga" placeholder="$"class="textbox" name="total_f" value="$${lista.total_fumiga}">
+                            <input type="submit" value="Ver Detalles" class="detalles"style="font-size: 15px; font-family: Times New Roman;" />
+                        </form>
+                    </div>
+                </c:forEach>
+            </div>    
+
+            <div class="class-consulta">
+                <c:forEach items="${total_despalille}" var="lista">
+                    <h3>DESPALILLE</h3>
+                    <img src="img-con/u56 (1).jpg" class="img-consultas"/>
+                    <div class="class-cont-consulta">
+                        <form action="ServletDespalille" method="post">
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input type="text" readonly="" id="Despalille" placeholder="$"class="textbox" value="$${lista.total_despalille}">    
+                            <input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles">
+                        </form>
+                    </div>
+
+                </c:forEach>
+            </div>
+            <div class="class-consulta">
+                <c:forEach items="${total_entresaque}" var="lista">
+                    <h3>ENTRESAQUE</h3>
+                    <img src="img-con/u56 (1).jpg" class="img-consultas"/>
+                    <div class="class-cont-consulta">
+                        <form action="ServletEntresaque" method="post">
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input type="text" readonly="" id="Entresaque" placeholder="$"class="textbox" value="$${lista.total_entresaque}"> 
+                            <input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles">
+                        </form>
+                    </div>
+
+                </c:forEach>
+            </div>
+            <div class="class-consulta">
+                <c:forEach items="${total_macheteada}" var="lista">
+                    <h3>MACHETEADA</h3>
+                    <img src="img-con/u56 (1).jpg" class="img-consultas"/>
+                    <div class="class-cont-consulta">
+                        <form action="ServletMacheteada" method="post">
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input type="text" readonly="" id="Macheteada" placeholder="$"class="textbox" value="$${lista.total_macheteada}"> 
+                            <input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles">
+                        </form>
+                    </div>
+
+                </c:forEach>
+            </div>  
+            <div class="class-consulta">
+                <c:forEach items="${total_pajareo}" var="lista">
+                    <h3>PAJAREO</h3>
+                    <img src="img-con/u62 (1).jpg" class="img-consultas"/>
+                    <div class="class-cont-consulta">
+                        <form action="ServletPajareoCeladuria" method="post">
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input type="text" readonly="" id="Pajareo" placeholder="$"class="textbox"value="$${lista.total_pajareo}"> 
+                            <input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles">
+                        </form>
+                    </div>
+
+                </c:forEach>
+            </div>
+
+            <div class="class-consulta">
+                <c:forEach items="${total_riego}" var="lista"> 
+                    <h3>RIEGO</h3>
+                    <img src="img-con/u54.png" class="img-consultas"/>
+                    <div class="class-cont-consulta">
+                        <form action="ServletRiego" method="post">
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input type="text" readonly="" id="Riego" placeholder="$"class="textbox"value="$${lista.total_riego}">
+                            <input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles">
+                        </form>
+                    </div>
+
+                </c:forEach>
+            </div>
+
+            <div class="class-consulta">
+                <c:forEach items="${total_corta_bultos}" var="lista">
+                    <h3>CORTA BULTOS</h3>
+                    <img src="img-con/u48.jpg" class="img-consultas"/>
+                    <div class="class-cont-consulta">
+                        <form action="ServletCortaBultos" method="post">
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input type="text" readonly="" id="Bultos" placeholder="$"class="textbox"  value="$${lista.total_corta_bultos}"> 
+                            <input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles">
+                        </form>
+                    </div>
+
+                </c:forEach>
 
             </div>
-            <footer>
-                <!--Pie de Pagina-->
-                <div id="pie_paginaInicio" align="center">
-                </div>
-            </footer>
-            <script>
-                miles("Quemaquimica");
-                miles("Quemafisica");
-                miles("Suelo");
-                miles("Residuos");
-                miles("Siembramecanizada");
-                miles("Siembramanual");
-                miles("Abonada");
-                miles("Fumiga");
-                miles("Despalille");
-                miles("Entresaque");
-                miles("Macheteada");
-                miles("Pajareo");
-                miles("Riego");
-                miles("Bultos");
-                miles("Granel");
-                miles("Mantenimiento");
-                miles("liquidacion");
-            </script>
+            <div class="class-consulta">
+                <c:forEach items="${total_corta_granel}" var="lista">
+                    <h3>CORTA GRANEL</h3>
+                    <img src="img-con/u49.jpg" class="img-consultas"/>
+                    <div class="class-cont-consulta">
+                        <form action="ServletCortaGranel" method="post">
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input type="text" readonly="" id="Granel" placeholder="$"class="textbox"value="$${lista.total_corta_granel}"> 
+                            <input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles">
+                        </form>
+                    </div>
+                </c:forEach>
+            </div>
+            <div class="class-consulta">
+                <c:forEach items="${total_mantenimiento_lote}" var="lista">
+                    <h3>MANTENIMIENTO</h3>
+                    <img src="img-con/u60.jpg" class="img-consultas"/>
+                    <div class="class-cont-consulta">
+                        <form action="ServletMantenimiento" method="post">
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input type="text" id="Mantenimiento" readonly="" placeholder="$" class="textbox" value="$${lista.total_mntlote}"> 
+                            <input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles">
+                        </form>
+                    </div>
+
+                </c:forEach>
+            </div>
+
+
+            <div class="class-consulta">
+                <c:forEach items="${valor_total_liquidacion}" var="lista">
+                    <h3>LIQUIDACIÓN</h3>
+                    <img src="img-con/u61.jpg" class="img-consultas"/>
+                    <div class="class-cont-consulta">
+                        <form action="LiquidacionDetalles" method="post">
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input type="text" readonly="" id="liquidacion" placeholder="$" class="textbox" value="$${lista.valor_total_liquidacion}"> 
+                            <input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles">
+                        </form>
+                    </div>
+
+                </c:forEach>
+            </div>
+
+            <div class="class-consulta-total">
+                <label class="lblCostos">Gastos Totales</label><br/>
+                 <c:forEach items="${valor_total}" var="lista">
+                     <input type="text" id="valorTotal" readonly="readonly" class="" value="$${lista.valor_total}"><br/>
+                </c:forEach>
+                <label class="lblCostos">Gastos Por Hectarea</label><br/>
+                <input type="text" id="valorTotal" readonly="readonly" class="" value=""><br/>
+                <label class="lblCostos">Ganancias</label><br/>
+                <input type="text" id="valorTotal" readonly="readonly" class="" value=""><br/>
+                <label class="lblCostos">Costo Por Kilogramo</label><br/>
+                <input type="text" id="valorTotal" readonly="readonly" class="" value=""><br/>
+                <label class="lblCostos">Costo De Insumos</label><br/>
+                <input type="text" id="valorTotal" readonly="readonly" class="" value=""><br/>
+                <label class="lblCostos">Costos Por Mano De Obra</label><br/>
+                <input type="text" id="valorTotal" readonly="readonly" class="" value=""><br/>
+                <input type="button" id="botonvolver" class="" value="VOLVER" onclick="location.href = 'Inicio.jsp'">
+
+            </div>
+
+        </div>
+
+        <footer>
+            <!--Pie de Pagina-->
+            <div id="pie_paginaInicio" align="center">
+
+            </div>
+        </footer>
+        <script type="text/javascript">
+            
+
+            miles("Quemaquimica");
+            miles("Quemafisica");
+            miles("Suelo");
+            miles("Residuos");
+            miles("Siembramecanizada");
+            miles("Siembramanual");
+            miles("Abonada");
+            miles("Fumiga");
+            miles("Despalille");
+            miles("Entresaque");
+            miles("Macheteada");
+            miles("Pajareo");
+            miles("Riego");
+            miles("Bultos");
+            miles("Granel");
+            miles("Mantenimiento");
+            miles("liquidacion");
+            miles("valorTotal");
+        </script>
     </body>
 </html>

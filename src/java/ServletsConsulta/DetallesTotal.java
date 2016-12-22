@@ -134,6 +134,14 @@ public class DetallesTotal extends HttpServlet {
             request.setAttribute("valor_total_liquidacion", cero);
         }
         
+        if (con.getValortotal(num_lote) != null){
+            System.err.println("eeeeeeeeeeeeeeeeeeeeeeee"+con.getValortotal(num_lote));
+            request.setAttribute("valor_total", new Conexion().getValortotal(num_lote));
+        } else {
+            request.setAttribute("valor_total", cero);
+        }
+        
+        
         request.getRequestDispatcher("consultar.jsp").forward(request, response);
     }
     
