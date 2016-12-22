@@ -41,6 +41,7 @@ body {
     font-family: 'open sans';
     margin: 0px;
     font-family: "Roboto"; 
+    position: absolute;
 }
 
 .logo {
