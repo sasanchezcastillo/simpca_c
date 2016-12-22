@@ -300,6 +300,10 @@
         <servlet-name>ReporteLiquidacion</servlet-name>
         <servlet-class>ServletsReportesPDF.ReporteLiquidacion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>seleccionarLote</servlet-name>
+        <servlet-class>Servlets.seleccionarLote</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registrar_Abonadas</servlet-name>
         <url-pattern>/Abonadas</url-pattern>
@@ -599,6 +603,10 @@
     <servlet-mapping>
         <servlet-name>ReporteLiquidacion</servlet-name>
         <url-pattern>/ReporteLiquidacion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>seleccionarLote</servlet-name>
+        <url-pattern>/lote</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

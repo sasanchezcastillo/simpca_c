@@ -65,6 +65,11 @@
                 <div class="cuerpo">        
                     <table width="200px" style="margin-left: 140px;" border="0">
                         <tr>
+                            <td>
+                                <form method="post" action="lote">
+                                    <input type="submit" value="Elegir Lote"/>
+                                </form>
+                            </td>
                             <td align="center"><font style="font-family: Times New Roman;" size="+3">Lote:</font></td>
                             <td><input type="text" class="textbox" style="background: none; width: 100px; font-size: 30px; font-family: Times New Roman;" readonly="lote" name="num_lote" value="<%=lote%>"/></td>
                         </tr>
@@ -78,37 +83,39 @@
                             </a>
                         </div>
                     </div>
-                        <div class="cont-c">
-                             <a  href="cosecha.jsp" class="htitulos">COSECHA</a>
-                             <div class="c-img">
-                                 <a href="cosecha.jsp">
-                                  <img src="imagenes/cosecha.jpg" /> 
-                                 <img src="imagenes/corta2.jpg"width="303" height="203"  />
-                                 </a>
-                            </div>
+                    <div class="cont-c">
+                        <a  href="cosecha.jsp" class="htitulos">COSECHA</a>
+                        <div class="c-img">
+                            <a href="cosecha.jsp">
+                                <img src="imagenes/cosecha.jpg" /> 
+                                <img src="imagenes/corta2.jpg"width="303" height="203"  />
+                            </a>
                         </div>
+                    </div>
 
-                        <div class="cont-ct">
-                            <a class="htitulos"href="corta.jsp">CORTA</a>
-                            <div class="ct-img" style="text-decoration: none;">
-                                <a href="corta.jsp">
+                    <div class="cont-ct">
+                        <a class="htitulos"href="corta.jsp">CORTA</a>
+                        <div class="ct-img" style="text-decoration: none;">
+                            <a href="corta.jsp">
                                 <img src="imagenes/corta.jpg"  /> 
                                 <img src="imagenes/corta3.jpg"  />
-                                </a>                                
-                            </div>
+                            </a>                                
                         </div>
-                        
-                        <div class="cont-ct">
-                           
-                            <div class="form-consultar">
-                                <form action="DetallesTotal" method="post" style="margin-top: 25px;">
-                                     <a class="htitulos">CONSULTAR LOTE</a>
-                                     <br>
-                                    <input type="text" name="num_lote" hidden="" value="<%=lote%>"/>
-                                    <input class="agregar-insumo" style="margin-top: 10px;" type="submit" value="Consultar"/>
-                                </form>
-                            </div>
+                    </div>
+
+                    <div class="cont-ct">
+
+                        <div class="form-consultar">
+                            <form action="DetallesTotal" method="post" style="margin-top: 25px;">
+                                <a class="htitulos">CONSULTAR LOTE</a>
+                                <br>
+                                <input type="text" name="num_lote" hidden="" value="<%=lote%>"/>
+                                <input class="agregar-insumo" style="margin-top: 10px;" type="submit" value="Consultar"/>
+
+                            </form>
+
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
