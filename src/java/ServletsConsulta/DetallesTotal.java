@@ -152,6 +152,12 @@ public class DetallesTotal extends HttpServlet {
         } else {
             request.setAttribute("valor_ganancia", cero);
         }
+        if (con.getValor_kilogramo(num_lote) != null){
+            System.err.println("eeeeeeeeeeeeeeeeeeeeeeee"+con.getValor_kilogramo(num_lote));
+            request.setAttribute("valor_kilogramo", new Conexion().getValor_kilogramo(num_lote));
+        } else {
+            request.setAttribute("valor_kilogramo", cero);
+        }
         request.getRequestDispatcher("consultar.jsp").forward(request, response);
     }
     

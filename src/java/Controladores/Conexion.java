@@ -23,6 +23,7 @@ import Modelos.TotalAbonada;
 import Modelos.Total_Corta_maleza;
 import Modelos.consulta_todo;
 import Modelos.ganancias;
+import Modelos.gasto_kilogramo;
 import Modelos.gastos_hectareas;
 import Modelos.insumos_abonada;
 import Modelos.insumos_fumiga;
@@ -767,5 +768,19 @@ public class Conexion {
         }
         return lista;
     }
+ public ArrayList<gasto_kilogramo> getValor_kilogramo(String num_lote) {
 
+        lista = new ArrayList<>();
+        String sql = "select costo_kilogramo('" + num_lote + "') as total";
+        try {
+            resultado = Consultar(sql);
+            while (resultado.next()) {
+                System.err.println("eeeeeeeeeeeeeeeeeeeeeeee" + resultado.getString("total"));
+                lista.add(new gasto_kilogramo(resultado.getString("total")));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return lista;
+    }
 }

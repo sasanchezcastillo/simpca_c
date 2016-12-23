@@ -314,22 +314,24 @@
             <div class="class-consulta-total">
                 <label class="lblCostos">Gastos Totales</label><br/>
                  <c:forEach items="${valor_total}" var="lista">
-                     <input type="text" id="valorTotalt" class="valorTotal" readonly="readonly" value="$${lista.valor_total}"><br/>
+                     <input type="text" id="valorTotalt" class="textbox" readonly="readonly" value="$${lista.valor_total}"><br/>
                 </c:forEach>
                      <label class="lblCostos">Gastos Por Hectarea</label><br/>
                 <c:forEach items="${total_gastos}" var="lista">
-                    <input type="text" id="valorTotalhectareas"  readonly="readonly" class="valorTotal" value="$${lista.total_gastos}"><br/>     
+                    <input type="text" id="valorTotalhectareas"  readonly="readonly" class="textbox" value="$${lista.total_gastos}"><br/>     
                 </c:forEach>   
                 <label class="lblCostos">Resultado Económico</label><br/>
                 <c:forEach items="${valor_ganancia}" var="lista">
-                <input type="text" id="valorGanancias"  class="valorTotal" readonly="readonly" class="" value="${lista.valor_ganancia}"><br/>
+                <input type="text" id="valorGanancias" class="textbox" readonly="readonly" class="" value="${lista.valor_ganancia}"><br/>
                 </c:forEach>
                 <label class="lblCostos">Costo Por Kilogramo</label><br/>
-                <input type="text" id="" readonly="readonly" class="valorTotal" value=""><br/>
+                <c:forEach items="${valor_kilogramo}" var="lista">
+                <input type="text" id="valorkilogramo" readonly="readonly" class="textbox" value="$${lista.valor_kilogramo}"><br/>
+                </c:forEach>
                 <label class="lblCostos">Costo De Insumos</label><br/>
-                <input type="text" id="" readonly="readonly" class="valorTotal" value=""><br/>
+                <input type="text" id="" readonly="readonly" class="textbox" value=""><br/>
                 <label class="lblCostos">Costos Por Mano De Obra</label><br/>
-                <input type="text" id="" readonly="readonly" class="valorTotal" value=""><br/>
+                <input type="text" id="" readonly="readonly" class="textbox" value=""><br/>
                 <input type="button" id="botonvolver" class="" value="VOLVER" onclick="location.href = 'Inicio.jsp'">
 
             </div>
@@ -343,8 +345,6 @@
             </div>
         </footer>
         <script type="text/javascript">
-            
-
             miles("Quemaquimica");
             miles("Quemafisica");
             miles("Suelo");
@@ -365,6 +365,7 @@
             miles("valorTotalt");
             miles("valorTotalhectareas");
             miles("valorGanancias");
+            miles("valorkilogramo");
         </script>
     
     </body>
