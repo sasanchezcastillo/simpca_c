@@ -188,6 +188,7 @@ section {
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
     width: 60%;
+    height: auto;
     padding: 0px;
 }
 

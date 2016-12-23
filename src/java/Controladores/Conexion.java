@@ -23,6 +23,7 @@ import Modelos.TotalAbonada;
 import Modelos.Total_Corta_maleza;
 import Modelos.consulta_todo;
 import Modelos.ganancias;
+import Modelos.gasto_insumos;
 import Modelos.gasto_kilogramo;
 import Modelos.gastos_hectareas;
 import Modelos.insumos_abonada;
@@ -783,4 +784,19 @@ public class Conexion {
         }
         return lista;
     }
+ public ArrayList<gasto_insumos> getValor_insumos(String num_lote) {
+
+        lista = new ArrayList<>();
+        String sql = "select valor_insumos('" + num_lote + "') as total";
+        try {
+            resultado = Consultar(sql);
+            while (resultado.next()) {
+                lista.add(new gasto_insumos(resultado.getString("total")));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return lista;
+    }
+ 
 }

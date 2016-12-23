@@ -158,6 +158,11 @@ public class DetallesTotal extends HttpServlet {
         } else {
             request.setAttribute("valor_kilogramo", cero);
         }
+        if (con.getValor_insumos(num_lote) != null){
+            request.setAttribute("valor_insumos", new Conexion().getValor_insumos(num_lote));
+        } else {
+            request.setAttribute("valor_insumos", cero);
+        }
         request.getRequestDispatcher("consultar.jsp").forward(request, response);
     }
     

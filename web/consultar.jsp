@@ -328,13 +328,14 @@
                 <c:forEach items="${valor_kilogramo}" var="lista">
                 <input type="text" id="valorkilogramo" readonly="readonly" class="textbox" value="$${lista.valor_kilogramo}"><br/>
                 </c:forEach>
-                <label class="lblCostos">Costo De Insumos</label><br/>
-                <input type="text" id="" readonly="readonly" class="textbox" value=""><br/>
-                <label class="lblCostos">Costos Por Mano De Obra</label><br/>
+                <label class="lblCostos">Gasto En Insumos</label><br/>
+                <c:forEach items="${valor_insumos}" var="lista">
+                <input type="text" id="valorinsumo" readonly="readonly" class="textbox" value="$${lista.valor_insumos}"><br/>
+                </c:forEach>
+                <label class="lblCostos">Gasto En Mano De Obra</label><br/>
                 <input type="text" id="" readonly="readonly" class="textbox" value=""><br/>
                 <input type="button" id="botonvolver" class="" value="VOLVER" onclick="location.href = 'Inicio.jsp'">
-
-            </div>
+             </div>52
 
         </div>
 
@@ -366,6 +367,7 @@
             miles("valorTotalhectareas");
             miles("valorGanancias");
             miles("valorkilogramo");
+            miles("valorinsumo");
         </script>
     
     </body>
