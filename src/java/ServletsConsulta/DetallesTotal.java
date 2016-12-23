@@ -140,8 +140,18 @@ public class DetallesTotal extends HttpServlet {
         } else {
             request.setAttribute("valor_total", cero);
         }
-        
-        
+        if (con.getTotal_gastos(num_lote) != null){
+            System.err.println("eeeeeeeeeeeeeeeeeeeeeeee"+con.getTotal_gastos(num_lote));
+            request.setAttribute("total_gastos", new Conexion().getTotal_gastos(num_lote));
+        } else {
+            request.setAttribute("total_gastos", cero);
+        }
+        if (con.getValor_ganancia(num_lote) != null){
+            System.err.println("eeeeeeeeeeeeeeeeeeeeeeee"+con.getValor_ganancia(num_lote));
+            request.setAttribute("valor_ganancia", new Conexion().getValor_ganancia(num_lote));
+        } else {
+            request.setAttribute("valor_ganancia", cero);
+        }
         request.getRequestDispatcher("consultar.jsp").forward(request, response);
     }
     

@@ -84,7 +84,7 @@ var kilo = 0;
     
     function parafiscales(){
         var total = toFloat(document.getElementById('totalvalorTotal').value);
-        var fomento_arrocero = toFloat(total * 0.005);
+        var fomento_arrocero = toFloat(total * 0.05);
         
         document.getElementById('fomento-arrocero').value = (fomento_arrocero);
         format(document.getElementById(fomento-arrocero));
@@ -92,9 +92,9 @@ var kilo = 0;
     
     function selector(value){
         var total = toFloat(document.getElementById('totalvalorTotal').value);
-        var bolsa_agropecuaria = toFloat(total * 0.003);
-        var comision_bolsa = toFloat(total * 0.003);
-        var retencion_fuente = toFloat(total * 0.015);
+        var bolsa_agropecuaria = toFloat(total * 0.03);
+        var comision_bolsa = toFloat(total * 0.03);
+        var retencion_fuente = toFloat(total * 0.15);
         
         if(value === "bolsa"){
             

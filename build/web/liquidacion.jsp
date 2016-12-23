@@ -77,7 +77,7 @@
                                 <td align="center"><b>Total</b></td>
                         </thead>
                             <tbody align="center" id="cuerpoTabla">
-                            <td><input style="font-family: Times New Roman; font-size: 16px;" type="date" class="textboxF" name="fecha" id="fecha0" ></td>
+                            <td><input style="font-family: Times New Roman; font-size: 16px;" type="date" placeholder="Dia/Mes/Año" class="textboxF" name="fecha" id="fecha0" ></td>
                                     <td><input type="text" class="textbox" name="tiquete" id="tiquete0" ></td>
                                     <td><input type="text" class="textbox" name="pesoNeto" id="pesoNeto0" ></td>
                                     <td><input type="text" class="textbox" name="bultos" id="bultos0" ></td>

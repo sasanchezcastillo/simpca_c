@@ -22,6 +22,7 @@
     %>
 
     <head>
+        <script src="Js/jquery-1.7.1.min.js" type="text/javascript"></script>
         <script src="Js/newjavascript.js" type="text/javascript"></script>
         <meta name="viewport" charset=UTF-8" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <link href="css/general_simpca.css" rel="stylesheet" type="text/css"/>
@@ -313,18 +314,22 @@
             <div class="class-consulta-total">
                 <label class="lblCostos">Gastos Totales</label><br/>
                  <c:forEach items="${valor_total}" var="lista">
-                     <input type="text" id="valorTotal" readonly="readonly" class="" value="$${lista.valor_total}"><br/>
+                     <input type="text" id="valorTotalt" class="valorTotal" readonly="readonly" value="$${lista.valor_total}"><br/>
                 </c:forEach>
-                <label class="lblCostos">Gastos Por Hectarea</label><br/>
-                <input type="text" id="valorTotal" readonly="readonly" class="" value=""><br/>
-                <label class="lblCostos">Ganancias</label><br/>
-                <input type="text" id="valorTotal" readonly="readonly" class="" value=""><br/>
+                     <label class="lblCostos">Gastos Por Hectarea</label><br/>
+                <c:forEach items="${total_gastos}" var="lista">
+                    <input type="text" id="valorTotalhectareas"  readonly="readonly" class="valorTotal" value="$${lista.total_gastos}"><br/>     
+                </c:forEach>   
+                <label class="lblCostos">Resultado Económico</label><br/>
+                <c:forEach items="${valor_ganancia}" var="lista">
+                <input type="text" id="valorGanancias"  class="valorTotal" readonly="readonly" class="" value="${lista.valor_ganancia}"><br/>
+                </c:forEach>
                 <label class="lblCostos">Costo Por Kilogramo</label><br/>
-                <input type="text" id="valorTotal" readonly="readonly" class="" value=""><br/>
+                <input type="text" id="" readonly="readonly" class="valorTotal" value=""><br/>
                 <label class="lblCostos">Costo De Insumos</label><br/>
-                <input type="text" id="valorTotal" readonly="readonly" class="" value=""><br/>
+                <input type="text" id="" readonly="readonly" class="valorTotal" value=""><br/>
                 <label class="lblCostos">Costos Por Mano De Obra</label><br/>
-                <input type="text" id="valorTotal" readonly="readonly" class="" value=""><br/>
+                <input type="text" id="" readonly="readonly" class="valorTotal" value=""><br/>
                 <input type="button" id="botonvolver" class="" value="VOLVER" onclick="location.href = 'Inicio.jsp'">
 
             </div>
@@ -357,7 +362,10 @@
             miles("Granel");
             miles("Mantenimiento");
             miles("liquidacion");
-            miles("valorTotal");
+            miles("valorTotalt");
+            miles("valorTotalhectareas");
+            miles("valorGanancias");
         </script>
+    
     </body>
 </html>

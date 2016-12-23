@@ -248,7 +248,7 @@ section {
     padding: 5px;
 }
 
-#valorTotal{
+.valorTotal{
     width: 60%;
     text-align: center;
     content: "$";
