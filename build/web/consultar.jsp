@@ -304,38 +304,60 @@
                         <form action="LiquidacionDetalles" method="post">
                             <input type="text" name="num_lote" hidden="" value="<%=lote%>">
                             <input type="text" readonly="" id="liquidacion" placeholder="$" class="textbox" value="$${lista.valor_total_liquidacion}"> 
+                            <input type="submit" value="Ver Detalles" id="liquidacion" class="detalles" style="font-size: 15px; font-family: Times New Roman; text-align: center;">
+                        </form>
+                    </div>
+
+                </c:forEach>
+            </div>
+            
+            <div class="class-consulta">
+                <c:forEach items="${valor_arriendo}" var="lista">
+                    <h3>Arriendo</h3>
+                    <img src="imagenes/arriendo.jpg" class="img-consultas"/>
+                    <div class="class-cont-consulta">
+                        <form action="LiquidacionDetalles" method="post">
+                            <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                            <input type="text" readonly="" id="arriendo" placeholder="$" class="textbox" value="$${lista.valor_arriendo}"> 
                             <input style="font-size: 15px; font-family: Times New Roman;" type="submit" value="Ver Detalles" class="detalles">
                         </form>
                     </div>
 
                 </c:forEach>
             </div>
-
+            
             <div class="class-consulta-total">
                 <label class="lblCostos">Gastos Totales</label><br/>
                  <c:forEach items="${valor_total}" var="lista">
                      <input type="text" id="valorTotalt" class="textbox" readonly="readonly" value="$${lista.valor_total}"><br/>
                 </c:forEach>
-                     <label class="lblCostos">Gastos Por Hectarea</label><br/>
+                     <label class="lblCostos">Gastos En Insumos</label><br/>
+                <c:forEach items="${valor_insumos}" var="lista">
+                <input type="text" id="valorinsumo" readonly="readonly" class="textbox" value="$${lista.valor_insumos}"><br/>
+                </c:forEach>
+                <label class="lblCostos">Gastos En Mano De Obra</label><br/>
+                 <c:forEach items="${total_mano}" var="lista">
+                <input type="text" id="totalmano" readonly="readonly" class="textbox" value="$${lista.total_mano}"><br/>
+                </c:forEach>
+                 <label class="lblCostos">Otros Gastos</label><br/>
+                 <c:forEach items="${total_otros}" var="lista">
+                <input type="text" id="otros" readonly="readonly" class="textbox" value="$${lista.total_otros}"><br/>
+                </c:forEach>
+                     <label class="lblCostos">Costos Por Hectarea</label><br/>
                 <c:forEach items="${total_gastos}" var="lista">
                     <input type="text" id="valorTotalhectareas"  readonly="readonly" class="textbox" value="$${lista.total_gastos}"><br/>     
                 </c:forEach>   
+                    <label class="lblCostos">Costos Por Kilogramo</label><br/>
+                <c:forEach items="${valor_kilogramo}" var="lista">
+                <input type="text" id="valorkilogramo" readonly="readonly" class="textbox" value="$${lista.valor_kilogramo}"><br/>
+                </c:forEach>
                 <label class="lblCostos">Resultado Económico</label><br/>
                 <c:forEach items="${valor_ganancia}" var="lista">
                 <input type="text" id="valorGanancias" class="textbox" readonly="readonly" class="" value="${lista.valor_ganancia}"><br/>
                 </c:forEach>
-                <label class="lblCostos">Costo Por Kilogramo</label><br/>
-                <c:forEach items="${valor_kilogramo}" var="lista">
-                <input type="text" id="valorkilogramo" readonly="readonly" class="textbox" value="$${lista.valor_kilogramo}"><br/>
-                </c:forEach>
-                <label class="lblCostos">Gasto En Insumos</label><br/>
-                <c:forEach items="${valor_insumos}" var="lista">
-                <input type="text" id="valorinsumo" readonly="readonly" class="textbox" value="$${lista.valor_insumos}"><br/>
-                </c:forEach>
-                <label class="lblCostos">Gasto En Mano De Obra</label><br/>
-                <input type="text" id="" readonly="readonly" class="textbox" value=""><br/>
+                
                 <input type="button" id="botonvolver" class="" value="VOLVER" onclick="location.href = 'Inicio.jsp'">
-             </div>52
+             </div> 
 
         </div>
 
@@ -346,6 +368,7 @@
             </div>
         </footer>
         <script type="text/javascript">
+            miles("arriendo");
             miles("Quemaquimica");
             miles("Quemafisica");
             miles("Suelo");
@@ -368,6 +391,9 @@
             miles("valorGanancias");
             miles("valorkilogramo");
             miles("valorinsumo");
+            miles("totalmano");
+            miles("otros");
+            
         </script>
     
     </body>

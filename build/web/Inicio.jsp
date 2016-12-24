@@ -63,17 +63,14 @@
                     <img class="img-productos" src="imagenes/arina_Arroz.png">
                 </div>
                 <div class="cuerpo">        
-                    <table width="200px" style="margin-left: 140px;" border="0">
-                        <tr>
-                            <td>
-                                <form method="post" action="lote">
-                                    <input type="submit" value="Elegir Lote"/>
-                                </form>
-                            </td>
-                            <td align="center"><font style="font-family: Times New Roman;" size="+3">Lote:</font></td>
-                            <td><input type="text" class="textbox" style="background: none; width: 100px; font-size: 30px; font-family: Times New Roman;" readonly="lote" name="num_lote" value="<%=lote%>"/></td>
-                        </tr>
-                    </table>
+                    <div class="lote-atras">
+                        <form method="post" action="lote" >
+                            <input type="image" title="Elegir Lote" src="imagenes/atrasX32.png" />   
+                            <h2 id="h2-elegir">N° Lote: <%=lote%></h2>
+                        </form>
+
+                    </div>
+
                     <div class="cont-pl">
                         <a class="htitulos" href="preparacion_de_lotes.jsp">PREPARACION DEL LOTE</a>
                         <div class="pl-img">

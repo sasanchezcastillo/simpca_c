@@ -3,6 +3,7 @@ package Controladores;
 import Modelos.insumos_quema_quimica;
 import Modelos.insumo_manteni_lot_1;
 import Modelos.Abonada;
+import Modelos.Arriendo;
 import Modelos.CortaBultos;
 import Modelos.CortaGranel;
 import Modelos.Despalille;
@@ -26,10 +27,12 @@ import Modelos.ganancias;
 import Modelos.gasto_insumos;
 import Modelos.gasto_kilogramo;
 import Modelos.gastos_hectareas;
+import Modelos.gastos_mano_obra;
 import Modelos.insumos_abonada;
 import Modelos.insumos_fumiga;
 import Modelos.liquidacion;
 import Modelos.liquidacionTotal;
+import Modelos.otros_gastos;
 import Modelos.total_corta_bultos;
 import Modelos.total_corta_granel;
 import Modelos.total_despalille;
@@ -483,14 +486,17 @@ public class Conexion {
     }
 
     public ArrayList<PreparacionSuelo> gettotal_preparacion_suelo(String num_lote) {
-
         lista = new ArrayList<>();
-        String sql = "select total_preparacions from preparacion_suelo where num_lote ='" + num_lote + "'limit 1";
+        long end = 0;
+        String sql = "select ifnull(sum(valor_total_preparacions),0) as total_preparacions from preparacion_suelo where num_lote = '"+num_lote+"' ";
         try {
             resultado = Consultar(sql);
-            while (resultado.next()) {
-                lista.add(new total_preparacion_suelo(resultado.getLong("total_preparacions")));
-            }
+            
+                while (resultado.next()) {
+                    System.out.println("este es el resultado de preparacion suelo " + resultado.getLong("total_preparacions"));
+                    lista.add(new total_preparacion_suelo(resultado.getLong("total_preparacions")));
+                }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -695,7 +701,7 @@ public class Conexion {
     public ArrayList<liquidacionTotal> getLiquidaciontotal(String num_lote) {
 
         lista = new ArrayList<>();
-        String sql = "SELECT sum(valor_total_liquidacion) as valor_total_liquidacion from liquidacion WHERE num_lote = '" + num_lote + "'";
+        String sql = "SELECT ifnull(sum(valor_total_liquidacion),0) as valor_total_liquidacion from liquidacion WHERE num_lote = '" + num_lote + "'";
         try {
             resultado = Consultar(sql);
             while (resultado.next()) {
@@ -754,10 +760,11 @@ public class Conexion {
         }
         return lista;
     }
+
     public ArrayList<ganancias> getValor_ganancia(String num_lote) {
 
         lista = new ArrayList<>();
-        String sql = "select ganancias('" + num_lote + "') as total";
+        String sql = "select ifnull(ganancias('" + num_lote + "'),'$0') as total";
         try {
             resultado = Consultar(sql);
             while (resultado.next()) {
@@ -769,10 +776,11 @@ public class Conexion {
         }
         return lista;
     }
- public ArrayList<gasto_kilogramo> getValor_kilogramo(String num_lote) {
+
+    public ArrayList<gasto_kilogramo> getValor_kilogramo(String num_lote) {
 
         lista = new ArrayList<>();
-        String sql = "select costo_kilogramo('" + num_lote + "') as total";
+        String sql = "select ifnull(costo_kilogramo('" + num_lote + "'),0) as total";
         try {
             resultado = Consultar(sql);
             while (resultado.next()) {
@@ -784,10 +792,11 @@ public class Conexion {
         }
         return lista;
     }
- public ArrayList<gasto_insumos> getValor_insumos(String num_lote) {
+
+    public ArrayList<gasto_insumos> getValor_insumos(String num_lote) {
 
         lista = new ArrayList<>();
-        String sql = "select valor_insumos('" + num_lote + "') as total";
+        String sql = "select ifnull(valor_insumos('" + num_lote + "'),0) as total";
         try {
             resultado = Consultar(sql);
             while (resultado.next()) {
@@ -798,5 +807,49 @@ public class Conexion {
         }
         return lista;
     }
- 
+
+    public ArrayList<gastos_mano_obra> getTotal_mano(String num_lote) {
+
+        lista = new ArrayList<>();
+        String sql = "select suma_mano('" + num_lote + "') as total";
+        try {
+            resultado = Consultar(sql);
+            while (resultado.next()) {
+                lista.add(new gastos_mano_obra(resultado.getString("total")));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return lista;
+    }
+
+    public ArrayList<otros_gastos> getTotal_otros(String num_lote) {
+
+        lista = new ArrayList<>();
+        String sql = "select ifnull(otrosgastos('" + num_lote + "'),0) as total";
+        try {
+            resultado = Consultar(sql);
+            while (resultado.next()) {
+                lista.add(new otros_gastos(resultado.getString("total")));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return lista;
+    }
+
+    public ArrayList<Arriendo> getValor_arriendo(String num_lote) {
+
+        lista = new ArrayList<>();
+        String sql = "select ifnull(sum(arriendo_lote),0) as total from lote where num_lote = '" + num_lote + "'";
+        try {
+            resultado = Consultar(sql);
+            while (resultado.next()) {
+                lista.add(new Arriendo(resultado.getString("total")));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return lista;
+    }
 }

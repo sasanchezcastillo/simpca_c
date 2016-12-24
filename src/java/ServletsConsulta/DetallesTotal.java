@@ -66,7 +66,7 @@ public class DetallesTotal extends HttpServlet {
         if(con.gettotal_preparacion_suelo(num_lote) != null){
             request.setAttribute("total_preparacion_suelo", new Conexion().gettotal_preparacion_suelo(num_lote));
         }else{
-            request.setAttribute("total_preparacion_suelo", cero);
+            request.setAttribute("total_preparacion_suelo",cero);
         }
         if(con.gettotal_mantenimiento_lote(num_lote) != null){
             request.setAttribute("total_mantenimiento_lote", new Conexion().gettotal_mantenimiento_lote(num_lote));
@@ -141,7 +141,6 @@ public class DetallesTotal extends HttpServlet {
             request.setAttribute("valor_total", cero);
         }
         if (con.getTotal_gastos(num_lote) != null){
-            System.err.println("eeeeeeeeeeeeeeeeeeeeeeee"+con.getTotal_gastos(num_lote));
             request.setAttribute("total_gastos", new Conexion().getTotal_gastos(num_lote));
         } else {
             request.setAttribute("total_gastos", cero);
@@ -162,6 +161,21 @@ public class DetallesTotal extends HttpServlet {
             request.setAttribute("valor_insumos", new Conexion().getValor_insumos(num_lote));
         } else {
             request.setAttribute("valor_insumos", cero);
+        }
+         if (con.getTotal_mano(num_lote) != null){
+            request.setAttribute("total_mano", new Conexion().getTotal_mano(num_lote));
+        } else {
+            request.setAttribute("total_mano", cero);
+        }
+          if (con.getTotal_otros(num_lote) != null){
+            request.setAttribute("total_otros", new Conexion().getTotal_otros(num_lote));
+        } else {
+            request.setAttribute("total_otros", cero);
+        }
+          if (con.getValor_arriendo(num_lote) != null){
+            request.setAttribute("valor_arriendo", new Conexion().getValor_arriendo(num_lote));
+        } else {
+            request.setAttribute("valor_arriendo", cero);
         }
         request.getRequestDispatcher("consultar.jsp").forward(request, response);
     }
