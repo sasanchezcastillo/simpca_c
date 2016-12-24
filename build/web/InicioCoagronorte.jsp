@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="imagenes/favicon.ico" rel="icon"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
         <link href="css/general_simpca.css" rel="stylesheet" type="text/css"/>

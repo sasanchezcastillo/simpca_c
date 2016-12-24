@@ -22,6 +22,7 @@
     %>
 
     <head>
+         <link href="imagenes/favicon.ico" rel="icon"/>
         <script src="Js/jquery-1.7.1.min.js" type="text/javascript"></script>
         <script src="Js/newjavascript.js" type="text/javascript"></script>
         <meta name="viewport" charset=UTF-8" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">

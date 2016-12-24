@@ -24,6 +24,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Registrar Lotes</title>
+     <link href="imagenes/favicon.ico" rel="icon"/>
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
         <link href="css/general_simpca.css" rel="stylesheet" type="text/css"/>
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
@@ -64,7 +65,7 @@
                     </div>
                     
                     <div class="input-group">
-                        <input type="text" id="nombre"   required="" name="area_lote"/>
+                        <input type="text" id="nombre"   onkeypress="return justNumbers(event); "required="" name="area_lote"/>
                         <label class="label" for="Area Del Lote">HECTAREAS DEL LOTE</label>
                     </div>
                     <div class="input-group">
@@ -87,5 +88,16 @@
                 <div id="pie_paginaSesion" align="center">
                 </div>
             </footer>
+    <script>
+        function justNumbers(e)
+        {
+            
+        var keynum = window.event ? window.event.keyCode : e.which;
+        if ((keynum == 8) || (keynum == 46))
+        return true;
+         
+        return /\d/.test(String.fromCharCode(keynum));
+        }
+    </script>
     </body>
 </html>
