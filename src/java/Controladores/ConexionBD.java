@@ -5,6 +5,7 @@
  */
 package Controladores;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -38,6 +39,18 @@ public class ConexionBD {
         }
     }
     
+     public Connection ConexionBD2(){
+        try {
+            Class.forName(CLASSNAME);
+            con = DriverManager.getConnection(URL,USERNAME,PASSWORD);
+            stmt=con.createStatement();
+        } catch (ClassNotFoundException e) {
+            System.err.println("ERROR"+e);
+        }catch (SQLException e){
+            System.err.println("Error"+e);
+        }
+        return con;
+    }
     public java.sql.Connection getConnection(){
         return con;
     }

@@ -3,8 +3,15 @@
     Created on : 8/08/2016, 01:51:26 PM
     Author     : SENA
 --%>
+<%@page import="Controladores.ConexionBD"%>
+<%@page import="Controladores.Conexion"%>
+<%@ page language="java" %>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="java.sql.Connection" %>
+<%@ page import = "java.sql.DriverManager" %> 
+<%@ page import = "java.sql.ResultSet" %> 
+<%@ page import = "java.sql.Statement"%>
 
-<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,14 +28,14 @@
                     }
                 }
   %>
-    
-    <head>
+     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="imagenes/favicon.ico" rel="icon"/>
         <link href="css/cssLiquidacion.css" rel="stylesheet" type="text/css"/>
         <link href="css/general_simpca.css" rel="stylesheet" type="text/css"/>
         <script src="Js/FuncionesLiquidacion.js" type="text/javascript"></script>
         <script src="Js/jquery.js" type="text/javascript"></script>
+        <script src="Js/Consultas.js" type="text/javascript"></script>
         <title>Liquidación</title>
     </head>
 <body class="fondo">
@@ -55,7 +62,7 @@
        <img src="ImagenesR/corta-1.png" style="width: 100%; height: 400px; position: absolute">
        
        <form action="Liquidacion" id="Liquidacion" method="post">
-         
+          
         <div id="contenedor" align="center">
             <h3 style="font-size: 22px; font-family: Times New Roman; margin-left: 800px; margin-top: 35px;">Lote: <input type="text" id="lote" name="num_lote" style="font-size: 20px; font-family: Times New Roman; width:50px; height: 30px; background: none; border:none" value="<%=lote%>" readonly="<%=lote%>"/></h3>           
             <h1 style="margin-top: 60px;"><p>LIQUIDACIÓN</p></h1>
@@ -66,6 +73,7 @@
                 <div id="contenedor2" align="center">
                     <table align="center" border="0" style="margin-top: -210px; font-style: normal; font-size: 20px;">
                         <thead>
+                             
                         <td align="center"><b>Fecha</b></td>
                                 <td align="center"><b>Tiquete</b></td>
                                 <td align="center"><b>Peso Neto</b></td>
@@ -77,7 +85,7 @@
                                 <td align="center"><b>Total</b></td>
                         </thead>
                             <tbody align="center" id="cuerpoTabla">
-                            <td><input style="font-family: Times New Roman; font-size: 16px;" type="date" placeholder="Dia/Mes/Año" class="textboxF" name="fecha" id="fecha0" ></td>
+                            <td><input style="font-family: Times New Roman; font-size: 16px;" type="date" class="textboxF" name="fecha" id="fecha0" ></td>
                                     <td><input type="text" class="textbox" name="tiquete" id="tiquete0" ></td>
                                     <td><input type="text" class="textbox" name="pesoNeto" id="pesoNeto0" ></td>
                                     <td><input type="text" class="textbox" name="bultos" id="bultos0" ></td>
@@ -85,7 +93,7 @@
                                     <td><input type="text" class="textbox" name="f24" id="fertilizante_a0" ></td>
                                     <td><input type="text" class="textbox" name="f4" id="fertilizante_b0"></td>
                                     <td><input type="text" class="textbox" name="kilosVerde" id="kilosVerde0"></td>
-                                    <td><input type="text" class="textbox" name="valorUnitario" id="valorUnitario0" onkeyup="liquidacion(this, 0); format(this, 0);" onchange="format(this, 0)" /></td>
+                                    <td><input type="text" class="textbox" name="valorUnitario" id="valorUnitario0" onkeyup="liquidacion(this, 0); format(this, 0);" onchange="format(this, 0); miles('totalvalorTotal');" /></td>
                                     <td><input type="text" class="textbox" style="background-color:#CCC; width: 120px;" name="valorTotal" id="valorTotal0" readonly="readonly" onkeyup="format(this, 0);" onchange="format(this, 0)" /></td>
                             </tbody>
                     </table>
@@ -96,13 +104,14 @@
                                 <td height="15%" width="90px" colspan="2"></td>
                                 <td align="center" width="86px"><input type="text" class="textbox" style="background-color:#CCC; width: 110px;" name="totalkilosVerde" id="TotalkilosVerde" readonly="readonly"></td>
                                 <td align="center" width="86px"><input type="text" class="textbox" style="background-color:#CCC; width: 100px;" name="totalvalorUnitario" readonly="readonly" id="totalvalorUnitario" onkeyup="format(this);" onchange="format(this)" /></td>
-                                <td align="center" width="50px"><input type="text" class="textbox" style="background-color:#CCC; width: 120px;" name="totalvalorTotal" readonly="readonly" id="totalvalorTotal" onkeyup="format(this);" onchange="format(this)" /></td>
+                                <td align="center" width="50px"><input type="text" class="textbox" style="background-color:#CCC; width: 120px;" name="totalvalorTotal" readonly="readonly" id="totalvalorTotal" onkeyup="parafiscales(); format(this);" onchange="format(this); " /></td>
                         </table>
                     </div>
                     </div>
             <div class="parafiscales">
-                <table style="font-family: Times New Roman; font-size: 20px;">
+                <table>
                     <tr>
+                        
                         <th>Parafiscales</th>
                         <th></th>
                         <th>Fomento Arrocero</th>
@@ -111,28 +120,66 @@
                     </tr>
                     <tr>
                         <td>
-                            <select class="textbox" name="select" id="select" onchange="selector(this.value)">
+                            <select class="textbox" name="select" id="select" onchange="seleector(this.value)">
                                 <option>Seleccione</option>
                                 <option id="bolsa" value="bolsa">Bolsa Nacional Agropecuaria</option>
-                                <option id="retencion" value="retencion">Retención Fuente</option>
+                                <option id="retencion" value="retencion">Retencion Fuente</option>
                             </select>
                         </td>
                         <td><input type="text" class="textbox" id="option" name="select" readonly=""></td>
                         <td><input type="text" class="textbox" id="fomento-arrocero" name="retencion_fuente" readonly=""></td>
-                        <td><input type="text" class="textbox" id="asistencia-tecnica" name="asistencia_tecnica" readonly="" value="0"></td>
+                        <% 
+               try
+               {
+                   
+                   
+                   Connection conexion = new ConexionBD().ConexionBD2();
+                   if(!conexion.isClosed())
+                   {
+                       Statement st = conexion.createStatement();
+                       ResultSet rs = st.executeQuery("select asistencia('" +lote+" ')as total");
+                       
+                         
+                         System.err.println("pase"); 
+                   while(rs.next())
+                   {
+                         
+                        out.println("<td><input type='text' class='textbox' id='asistencia-tecnica' name='asistencia_tecnica' readonly= ''value="+rs.getObject("total")+"></td>");
+                         
+                          
+                   }
+                  
+                   conexion.close();
+                   System.err.println("eroorrrrrrrrrrrrrrr"+rs.next());                   
+                   }
+                   else 
+                       out.println("fallo");
+               }
+               catch(Exception e )
+               {
+                   
+                   e.printStackTrace();
+               }
+         %>
                         <td><input type="text" class="textbox" id="intereses" name="intereses" readonly="" value="0"></td>
-                    </tr>
+                        
                 </table>
             </div>
             <div class="cont-inputsL" style="margin-top: -10px;">
                 <input style="font-family: Times New Roman;" type="button" onclick="VentanaEmergenteL()" class="agregar-insumoL" value="GUARDAR"/>
                 <input style="font-family: Times New Roman;" name="cerrar"  type="button" class="agregar-insumoL" value="CERRAR" onclick="location.href ='corta.jsp'"/>
             </div>
+            
         </div>
     </form> 
+            <script>
+                
+                miles('totalvalorTotal');
+                miles('asistencia-tecnica');
+            </script>
     <div id="piepagina">
         <footer>
-            <div id="footer"></div>
+            <div id=""></div>
         </footer>
     </div>
 </body>

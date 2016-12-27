@@ -158,13 +158,25 @@
                 </div>
             </div>
             <div align="center">
-                <form style="margin-left: -300px;" action="DetallesTotal" method="post"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><font><input style="font-size: 14px; font-family: Times New Roman;" class="agregar-insumoC" type="submit" value="VOLVER"></u></form>
-                <form style="margin-top: -120px; margin-left: 300px; width: 100%;" action="ReporteCortaGranel" method="POST"><input type="text" name="num_lote" hidden="" value="<%=lote%>"><font><input style="font-size: 14px; font-family: Times New Roman;" class="agregar-insumoC" type="submit" value="GENERAR PDF"></form>
+                <form style="margin-left: -300px;" action="DetallesTotal" method="post">
+                    <input type="text" name="num_lote" hidden="" value="<%=lote%>"><font>
+                    <input style="font-size: 14px; font-family: Times New Roman;" class="agregar-insumoC" type="submit" value="VOLVER">
+                </form>
+                <form name="formulario_reporte_cortaGranel" target="_blank" style="margin-top: -120px; margin-left: 300px; width: 100%;" action="ReporteCortaGranel" method="POST">
+                    <input type="text" name="num_lote" hidden="" value="<%=lote%>">
+                    <font>
+                    <input style="font-size: 14px; font-family: Times New Roman;" class="agregar-insumoC" type="button" onclick="redireccionar()" target="_blank" value="GENERAR PDF">
+                    
+                </form>
             </div>
         </div>
 
     </body>
 <script type="text/javascript">
+    function redireccionar(){
+        document.formulario_reporte_cortaGranel.submit();
+    }
+    
         function eliminar(){
             if($('input[name="id"]').is(':checked')){
                 if(confirm("¿Esta seguro de eliminar el registro?")){

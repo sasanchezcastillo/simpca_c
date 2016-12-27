@@ -24,6 +24,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.net.URL;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.text.DateFormat;
@@ -52,13 +53,12 @@ public class ReporteCortaBultos extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
+
         String num_lote = request.getParameter("num_lote");
 
         response.setContentType("application/pdf");
         OutputStream out = response.getOutputStream();
-        
-        
+
         try {
             try {
 
@@ -74,7 +74,7 @@ public class ReporteCortaBultos extends HttpServlet {
                 ResultSet rs4 = null;
                 ResultSet rs5 = null;
                 Class.forName("com.mysql.jdbc.Driver");
-                con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto", "root", "");
+                con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/simpca", "root", "9510");
 
                 st = (Statement) con.createStatement();
                 st2 = (Statement) con.createStatement();
@@ -88,21 +88,20 @@ public class ReporteCortaBultos extends HttpServlet {
                 rs5 = st5.executeQuery("SELECT * from corta_bultos where num_lote ='" + num_lote + "'");
                 if (con != null) {
                     Document documento = new Document(A4.rotate());
-                   PdfWriter writer = PdfWriter.getInstance(documento, out);
-                   FooterPiePaginaiText footer = new FooterPiePaginaiText();
+                    PdfWriter writer = PdfWriter.getInstance(documento, out);
+                    FooterPiePaginaiText footer = new FooterPiePaginaiText();
                     writer.setPageEvent(footer);
-                    
+
                     documento.open();
-                    
+
                     try {
-
-                        Image imagenes = Image.getInstance("C:\\Users\\LENOVO\\Desktop\\Proyecto_SIMPCA_1\\web\\ImagenesR\\logof.png");
-                        imagenes.setAlignment(Element.ALIGN_RIGHT);
-                        imagenes.scaleToFit(200, 200);
-                        documento.add(imagenes);
-                       
-
                         
+                        
+                        Image imagenes = Image.getInstance("C:\\Users\\USUARIO\\Desktop\\simpca\\SIMPCA Coagronorte\\web\\ImagenesR\\coagronorte-slogan.png");
+                        imagenes.setAlignment(Element.ALIGN_RIGHT);
+                        imagenes.scaleToFit(120, 120);
+                        documento.add(imagenes);
+
                         //documento.add(imagenes);
                         Paragraph par21 = new Paragraph();
                         Font fontDescrip = new Font(Font.FontFamily.TIMES_ROMAN, 20, Font.ITALIC, BaseColor.BLACK);
@@ -110,16 +109,16 @@ public class ReporteCortaBultos extends HttpServlet {
                         par21.setAlignment(Element.ALIGN_CENTER);
                         par21.add(new Phrase(Chunk.NEWLINE));
                         documento.add(par21);
-                        
-                         String nombre= null;
-                        String Apellido= null;
-                        String cedula= null;
+
+                        String nombre = null;
+                        String Apellido = null;
+                        String cedula = null;
                         while (rs.next()) {
-                            nombre =(rs.getString("nombre"));
-                            cedula =(rs.getString("cedula"));
-                            Apellido=(rs.getString("apellido"));
+                            nombre = (rs.getString("nombre"));
+                            cedula = (rs.getString("cedula"));
+                            Apellido = (rs.getString("apellido"));
                         }
-                        
+
                         Paragraph par2 = new Paragraph();
                         Font fontfecha = new Font(Font.FontFamily.TIMES_ROMAN, 13, Font.NORMAL, BaseColor.BLACK);
                         Date date = new Date();
@@ -128,17 +127,17 @@ public class ReporteCortaBultos extends HttpServlet {
                         //par2.add(new Paragraph(new Date().toString()));
                         par2.setAlignment(Element.ALIGN_RIGHT);;
                         documento.add(par2);
-                        
+
                         Paragraph par7 = new Paragraph();
-                        Font fontUsuario = new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL, BaseColor.DARK_GRAY);
-                        par7.add(new Phrase("Nombre:   " +nombre +"  " +Apellido , fontUsuario));
-                        par7.add(new Phrase("\nc.c:   " +cedula , fontUsuario));
+                        Font fontUsuario = new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL, BaseColor.BLACK);
+                        par7.add(new Phrase("Nombre:   " + nombre + "  " + Apellido, fontUsuario));
+                        par7.add(new Phrase("\nc.c:   " + cedula, fontUsuario));
                         par7.setAlignment(Element.ALIGN_LEFT);
                         par7.add(new Phrase(Chunk.NEWLINE));
                         documento.add(par7);
 
                         Paragraph par3 = new Paragraph();
-                        Font fontDescri = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.NORMAL, BaseColor.DARK_GRAY);
+                        Font fontDescri = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.NORMAL, BaseColor.BLACK);
                         par3.add(new Phrase("Numero Lote:\n " + num_lote, fontDescri));
                         par3.setAlignment(Element.ALIGN_CENTER);
                         par3.add(new Phrase(Chunk.NEWLINE));
@@ -149,9 +148,9 @@ public class ReporteCortaBultos extends HttpServlet {
                     }
 
                     try {
-                        
+
                         Paragraph par1 = new Paragraph();
-                        Font fonttitulo = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.ORANGE);
+                        Font fonttitulo = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.BLACK);
                         par1.add(new Phrase(Chunk.NEWLINE));
                         par1.add(new Phrase(Chunk.NEWLINE));
                         par1.add(new Phrase(Chunk.NEWLINE));
@@ -160,9 +159,9 @@ public class ReporteCortaBultos extends HttpServlet {
                         par1.add(new Phrase(Chunk.NEWLINE));
 
                         documento.add(par1);
-                        
+
                         Paragraph par2 = new Paragraph();
-                        Font fonttitulo2 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.ORANGE);
+                        Font fonttitulo2 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.BLACK);
                         par2.add(new Phrase(Chunk.NEWLINE));
                         par2.add(new Phrase(Chunk.NEWLINE));
                         par2.add(new Phrase(Chunk.NEWLINE));
@@ -196,7 +195,7 @@ public class ReporteCortaBultos extends HttpServlet {
                         tabla.addCell(celda5);
                         tabla.addCell(celda6);
                         tabla.addCell(celda7);
-                        
+
                         while (rs2.next()) {
 
                             tabla.addCell(rs2.getString("fecha_crb"));
@@ -206,23 +205,22 @@ public class ReporteCortaBultos extends HttpServlet {
                             tabla.addCell(rs2.getString("cantidad_mq_oruga_crb"));
                             tabla.addCell(rs2.getString("valor_mq_oruga_crb"));
                             tabla.addCell(rs2.getString("valor_total_mq_oruga_crb"));
-                            
+
                         }
                         documento.add(tabla);
-                        
-                       
+
                         Paragraph par4 = new Paragraph();
-                        
+
                         par4.add(new Phrase(Chunk.NEWLINE));
                         par4.add(new Phrase(Chunk.NEWLINE));
                         par4.add(new Phrase(Chunk.NEWLINE));
-                        Font fontFooter2 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.ORANGE);
+                        Font fontFooter2 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.BLACK);
                         par4.add(new Phrase("REPORTE COSTOS DE LLENADOR, TRACTOR Y BULTEADOR", fontFooter2));
                         par4.setAlignment(Element.ALIGN_CENTER);
                         par4.add(new Phrase(Chunk.NEWLINE));
                         par4.add(new Phrase(Chunk.NEWLINE));
                         documento.add(par4);
-                       
+
                         PdfPTable tabla2 = new PdfPTable(9);
                         FontFactory.registerDirectories();
                         PdfPCell celda10 = new PdfPCell(new Paragraph("Cantidad (Llenador)", FontFactory.getFont("Times New Roman", 12, Font.BOLD,
@@ -262,8 +260,8 @@ public class ReporteCortaBultos extends HttpServlet {
                         tabla2.addCell(celda70);
                         tabla2.addCell(celda80);
                         tabla2.addCell(celda90);
-                        
-                        while(rs3.next()){
+
+                        while (rs3.next()) {
                             tabla2.addCell(rs3.getString("cantidad_llenador_crb"));
                             tabla2.addCell(rs3.getString("valor_llenador_crb"));
                             tabla2.addCell(rs3.getString("valor_total_llenador_crb"));
@@ -276,19 +274,19 @@ public class ReporteCortaBultos extends HttpServlet {
                         }
 
                         documento.add(tabla2);
-                        
+
                         Paragraph par8 = new Paragraph();
-                        
+
                         par8.add(new Phrase(Chunk.NEWLINE));
                         par8.add(new Phrase(Chunk.NEWLINE));
                         par8.add(new Phrase(Chunk.NEWLINE));
-                        Font fontFooter4 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.ORANGE);
+                        Font fontFooter4 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.BLACK);
                         par8.add(new Phrase("REPORTE COSTOS DE FLETE", fontFooter4));
                         par8.setAlignment(Element.ALIGN_CENTER);
                         par8.add(new Phrase(Chunk.NEWLINE));
                         par8.add(new Phrase(Chunk.NEWLINE));
                         documento.add(par8);
-                       
+
                         PdfPTable tabla3 = new PdfPTable(3);
                         FontFactory.registerDirectories();
                         PdfPCell celda100 = new PdfPCell(new Paragraph("Cantidad (Flete)", FontFactory.getFont("Times New Roman", 12, Font.BOLD,
@@ -304,27 +302,27 @@ public class ReporteCortaBultos extends HttpServlet {
                         tabla3.addCell(celda100);
                         tabla3.addCell(celda110);
                         tabla3.addCell(celda120);
-                        
-                        while(rs4.next()){
+
+                        while (rs4.next()) {
                             tabla3.addCell(rs4.getString("cantidad_flete_crb"));
                             tabla3.addCell(rs4.getString("valor_flete_crb"));
                             tabla3.addCell(rs4.getString("valor_total_flete_crb"));
                         }
 
                         documento.add(tabla3);
-                        
+
                         Paragraph par9 = new Paragraph();
-                        
+
                         par9.add(new Phrase(Chunk.NEWLINE));
                         par9.add(new Phrase(Chunk.NEWLINE));
                         par9.add(new Phrase(Chunk.NEWLINE));
-                        Font fontFooter5 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.ORANGE);
+                        Font fontFooter5 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.BLACK);
                         par9.add(new Phrase("REPORTE COSTOS ADICIONALES", fontFooter5));
                         par9.setAlignment(Element.ALIGN_CENTER);
                         par9.add(new Phrase(Chunk.NEWLINE));
                         par9.add(new Phrase(Chunk.NEWLINE));
                         documento.add(par9);
-                        
+
                         PdfPTable tabla4 = new PdfPTable(6);
                         FontFactory.registerDirectories();
                         PdfPCell celda130 = new PdfPCell(new Paragraph("Valor Cabuya O Nylon", FontFactory.getFont("Times New Roman", 12, Font.BOLD,
@@ -352,8 +350,8 @@ public class ReporteCortaBultos extends HttpServlet {
                         tabla4.addCell(celda160);
                         tabla4.addCell(celda170);
                         tabla4.addCell(celda180);
-                        
-                        while(rs5.next()){
+
+                        while (rs5.next()) {
                             tabla4.addCell(rs5.getString("valor_cabuya_nylon_crb"));
                             tabla4.addCell(rs5.getString("valor_celaduria_maquina_crb"));
                             tabla4.addCell(rs5.getString("valor_alimentacion_crb"));
@@ -367,10 +365,9 @@ public class ReporteCortaBultos extends HttpServlet {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    
-                    
+
                     documento.close();
-                
+
                 }
             } catch (Exception e) {
                 e.getMessage();
@@ -380,7 +377,6 @@ public class ReporteCortaBultos extends HttpServlet {
             out.close();
         }
     }
-   
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

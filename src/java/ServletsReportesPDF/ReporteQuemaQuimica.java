@@ -70,7 +70,7 @@ public class ReporteQuemaQuimica extends HttpServlet {
                 ResultSet rs2 = null;
                 ResultSet rs3 = null;
                 Class.forName("com.mysql.jdbc.Driver");
-                con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto", "root", "");
+                con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/simpca", "root", "9510");
 
                 st = (Statement) con.createStatement();
                 st2 = (Statement) con.createStatement();
@@ -88,9 +88,9 @@ public class ReporteQuemaQuimica extends HttpServlet {
                     
                     try {
 
-                        Image imagenes = Image.getInstance("C:\\Users\\LENOVO\\Desktop\\Proyecto_SIMPCA_1\\web\\ImagenesR\\logof.png");
+                        Image imagenes = Image.getInstance("C:\\Users\\USUARIO\\Desktop\\simpca\\SIMPCA Coagronorte\\web\\ImagenesR\\coagronorte-slogan.png");
                         imagenes.setAlignment(Element.ALIGN_RIGHT);
-                        imagenes.scaleToFit(200, 200);
+                        imagenes.scaleToFit(120, 120);
                         documento.add(imagenes);
                        
 
@@ -122,7 +122,7 @@ public class ReporteQuemaQuimica extends HttpServlet {
                         documento.add(par2);
                         
                         Paragraph par7 = new Paragraph();
-                        Font fontUsuario = new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL, BaseColor.DARK_GRAY);
+                        Font fontUsuario = new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL, BaseColor.BLACK);
                         par7.add(new Phrase("Nombre:   " +nombre +"  " +Apellido , fontUsuario));
                         par7.add(new Phrase("\nc.c:   " +cedula , fontUsuario));
                         par7.setAlignment(Element.ALIGN_LEFT);
@@ -130,7 +130,7 @@ public class ReporteQuemaQuimica extends HttpServlet {
                         documento.add(par7);
 
                         Paragraph par3 = new Paragraph();
-                        Font fontDescri = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.NORMAL, BaseColor.DARK_GRAY);
+                        Font fontDescri = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.NORMAL, BaseColor.BLACK);
                         par3.add(new Phrase("Numero Lote:\n " + num_lote, fontDescri));
                         par3.setAlignment(Element.ALIGN_CENTER);
                         par3.add(new Phrase(Chunk.NEWLINE));
@@ -169,11 +169,11 @@ public class ReporteQuemaQuimica extends HttpServlet {
                         PdfPCell celda5 = new PdfPCell(new Paragraph("Valor Total", FontFactory.getFont("Times New Roman", 12, Font.BOLD,
                                 BaseColor.BLACK)));
                         celda5.setHorizontalAlignment(Element.ALIGN_CENTER);
-                        celda1.setBackgroundColor(BaseColor.LIGHT_GRAY);
-                        celda2.setBackgroundColor(BaseColor.LIGHT_GRAY);
-                        celda3.setBackgroundColor(BaseColor.LIGHT_GRAY);
-                        celda4.setBackgroundColor(BaseColor.LIGHT_GRAY);
-                        celda5.setBackgroundColor(BaseColor.LIGHT_GRAY);
+                        celda1.setBackgroundColor(BaseColor.WHITE);
+                        celda2.setBackgroundColor(BaseColor.WHITE);
+                        celda3.setBackgroundColor(BaseColor.WHITE);
+                        celda4.setBackgroundColor(BaseColor.WHITE);
+                        celda5.setBackgroundColor(BaseColor.WHITE);
                         tabla.addCell(celda1); 
                         tabla.addCell(celda2);
                         tabla.addCell(celda3);
@@ -222,12 +222,12 @@ public class ReporteQuemaQuimica extends HttpServlet {
                         PdfPCell celda60 = new PdfPCell(new Paragraph("Valor Total", FontFactory.getFont("Times New Roman", 12, Font.BOLD,
                                 BaseColor.BLACK)));
                         celda60.setHorizontalAlignment(Element.ALIGN_CENTER);
-                        celda10.setBackgroundColor(BaseColor.LIGHT_GRAY);
-                        celda20.setBackgroundColor(BaseColor.LIGHT_GRAY);
-                        celda30.setBackgroundColor(BaseColor.LIGHT_GRAY);
-                        celda40.setBackgroundColor(BaseColor.LIGHT_GRAY);
-                        celda50.setBackgroundColor(BaseColor.LIGHT_GRAY);
-                        celda60.setBackgroundColor(BaseColor.LIGHT_GRAY);
+                        celda10.setBackgroundColor(BaseColor.WHITE);
+                        celda20.setBackgroundColor(BaseColor.WHITE);
+                        celda30.setBackgroundColor(BaseColor.WHITE);
+                        celda40.setBackgroundColor(BaseColor.WHITE);
+                        celda50.setBackgroundColor(BaseColor.WHITE);
+                        celda60.setBackgroundColor(BaseColor.WHITE);
 
                         tabla2.addCell(celda10);
                         tabla2.addCell(celda20);

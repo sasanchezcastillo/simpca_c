@@ -5,6 +5,7 @@
  */
 package ServletsReportesPDF;
 
+import Controladores.ConexionBD;
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
@@ -62,7 +63,6 @@ public class ReporteAbonadas extends HttpServlet {
         try {
             try {
 
-                Connection con = null;
                 Statement st = null;
                 Statement st2 = null;
                 Statement st3 = null;
@@ -73,8 +73,8 @@ public class ReporteAbonadas extends HttpServlet {
                 ResultSet rs3 = null;
                 ResultSet rs4 = null;
                 ResultSet rs5 = null;
-                Class.forName("com.mysql.jdbc.Driver");
-                con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto", "root", "");
+                java.sql.Connection con = new ConexionBD().ConexionBD2();
+                
 
                 st = (Statement) con.createStatement();
                 st2 = (Statement) con.createStatement();
@@ -96,9 +96,9 @@ public class ReporteAbonadas extends HttpServlet {
                     
                     try {
 
-                        Image imagenes = Image.getInstance("C:\\Users\\LENOVO\\Desktop\\Proyecto_SIMPCA_1\\web\\ImagenesR\\logof.png");
+                        Image imagenes = Image.getInstance("C:\\Users\\USUARIO\\Desktop\\simpca\\SIMPCA Coagronorte\\web\\ImagenesR\\coagronorte-slogan.png");
                         imagenes.setAlignment(Element.ALIGN_RIGHT);
-                        imagenes.scaleToFit(200, 200);
+                        imagenes.scaleToFit(120, 120);
                         documento.add(imagenes);
                        
 
@@ -130,7 +130,7 @@ public class ReporteAbonadas extends HttpServlet {
                         documento.add(par2);
                         
                         Paragraph par7 = new Paragraph();
-                        Font fontUsuario = new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL, BaseColor.DARK_GRAY);
+                        Font fontUsuario = new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL, BaseColor.BLACK);
                         par7.add(new Phrase("Nombre:   " +nombre +"  " +Apellido , fontUsuario));
                         par7.add(new Phrase("\nc.c:   " +cedula , fontUsuario));
                         par7.setAlignment(Element.ALIGN_LEFT);
@@ -138,7 +138,7 @@ public class ReporteAbonadas extends HttpServlet {
                         documento.add(par7);
 
                         Paragraph par3 = new Paragraph();
-                        Font fontDescri = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.NORMAL, BaseColor.DARK_GRAY);
+                        Font fontDescri = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.NORMAL, BaseColor.BLACK);
                         par3.add(new Phrase("Numero Lote:\n " + num_lote, fontDescri));
                         par3.setAlignment(Element.ALIGN_CENTER);
                         par3.add(new Phrase(Chunk.NEWLINE));
@@ -205,7 +205,7 @@ public class ReporteAbonadas extends HttpServlet {
                         par4.add(new Phrase(Chunk.NEWLINE));
                         par4.add(new Phrase(Chunk.NEWLINE));
                         par4.add(new Phrase(Chunk.NEWLINE));
-                        Font fontFooter2 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.ORANGE);
+                        Font fontFooter2 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.BLACK);
                         par4.add(new Phrase("REPORTE MANO DE OBRA ABONADAS", fontFooter2));
                         par4.setAlignment(Element.ALIGN_CENTER);
                         par4.add(new Phrase(Chunk.NEWLINE));
@@ -246,7 +246,7 @@ public class ReporteAbonadas extends HttpServlet {
                         par11.add(new Phrase(Chunk.NEWLINE));
                         par11.add(new Phrase(Chunk.NEWLINE));
                         par11.add(new Phrase(Chunk.NEWLINE));
-                        Font fontFooter3 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.ORANGE);
+                        Font fontFooter3 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.BLACK);
                         par11.add(new Phrase("OTROS", fontFooter3));
                         par11.setAlignment(Element.ALIGN_CENTER);
                         par11.add(new Phrase(Chunk.NEWLINE));
@@ -292,7 +292,7 @@ public class ReporteAbonadas extends HttpServlet {
                         par7.add(new Phrase(Chunk.NEWLINE));
                         par7.add(new Phrase(Chunk.NEWLINE));
                         par7.add(new Phrase(Chunk.NEWLINE));
-                        Font fontFooter4 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.ORANGE);
+                        Font fontFooter4 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.BLACK);
                         par7.add(new Phrase("REPORTE INSUMOS ABONADAS", fontFooter4));
                         par7.setAlignment(Element.ALIGN_CENTER);
                         par7.add(new Phrase(Chunk.NEWLINE));

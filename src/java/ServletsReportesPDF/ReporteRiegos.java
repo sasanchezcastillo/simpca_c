@@ -72,7 +72,7 @@ public class ReporteRiegos extends HttpServlet {
                 ResultSet rs3 = null;
                 ResultSet rs4 = null;
                 Class.forName("com.mysql.jdbc.Driver");
-                con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto", "root", "");
+                con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/simpca", "root", "9510");
 
                 st = (Statement) con.createStatement();
                 st2 = (Statement) con.createStatement();
@@ -92,7 +92,7 @@ public class ReporteRiegos extends HttpServlet {
                     
                     try {
 
-                        Image imagenes = Image.getInstance("C:\\Users\\LENOVO\\Desktop\\Proyecto_SIMPCA_1\\web\\ImagenesR\\logof.png");
+                        Image imagenes = Image.getInstance("C:\\Users\\USUARIO\\Desktop\\simpca\\SIMPCA Coagronorte\\web\\ImagenesR\\coagronorte-slogan.png");
                         imagenes.setAlignment(Element.ALIGN_RIGHT);
                         imagenes.scaleToFit(200, 200);
                         documento.add(imagenes);
@@ -126,7 +126,7 @@ public class ReporteRiegos extends HttpServlet {
                         documento.add(par2);
                         
                         Paragraph par7 = new Paragraph();
-                        Font fontUsuario = new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL, BaseColor.DARK_GRAY);
+                        Font fontUsuario = new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL, BaseColor.BLACK);
                         par7.add(new Phrase("Nombre:   " +nombre +"  " +Apellido , fontUsuario));
                         par7.add(new Phrase("\nc.c:   " +cedula , fontUsuario));
                         par7.setAlignment(Element.ALIGN_LEFT);
@@ -134,7 +134,7 @@ public class ReporteRiegos extends HttpServlet {
                         documento.add(par7);
 
                         Paragraph par3 = new Paragraph();
-                        Font fontDescri = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.NORMAL, BaseColor.DARK_GRAY);
+                        Font fontDescri = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.NORMAL, BaseColor.BLACK);
                         par3.add(new Phrase("Numero Lote:\n " + num_lote, fontDescri));
                         par3.setAlignment(Element.ALIGN_CENTER);
                         par3.add(new Phrase(Chunk.NEWLINE));
@@ -147,7 +147,7 @@ public class ReporteRiegos extends HttpServlet {
                     try {
                         
                         Paragraph par1 = new Paragraph();
-                        Font fonttitulo = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.ORANGE);
+                        Font fonttitulo = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.BLACK);
                         par1.add(new Phrase(Chunk.NEWLINE));
                         par1.add(new Phrase(Chunk.NEWLINE));
                         par1.add(new Phrase(Chunk.NEWLINE));
@@ -193,7 +193,7 @@ public class ReporteRiegos extends HttpServlet {
                         par4.add(new Phrase(Chunk.NEWLINE));
                         par4.add(new Phrase(Chunk.NEWLINE));
                         par4.add(new Phrase(Chunk.NEWLINE));
-                        Font fontFooter2 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.ORANGE);
+                        Font fontFooter2 = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.BLACK);
                         par4.add(new Phrase("REPORTE INSUMOS RIEGO", fontFooter2));
                         par4.setAlignment(Element.ALIGN_CENTER);
                         par4.add(new Phrase(Chunk.NEWLINE));

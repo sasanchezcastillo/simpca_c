@@ -22,6 +22,7 @@ import Modelos.SiembraManual;
 import Modelos.SiembraMecanizada;
 import Modelos.TotalAbonada;
 import Modelos.Total_Corta_maleza;
+import Modelos.asistencia;
 import Modelos.consulta_todo;
 import Modelos.ganancias;
 import Modelos.gasto_insumos;
@@ -78,6 +79,7 @@ public class Conexion {
         } catch (ClassNotFoundException ex) {
             ex.printStackTrace();
         }
+        
 
     }
 
@@ -852,4 +854,20 @@ public class Conexion {
         }
         return lista;
     }
+      public ArrayList<asistencia> getValor_asistencia(String num_lote) {
+
+        lista = new ArrayList<>();
+        String sql = "select ifnull(asistencia('" + num_lote + "'),0) as total";
+        try {
+            resultado = Consultar(sql);
+            while (resultado.next()) {
+                lista.add(new asistencia(resultado.getString("total")));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return lista;
+    }
+    
+    
 }
