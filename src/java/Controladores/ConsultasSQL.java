@@ -1424,9 +1424,36 @@ public boolean registrarGravedad ( String fecha, String tipo_riego, String lote,
     return  false;
     }
     
+     public boolean Registrarparafiscales( String num_lote,String fomento_arrocero ,String bolsa_retencion,  String asistensia_tecnica ,  String intereses ){
+        PreparedStatement pst = null;
+        try {
+            String consultas = "insert into parafiscales (num_lote , fomento_arrocero , bolsa_retencion,asistencia_tecnica,intereses) values(?,?,?,?,?)";
+            pst = getConnection().prepareStatement(consultas);
+            pst.setString(1,num_lote);
+            pst.setString(2,fomento_arrocero);
+            pst.setString(3,bolsa_retencion);
+            pst.setString(4,asistensia_tecnica);
+            pst.setString(5,intereses);
+            
+            if (pst.executeUpdate() == 1) {
+                return true;
+            }
+        } catch (Exception ex) {
+            System.out.println("ERROR"+ ex);
+        }finally{
+            try {
+                if (pst != null)pst.close(); 
+                    
+                } catch (Exception e) {
+                    System.out.println("ERROR" + e);
+            }
+        }
+    return  false;
+    }
+    
     /*public static void main(String[] args) {
         ConsultasSQL co = new ConsultasSQL();
-        System.out.println(co.RegistrarInsumos("dolor", "herbicidas"));
+        System.out.println(co.Registrarparafiscales("aof09e", "1000", "5666", "7888", "89999", "988", "9888"));
  
     }*/
     

@@ -33,6 +33,12 @@ public class RegistrarLiquidacion extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        System.out.println("iniciando el servlet");
+        
+        String bolsa_retencion = request.getParameter("bolsa_retencion").replace(".","");
+        String fomento_arrocero = request.getParameter("fomento_arrocero").replace(".","");
+        String asistencia_tecnica = request.getParameter("asistencia_tecnica").replace(".","");
+        String intereses = request.getParameter("intereses").replace(".","");
         
         String[] fecha = request.getParameterValues("fecha");
         String[] tiquete = request.getParameterValues("tiquete");
@@ -51,7 +57,10 @@ public class RegistrarLiquidacion extends HttpServlet {
         String totalvalorUnitario = request.getParameter("totalvalorUnitario").replace(".", "");
         String totalvalorTotal = request.getParameter("totalvalorTotal").replace(".", "");
         
+      
        
+   
+        
         ConsultasSQL co = new ConsultasSQL();
         boolean resultado = false;
         System.out.println("imprimio1");
@@ -62,11 +71,19 @@ public class RegistrarLiquidacion extends HttpServlet {
                 for(int i=0 ; i < fecha.length; i++ ){
                     System.out.println("imprimio4");
                     if(co.liquidacion(tiquete[i], numLote, fecha[i], pesoNeto[i],pesoFinal[i].replace(".", ""), bultos[i],  f24[i], f4[i], kilosVerde[i], valorUnitario[i].replace(".", ""), valorTotal[i].replace(".", ""),totalvalorTotal,totalpesoFinal,totalkilosVerde,totalvalorUnitario)){
-                        resultado = true;
+                        if(co.Registrarparafiscales(numLote, fomento_arrocero, bolsa_retencion, asistencia_tecnica, intereses)){
+                           resultado = true; 
+                        }else{
+                            System.out.println("2 if");
+                        }
+                        resultado=true;
+                    }else{
+                        System.out.println("1 if");
                     }
-                
             }
+                
            } catch (SQLException se) {
+               System.out.println("este es el caaaatch"+se);
             se.printStackTrace();
 
         }finally{

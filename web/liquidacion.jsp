@@ -126,29 +126,22 @@
                                 <option id="retencion" value="retencion">Retencion Fuente</option>
                             </select>
                         </td>
-                        <td><input type="text" class="textbox" id="option" name="select" readonly=""></td>
-                        <td><input type="text" class="textbox" id="fomento-arrocero" name="retencion_fuente" readonly=""></td>
+                        <td><input type="text" class="textbox" id="option" name="bolsa_retencion" onkeyup="format(this);" onchange="format(this)" readonly=""></td>
+                        <td><input type="text" class="textbox" id="fomento-arrocero" onkeyup="format(this);" onchange="format(this)" name="fomento_arrocero" readonly=""></td>
                         <% 
                try
                {
-                   
-                   
                    Connection conexion = new ConexionBD().ConexionBD2();
                    if(!conexion.isClosed())
                    {
                        Statement st = conexion.createStatement();
                        ResultSet rs = st.executeQuery("select asistencia('" +lote+" ')as total");
                        
-                         
                          System.err.println("pase"); 
                    while(rs.next())
                    {
-                         
-                        out.println("<td><input type='text' class='textbox' id='asistencia-tecnica' name='asistencia_tecnica' readonly= ''value="+rs.getObject("total")+"></td>");
-                         
-                          
+                        out.println("<td><input type='text' class='textbox' id='asistencia-tecnica' onkeyup='format(this);'onchange='format(this)'name='asistencia_tecnica' readonly= '' value="+rs.getObject("total")+"></td>");
                    }
-                  
                    conexion.close();
                    System.err.println("eroorrrrrrrrrrrrrrr"+rs.next());                   
                    }
@@ -157,12 +150,10 @@
                }
                catch(Exception e )
                {
-                   
                    e.printStackTrace();
                }
          %>
-                        <td><input type="text" class="textbox" id="intereses" name="intereses" readonly="" value="0"></td>
-                        
+             <td><input type="text" class="textbox" id="intereses" onkeyup="format(this);" onchange="format(this)" name="intereses"  value=""></td>
                 </table>
             </div>
             <div class="cont-inputsL" style="margin-top: -10px;">
