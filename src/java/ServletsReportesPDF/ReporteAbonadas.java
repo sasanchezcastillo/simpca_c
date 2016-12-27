@@ -151,7 +151,7 @@ public class ReporteAbonadas extends HttpServlet {
                     try {
                         
                         Paragraph par1 = new Paragraph();
-                        Font fonttitulo = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.ORANGE);
+                        Font fonttitulo = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD, BaseColor.BLACK);
                         par1.add(new Phrase(Chunk.NEWLINE));
                         par1.add(new Phrase(Chunk.NEWLINE));
                         par1.add(new Phrase(Chunk.NEWLINE));
