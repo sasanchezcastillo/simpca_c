@@ -6,7 +6,7 @@
 
     function miles(id) {
     var nStr = document.getElementById(id).value;
-    
+
     nStr += '';
     x = nStr.split('.');
     x1 = x[0];
@@ -17,6 +17,3 @@
     }
     document.getElementById(id).value = (x1 + x2);
     }
-    
-    
-    

@@ -127,7 +127,7 @@
                             </select>
                         </td>
                         <td><input type="text" class="textbox" id="option" name="bolsa_retencion" onkeyup="format(this);" onchange="format(this)" readonly=""></td>
-                        <td><input type="text" class="textbox" id="fomento-arrocero" onkeyup="format(this);" onchange="format(this)" name="fomento_arrocero" readonly=""></td>
+                        <td><input type="text" class="textbox" id="fomento-arrocero" onkeyup="format(this);" readonly="" onchange="format(this)" name="fomento_arrocero" readonly=""></td>
                         <% 
                try
                {
@@ -143,7 +143,7 @@
                         out.println("<td><input type='text' class='textbox' id='asistencia-tecnica' onkeyup='format(this);'onchange='format(this)'name='asistencia_tecnica' readonly= '' value="+rs.getObject("total")+"></td>");
                    }
                    conexion.close();
-                   System.err.println("eroorrrrrrrrrrrrrrr"+rs.next());                   
+                                     
                    }
                    else 
                        out.println("fallo");
@@ -164,7 +164,6 @@
         </div>
     </form> 
             <script>
-                
                 miles('totalvalorTotal');
                 miles('asistencia-tecnica');
             </script>

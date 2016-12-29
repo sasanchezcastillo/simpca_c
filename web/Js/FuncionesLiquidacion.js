@@ -54,7 +54,7 @@ var kilo = 0;
                     '<td><input type="text" class="textbox" name="f24" id="fertilizante_a' + i + '"/></td>' +
                     '<td><input type="text" class="textbox" name="f4" id="fertilizante_b' + i + '"/></td>' +
                     '<td><input type="text" class="textbox" name="kilosVerde" id="kilosVerde' + i + '"/></td>' +
-                    '<td><input type="text" class="textbox" name="valorUnitario" id="valorUnitario' + i + '" onkeyup="liquidacion(this,' + i + '); format(this,' + i + '); " onchange="format(this,' + i + ');miles()"/></td>' +
+                    '<td><input type="text" class="textbox" name="valorUnitario" id="valorUnitario' + i + '" onkeyup="liquidacion(this,' + i + '); format(this,' + i + '); " onchange="format(this,' + i + ')"/></td>' +
                     '<td><input type="text" class="textbox" style="background-color:#CCC; width: 120px;" name="valorTotal" id="valorTotal' + i +'" onkeyup="format(this,' + i + '); " onchange="format(this,' + i + ')"/></td>' +
                     '</tr>';
             $("#cuerpoTabla").append(fila_nueva);  

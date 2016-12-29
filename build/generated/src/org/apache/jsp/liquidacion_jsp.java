@@ -3,7 +3,13 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import Controladores.ConexionBD;
+import Controladores.Conexion;
 import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public final class liquidacion_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -46,6 +52,13 @@ public final class liquidacion_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write(" \r\n");
+      out.write(" \r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
       out.write("    \r\n");
@@ -70,6 +83,7 @@ public final class liquidacion_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link href=\"css/general_simpca.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("        <script src=\"Js/FuncionesLiquidacion.js\" type=\"text/javascript\"></script>\r\n");
       out.write("        <script src=\"Js/jquery.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("        <script src=\"Js/Consultas.js\" type=\"text/javascript\"></script>\r\n");
       out.write("        <title>Liquidación</title>\r\n");
       out.write("    </head>\r\n");
       out.write("<body class=\"fondo\">\r\n");
@@ -98,7 +112,7 @@ public final class liquidacion_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("       <img src=\"ImagenesR/corta-1.png\" style=\"width: 100%; height: 400px; position: absolute\">\r\n");
       out.write("       \r\n");
       out.write("       <form action=\"Liquidacion\" id=\"Liquidacion\" method=\"post\">\r\n");
-      out.write("         \r\n");
+      out.write("          \r\n");
       out.write("        <div id=\"contenedor\" align=\"center\">\r\n");
       out.write("            <h3 style=\"font-size: 22px; font-family: Times New Roman; margin-left: 800px; margin-top: 35px;\">Lote: <input type=\"text\" id=\"lote\" name=\"num_lote\" style=\"font-size: 20px; font-family: Times New Roman; width:50px; height: 30px; background: none; border:none\" value=\"");
       out.print(lote);
@@ -113,6 +127,7 @@ public final class liquidacion_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div id=\"contenedor2\" align=\"center\">\r\n");
       out.write("                    <table align=\"center\" border=\"0\" style=\"margin-top: -210px; font-style: normal; font-size: 20px;\">\r\n");
       out.write("                        <thead>\r\n");
+      out.write("                             \r\n");
       out.write("                        <td align=\"center\"><b>Fecha</b></td>\r\n");
       out.write("                                <td align=\"center\"><b>Tiquete</b></td>\r\n");
       out.write("                                <td align=\"center\"><b>Peso Neto</b></td>\r\n");
@@ -132,7 +147,7 @@ public final class liquidacion_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                    <td><input type=\"text\" class=\"textbox\" name=\"f24\" id=\"fertilizante_a0\" ></td>\r\n");
       out.write("                                    <td><input type=\"text\" class=\"textbox\" name=\"f4\" id=\"fertilizante_b0\"></td>\r\n");
       out.write("                                    <td><input type=\"text\" class=\"textbox\" name=\"kilosVerde\" id=\"kilosVerde0\"></td>\r\n");
-      out.write("                                    <td><input type=\"text\" class=\"textbox\" name=\"valorUnitario\" id=\"valorUnitario0\" onkeyup=\"liquidacion(this, 0); format(this, 0);\" onchange=\"format(this, 0)\" /></td>\r\n");
+      out.write("                                    <td><input type=\"text\" class=\"textbox\" name=\"valorUnitario\" id=\"valorUnitario0\" onkeyup=\"liquidacion(this, 0); format(this, 0);\" onchange=\"format(this, 0); miles('totalvalorTotal');\" /></td>\r\n");
       out.write("                                    <td><input type=\"text\" class=\"textbox\" style=\"background-color:#CCC; width: 120px;\" name=\"valorTotal\" id=\"valorTotal0\" readonly=\"readonly\" onkeyup=\"format(this, 0);\" onchange=\"format(this, 0)\" /></td>\r\n");
       out.write("                            </tbody>\r\n");
       out.write("                    </table>\r\n");
@@ -143,7 +158,7 @@ public final class liquidacion_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <td height=\"15%\" width=\"90px\" colspan=\"2\"></td>\r\n");
       out.write("                                <td align=\"center\" width=\"86px\"><input type=\"text\" class=\"textbox\" style=\"background-color:#CCC; width: 110px;\" name=\"totalkilosVerde\" id=\"TotalkilosVerde\" readonly=\"readonly\"></td>\r\n");
       out.write("                                <td align=\"center\" width=\"86px\"><input type=\"text\" class=\"textbox\" style=\"background-color:#CCC; width: 100px;\" name=\"totalvalorUnitario\" readonly=\"readonly\" id=\"totalvalorUnitario\" onkeyup=\"format(this);\" onchange=\"format(this)\" /></td>\r\n");
-      out.write("                                <td align=\"center\" width=\"50px\"><input type=\"text\" class=\"textbox\" style=\"background-color:#CCC; width: 120px;\" name=\"totalvalorTotal\" readonly=\"readonly\" id=\"totalvalorTotal\" onkeyup=\"parafiscales(); format(this)\" onchange=\"format(this); \" /></td>\r\n");
+      out.write("                                <td align=\"center\" width=\"50px\"><input type=\"text\" class=\"textbox\" style=\"background-color:#CCC; width: 120px;\" name=\"totalvalorTotal\" readonly=\"readonly\" id=\"totalvalorTotal\" onkeyup=\"parafiscales(); format(this);\" onchange=\"format(this); \" /></td>\r\n");
       out.write("                        </table>\r\n");
       out.write("                    </div>\r\n");
       out.write("                    </div>\r\n");
@@ -165,11 +180,36 @@ public final class liquidacion_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <option id=\"retencion\" value=\"retencion\">Retencion Fuente</option>\r\n");
       out.write("                            </select>\r\n");
       out.write("                        </td>\r\n");
-      out.write("                        <td><input type=\"text\" class=\"textbox\" id=\"option\" name=\"select\" readonly=\"\"></td>\r\n");
-      out.write("                        <td><input type=\"text\" class=\"textbox\" id=\"fomento-arrocero\" name=\"retencion_fuente\" readonly=\"\"></td>\r\n");
-      out.write("                        <td><input type=\"text\" class=\"textbox\" id=\"asistencia-tecnica\" name=\"asistencia_tecnica\" readonly=\"\" value=\"0\"></td>\r\n");
-      out.write("                        <td><input type=\"text\" class=\"textbox\" id=\"intereses\" name=\"intereses\" readonly=\"\" value=\"0\"></td>\r\n");
-      out.write("                        \r\n");
+      out.write("                        <td><input type=\"text\" class=\"textbox\" id=\"option\" name=\"bolsa_retencion\" onkeyup=\"format(this);\" onchange=\"format(this)\" readonly=\"\"></td>\r\n");
+      out.write("                        <td><input type=\"text\" class=\"textbox\" id=\"fomento-arrocero\" onkeyup=\"format(this);\" onchange=\"format(this)\" name=\"fomento_arrocero\" readonly=\"\"></td>\r\n");
+      out.write("                        ");
+ 
+               try
+               {
+                   Connection conexion = new ConexionBD().ConexionBD2();
+                   if(!conexion.isClosed())
+                   {
+                       Statement st = conexion.createStatement();
+                       ResultSet rs = st.executeQuery("select asistencia('" +lote+" ')as total");
+                       
+                         System.err.println("pase"); 
+                   while(rs.next())
+                   {
+                        out.println("<td><input type='text' class='textbox' id='asistencia-tecnica' onkeyup='format(this);'onchange='format(this)'name='asistencia_tecnica' readonly= '' value="+rs.getObject("total")+"></td>");
+                   }
+                   conexion.close();
+                   System.err.println("eroorrrrrrrrrrrrrrr"+rs.next());                   
+                   }
+                   else 
+                       out.println("fallo");
+               }
+               catch(Exception e )
+               {
+                   e.printStackTrace();
+               }
+         
+      out.write("\r\n");
+      out.write("             <td><input type=\"text\" class=\"textbox\" id=\"intereses\" onkeyup=\"format(this);\" onchange=\"format(this)\" name=\"intereses\"  value=\"\"></td>\r\n");
       out.write("                </table>\r\n");
       out.write("            </div>\r\n");
       out.write("            <div class=\"cont-inputsL\" style=\"margin-top: -10px;\">\r\n");
@@ -179,6 +219,10 @@ public final class liquidacion_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            \r\n");
       out.write("        </div>\r\n");
       out.write("    </form> \r\n");
+      out.write("            <script>\r\n");
+      out.write("                miles('totalvalorTotal');\r\n");
+      out.write("                miles('asistencia-tecnica');\r\n");
+      out.write("            </script>\r\n");
       out.write("    <div id=\"piepagina\">\r\n");
       out.write("        <footer>\r\n");
       out.write("            <div id=\"\"></div>\r\n");
