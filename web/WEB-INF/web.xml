@@ -304,6 +304,10 @@
         <servlet-name>seleccionarLote</servlet-name>
         <servlet-class>Servlets.seleccionarLote</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>graficas</servlet-name>
+        <servlet-class>Servlets.graficas</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registrar_Abonadas</servlet-name>
         <url-pattern>/Abonadas</url-pattern>
@@ -607,6 +611,10 @@
     <servlet-mapping>
         <servlet-name>seleccionarLote</servlet-name>
         <url-pattern>/lote</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>graficas</servlet-name>
+        <url-pattern>/graficas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

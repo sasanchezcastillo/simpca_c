@@ -94,7 +94,7 @@ public final class Inicio_005fsesion_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("        </header>\n");
       out.write("        <img src=\"ImagenesR/Sesion-1.png\" style=\"width: 100%; height: 400px; position: absolute\">\n");
       out.write("        <div class=\"contenedor-formulario\">\n");
-      out.write("    <div class=\"wrap\">\n");
+      out.write("            <div class=\"wrap\" >\n");
       out.write("           <form action=\"Iniciar\" class=\"formulario\" name=\"formulario_registro\" method=\"post\">\n");
       out.write("            <h1 class=\"titulo\">Iniciar Sesión</h1>\n");
       out.write("                    <br>\n");

@@ -181,7 +181,7 @@ public final class liquidacion_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            </select>\r\n");
       out.write("                        </td>\r\n");
       out.write("                        <td><input type=\"text\" class=\"textbox\" id=\"option\" name=\"bolsa_retencion\" onkeyup=\"format(this);\" onchange=\"format(this)\" readonly=\"\"></td>\r\n");
-      out.write("                        <td><input type=\"text\" class=\"textbox\" id=\"fomento-arrocero\" onkeyup=\"format(this);\" onchange=\"format(this)\" name=\"fomento_arrocero\" readonly=\"\"></td>\r\n");
+      out.write("                        <td><input type=\"text\" class=\"textbox\" id=\"fomento-arrocero\" onkeyup=\"format(this);\" readonly=\"\" onchange=\"format(this)\" name=\"fomento_arrocero\" readonly=\"\"></td>\r\n");
       out.write("                        ");
  
                try
@@ -198,7 +198,7 @@ public final class liquidacion_jsp extends org.apache.jasper.runtime.HttpJspBase
                         out.println("<td><input type='text' class='textbox' id='asistencia-tecnica' onkeyup='format(this);'onchange='format(this)'name='asistencia_tecnica' readonly= '' value="+rs.getObject("total")+"></td>");
                    }
                    conexion.close();
-                   System.err.println("eroorrrrrrrrrrrrrrr"+rs.next());                   
+                                     
                    }
                    else 
                        out.println("fallo");

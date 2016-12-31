@@ -23,7 +23,7 @@
                <div class="contenedor-formulario" style="margin-top: -70%;">
                 <div class="wrapper" >
                     <form class="formulario" name="formulario_registro" action="../eliminarU" method="post">
-                        <h4 style="text-align: center;" >REGISTRE UN ADMINISTRADOR</h4>
+                        <h4 style="text-align: center;" > ELIMINAR </h4>
                         <div class="input-group">
                             <input type="text" id="nombre" readonly="" name="nombre" value="<%= dato.getNombre()%>"/>
                             <label class="label" for="nombre"></label>

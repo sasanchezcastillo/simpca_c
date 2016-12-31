@@ -3,10 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package servletAdmin;
-
+package Servlets;
+import Controladores.Graficas_usuarios;
 import Controladores.ConexionBD;
-import controlador_admin.registrosAdministrador;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,9 +16,9 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author LENOVO
+ * @author popor
  */
-public class BuscarEliminar extends HttpServlet {
+public class graficas extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,32 +33,31 @@ public class BuscarEliminar extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+         
+        String num_lote = request.getParameter("num_lote");
         
-        String cedula = request.getParameter("cedula");
-        
-        ConexionBD con = null;
-        
-        try {
+       ConexionBD con = null;
+       
+       try {
+          
             con = new ConexionBD();
-            registrosAdministrador buscar = new registrosAdministrador(con.getConnection());
-            registrosAdministrador b = buscar.buscar(cedula);
-            
-            if(b != null){
-                HttpSession session = request.getSession();
-                session.setAttribute("datos", b);
-                response.sendRedirect("administrador/resultado.jsp");
+            Graficas_usuarios datos = new Graficas_usuarios(con.getConnection());
+            Graficas_usuarios d = datos.datos(num_lote);
+             out.print(num_lote);
+            if (d != null) {
+                 HttpSession session = request.getSession();
+                 session.setAttribute("datos", d);
+                 response.sendRedirect("graficas.jsp");
+                 
+                
             }else{
-                
-                response.sendRedirect("error.jsp");
-            }
-                
-            
+                 response.sendRedirect("inicio.jsp");
+             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-               
-        
-    }
+        }
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -101,4 +99,3 @@ public class BuscarEliminar extends HttpServlet {
     }// </editor-fold>
 
 }
-
