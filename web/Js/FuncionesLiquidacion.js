@@ -1,8 +1,5 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+
 
 var kilo = 0;
       var peso = 0;
@@ -25,6 +22,7 @@ var kilo = 0;
         $("#TotalkilosVerde").val(total_kilo);
         $("#totalvalorUnitario").val(total_und);
         $("#totalvalorTotal").val(total_totales); 
+        parafiscales();
     }
       
          function liquidacion(x, idFila) {
@@ -35,7 +33,8 @@ var kilo = 0;
             
             toFloat(document.getElementById('valorTotal'+ idFila).value = (c * v));
             format(document.getElementById('valorTotal'+ idFila)); 
-            Sumar();       
+            Sumar();    
+            
         }
                     
         var contadorFilas = 0;
@@ -81,27 +80,27 @@ var kilo = 0;
             alert("Informacion Guardada Exitosamente");
         }
     }
-    
     function parafiscales(){
         var total = toFloat(document.getElementById('totalvalorTotal').value);
         var fomento_arrocero = toFloat(total * 0.005);
         
         document.getElementById('fomento-arrocero').value = (fomento_arrocero);
-        format(document.getElementById(fomento-arrocero));
+        format(document.getElementById('fomento-arrocero'));
+        
     }
-    
-    function selector(value){
+    function seleector(value){
         var total = toFloat(document.getElementById('totalvalorTotal').value);
         var bolsa_agropecuaria = toFloat(total * 0.003);
         var comision_bolsa = toFloat(total * 0.003);
         var retencion_fuente = toFloat(total * 0.015);
         
-        if(value === "bolsa"){
-            
+        if(value === "bolsa" )
+        {
+           
             document.getElementById('option').value = (bolsa_agropecuaria + comision_bolsa);
             format(document.getElementById('option'));
-        }else if(value === "retencion"){
-            
+        }else if( value === "retencion" ){
+           
             document.getElementById('option').value = (retencion_fuente);
             format(document.getElementById('option'));
         }

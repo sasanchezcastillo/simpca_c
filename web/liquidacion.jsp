@@ -74,12 +74,13 @@
                     <table align="center" border="0" style="margin-top: -210px; font-style: normal; font-size: 20px;">
                         <thead>
                              
-                        <td align="center"><b>Fecha</b></td>
+                                <td align="center"><b>Fecha</b></td>
                                 <td align="center"><b>Tiquete</b></td>
                                 <td align="center"><b>Peso Neto</b></td>
                                 <td align="center"><b>Bultos</b></td>
                                 <td align="center"><b>Peso Final</b></td>
-                                <td align="center" colspan="2"><b>F(24/4)</b></td>
+                                <td align="center"><b>F(24/4)</td>
+                                <td align="center"><b>F(/4)</td>
                                 <td align="center"><b>K. Verdes</b></td>
                                 <td align="center"><b>V. Unitario</b></td>
                                 <td align="center"><b>Total</b></td>

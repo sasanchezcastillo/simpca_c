@@ -1,12 +1,14 @@
 
+
+
+
 .cont-graficas{
     width: 100%;
     height: auto;
     margin-top: 14%;
     position: absolute;
-    background: #23527c;
     display: inline-block;
- 
+
 }
 .torta{
 
@@ -27,6 +29,11 @@
     text-align: center;
     cursor: pointer;
     color: black;
+}
+.cont-graficas{
+    width: 100%;
+    background: none;
+    position: relative;
 }
 
 

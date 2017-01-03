@@ -51,12 +51,12 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html>\n");
-      out.write("\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<html>\r\n");
+      out.write("\r\n");
       out.write("    ");
 
         HttpSession objSession = request.getSession();
@@ -70,57 +70,59 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
             }
         }
     
-      out.write("\n");
-      out.write("\n");
-      out.write("    <head>\n");
-      out.write("        <script src=\"Js/newjavascript.js\" type=\"text/javascript\"></script>\n");
-      out.write("        <meta name=\"viewport\" charset=UTF-8\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\n");
-      out.write("        <link href=\"css/general_simpca.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
-      out.write("        <link href=\"css/consultas_1.css\" rel=\"stylesheet\" type=\"text/css\"/>        \n");
-      out.write("        <script src=\"Js/Consultas.js\" type=\"text/javascript\"></script>\n");
-      out.write("        <script src=\"http://code.jquery.com/jquery-latest.js\" type=\"text/javascript\"></script>\n");
-      out.write("\n");
-      out.write("        <link href=\"imagenes/favicon.ico\" rel=\"icon\"/>\n");
-      out.write("        <title>consultas</title>\n");
-      out.write("    </head>\n");
-      out.write("    <!--Interfaz Inicio, permite que el agricultor pueda Ingresar al Menu de la pagina para ingresar la informacion correspondiente al lote -->\n");
-      out.write("    <body class=\"fondoInicio\">\n");
-      out.write("        <div id=\"toplogo\">\n");
-      out.write("            <h1 id=\"logo\">\n");
-      out.write("                <a href=\"Inicio.jsp\" title=\"Coagronorte-Cooperativa Agropecuaria Norte de Santander\"></a>\n");
-      out.write("            </h1>\n");
-      out.write("        </div>\n");
-      out.write("\n");
-      out.write("        <header>\n");
-      out.write("            <section>\n");
-      out.write("                <nav>\n");
-      out.write("                    <ul>\n");
-      out.write("                        <li><a href=\"#\">Coagronorte</a>\n");
-      out.write("                        <li><a href=\"#\">Productos</a>\n");
-      out.write("                        <li><a href=\"#\">Servicios</a>\n");
-      out.write("                        <li><a href=\"#\">Blog</a>\n");
-      out.write("                        <li><a href=\"#\">Contacto </a>\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("    <head>\r\n");
+      out.write("        <link href=\"imagenes/favicon.ico\" rel=\"icon\"/>\r\n");
+      out.write("        <script src=\"Js/jquery-1.7.1.min.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("        <script src=\"Js/newjavascript.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("        <meta name=\"viewport\" charset=UTF-8\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\r\n");
+      out.write("        <link href=\"css/general_simpca.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+      out.write("        <link href=\"css/consultas_1.css\" rel=\"stylesheet\" type=\"text/css\"/>        \r\n");
+      out.write("        <script src=\"Js/Consultas.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("        <script src=\"http://code.jquery.com/jquery-latest.js\" type=\"text/javascript\"></script>\r\n");
+      out.write("\r\n");
+      out.write("        <link href=\"imagenes/favicon.ico\" rel=\"icon\"/>\r\n");
+      out.write("        <title>consultas</title>\r\n");
+      out.write("    </head>\r\n");
+      out.write("    <!--Interfaz Inicio, permite que el agricultor pueda Ingresar al Menu de la pagina para ingresar la informacion correspondiente al lote -->\r\n");
+      out.write("    <body class=\"fondoInicio\">\r\n");
+      out.write("        <div id=\"toplogo\">\r\n");
+      out.write("            <h1 id=\"logo\">\r\n");
+      out.write("                <a href=\"Inicio.jsp\" title=\"Coagronorte-Cooperativa Agropecuaria Norte de Santander\"></a>\r\n");
+      out.write("            </h1>\r\n");
+      out.write("        </div>\r\n");
+      out.write("\r\n");
+      out.write("        <header>\r\n");
+      out.write("            <section>\r\n");
+      out.write("                <nav>\r\n");
+      out.write("                    <ul>\r\n");
+      out.write("                        <li><a href=\"#\">Coagronorte</a>\r\n");
+      out.write("                        <li><a href=\"#\">Productos</a>\r\n");
+      out.write("                        <li><a href=\"#\">Servicios</a>\r\n");
+      out.write("                        <li><a href=\"#\">Blog</a>\r\n");
+      out.write("                        <li><a href=\"#\">Contacto </a>\r\n");
       out.write("                        <li><a href=\"#\">");
       out.print(nombre);
-      out.write("</a>\n");
-      out.write("                        <li><a href=\"Session\">Cerrar Sesion</a>\n");
-      out.write("                    </ul>\n");
-      out.write("                </nav>\n");
-      out.write("            </section>\n");
-      out.write("        </header>\n");
-      out.write("        <div class=\"cont-consultas\">\n");
-      out.write("            <h3 class=\"info-lote\" style=\"font-size: 22px; font-family: Times New Roman; float: right; \n");
-      out.write("                position: relative;\">Lote: \n");
+      out.write("</a>\r\n");
+      out.write("                        <li><a href=\"Session\">Cerrar Sesion</a>\r\n");
+      out.write("                    </ul>\r\n");
+      out.write("                </nav>\r\n");
+      out.write("            </section>\r\n");
+      out.write("        </header>\r\n");
+      out.write("        <div class=\"cont-consultas\">\r\n");
+      out.write("            <h3 class=\"info-lote\" style=\"font-size: 22px; font-family: Times New Roman; float: right; \r\n");
+      out.write("                position: relative;\">Lote: \r\n");
       out.write("                <input type=\"text\" id=\"lote\" name=\"num_lote\" style=\"font-size: 20px; font-family: Times New Roman; width:50px; height: 30px; background: none; border:none;position: relative;\" value=\"");
       out.print(lote);
       out.write("\" readonly=\"");
       out.print(lote);
-      out.write("\"/>\n");
-      out.write("            </h3><br/>           \n");
-      out.write("            <h2 id=\"h2costosdeproduccion\" style=\"width: 100%;\">COSTOS DE PRODUCCIÓN</h2>\n");
-      out.write("\n");
-      out.write("            <div class=\"class-consulta\">\n");
-      out.write("                <h3>QUEMA QUÍMICA</h3>\n");
+      out.write("\"/>\r\n");
+      out.write("            </h3><br/>           \r\n");
+      out.write("            <h2 id=\"h2costosdeproduccion\" style=\"width: 100%;\">COSTOS DE PRODUCCIÓN</h2>\r\n");
+      out.write("\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
+      out.write("                <h3>QUEMA QUÍMICA</h3>\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -133,21 +135,21 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
         if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <img src=\"img-con/quema_fi.jpg\" class=\"img-consultas\"/>\n");
-            out.write("\n");
-            out.write("                        <form action=\"ServletQuemaQuimica\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <img src=\"img-con/quema_fi.jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("\r\n");
+            out.write("                        <form action=\"ServletQuemaQuimica\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" id=\"Quemaquimica\"  value=\"$");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.valor_total_quemaq}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\" readonly=\"\"  placeholder=\"$ 0.0\"class=\"textbox\" > \n");
+            out.write("\" readonly=\"\"  placeholder=\"$ 0.0\"class=\"textbox\" > \r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
-            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\n");
-            out.write("                        </form>\n");
-            out.write("\n");
-            out.write("                    </div> \n");
+            out.write("\">\r\n");
+            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("\r\n");
+            out.write("                    </div> \r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -165,10 +167,10 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_0.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_0);
       }
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("            <div class=\"class-consulta\">\n");
-      out.write("                <h3>QUEMA FÍSICA</h3>\n");
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
+      out.write("                <h3>QUEMA FÍSICA</h3>\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_1 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -181,23 +183,23 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_1 = _jspx_th_c_forEach_1.doStartTag();
         if (_jspx_eval_c_forEach_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <img src=\"img-con/u56.jpg\" class=\"img-consultas\"/>\n");
-            out.write("\n");
-            out.write("\n");
-            out.write("                        <form action=\"ServletQuemaFisica\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <img src=\"img-con/u56.jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("\r\n");
+            out.write("\r\n");
+            out.write("                        <form action=\"ServletQuemaFisica\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" readonly=\"\" id=\"Quemafisica\" placeholder=\"$\"class=\"textbox\" value=\"$");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_qf}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\"> \n");
+            out.write("\"> \r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
-            out.write("                            <input type=\"submit\" value=\"Ver Detalles\" style=\"text-align: center\" class=\"detalles\">\n");
-            out.write("                        </form>\n");
-            out.write("\n");
-            out.write("\n");
-            out.write("                    </div>\n");
+            out.write("\">\r\n");
+            out.write("                            <input type=\"submit\" value=\"Ver Detalles\" style=\"text-align: center\" class=\"detalles\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("\r\n");
+            out.write("\r\n");
+            out.write("                    </div>\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_1.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -215,10 +217,10 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_1.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_1);
       }
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("            <div class=\"class-consulta\">\n");
-      out.write("                <h3>PREPARACIÓN DE SUELO</h3>\n");
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
+      out.write("                <h3>PREPARACIÓN DE SUELO</h3>\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_2 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -231,19 +233,19 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_2 = _jspx_th_c_forEach_2.doStartTag();
         if (_jspx_eval_c_forEach_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <img src=\"img-con/u58.jpg\" class=\"img-consultas\"/>\n");
-            out.write("                        <form action=\"ServletPreparacionSuelo\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <img src=\"img-con/u58.jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("                        <form action=\"ServletPreparacionSuelo\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" id=\"Suelo\" readonly=\"\" placeholder=\"$\" class=\"textbox\" name=\"total_n\" value=\" $");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_preparacion_suelo}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\">\n");
+            out.write("\">\r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
-            out.write("                            <input type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\n");
-            out.write("                        </form>\n");
-            out.write("                    </div>\n");
+            out.write("\">\r\n");
+            out.write("                            <input type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("                    </div>\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_2.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -261,10 +263,10 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_2.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_2);
       }
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("            <div class=\"class-consulta\">\n");
-      out.write("                <h3>MANEJO RESIDUOS DE COSECHA</h3>\n");
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
+      out.write("                <h3>MANEJO RESIDUOS DE COSECHA</h3>\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_3 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -277,21 +279,21 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_3 = _jspx_th_c_forEach_3.doStartTag();
         if (_jspx_eval_c_forEach_3 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <img src=\"img-con/u62.jpg\" class=\"img-consultas\"/>\n");
-            out.write("                        <div class=\"class-cont-consulta\">\n");
-            out.write("                            <form action=\"Detalles_corta_maleza\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <img src=\"img-con/u62.jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("                        <div class=\"class-cont-consulta\">\r\n");
+            out.write("                            <form action=\"Detalles_corta_maleza\" method=\"post\">\r\n");
             out.write("                                <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
+            out.write("\">\r\n");
             out.write("                                <input type=\"text\" id=\"Residuos\"  readonly=\"\" placeholder=\"$\" class=\"textbox\" value=\" $");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.valor_total_mrc}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\"> \n");
-            out.write("                                <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\n");
-            out.write("                            </form>\n");
-            out.write("                        </div>\n");
-            out.write("                    </div>\n");
+            out.write("\"> \r\n");
+            out.write("                                <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\r\n");
+            out.write("                            </form>\r\n");
+            out.write("                        </div>\r\n");
+            out.write("                    </div>\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_3.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -309,10 +311,10 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_3.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_3);
       }
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("\n");
-      out.write("            <div class=\"class-consulta\">\n");
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_4 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -325,21 +327,21 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_4 = _jspx_th_c_forEach_4.doStartTag();
         if (_jspx_eval_c_forEach_4 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <h3>SIEMBRA MECANIZADA</h3>\n");
-            out.write("                    <img src=\"img-con/u60.jpg\" class=\"img-consultas\"/>\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <form action=\"ServletSiembraMecanizada\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <h3>SIEMBRA MECANIZADA</h3>\r\n");
+            out.write("                    <img src=\"img-con/u60.jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <form action=\"ServletSiembraMecanizada\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
+            out.write("\">\r\n");
             out.write("                            <input type=\"text\" readonly=\"\" id=\"Siembramecanizada\" placeholder=\"$ 0.0\"class=\"textbox\" value=\" $");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_smzd}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\"> \n");
-            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\n");
-            out.write("                        </form>\n");
-            out.write("                    </div>\n");
-            out.write("\n");
+            out.write("\"> \r\n");
+            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("                    </div>\r\n");
+            out.write("\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_4.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -357,9 +359,9 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_4.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_4);
       }
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("            <div class=\"class-consulta\">\n");
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_5 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -372,21 +374,21 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_5 = _jspx_th_c_forEach_5.doStartTag();
         if (_jspx_eval_c_forEach_5 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <h3 >SIEMBRA MANUAL</h3>\n");
-            out.write("                    <img src=\"img-con/u30.png\" class=\"img-consultas\"/>\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <form action=\"ServletSiembraManual\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <h3 >SIEMBRA MANUAL</h3>\r\n");
+            out.write("                    <img src=\"img-con/u30.png\" class=\"img-consultas\"/>\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <form action=\"ServletSiembraManual\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
+            out.write("\">\r\n");
             out.write("                            <input type=\"text\" readonly=\"\" id=\"Siembramanual\" placeholder=\"$\"class=\"textbox\" value=\" $");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_siembra_manual}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\">                                 \n");
-            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\n");
-            out.write("                        </form>\n");
-            out.write("                    </div>\n");
-            out.write("\n");
+            out.write("\">                                 \r\n");
+            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("                    </div>\r\n");
+            out.write("\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_5.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -404,9 +406,9 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_5.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_5);
       }
-      out.write("\n");
-      out.write("            </div>        \n");
-      out.write("            <div class=\"class-consulta\">\n");
+      out.write("\r\n");
+      out.write("            </div>        \r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_6 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -419,21 +421,21 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_6 = _jspx_th_c_forEach_6.doStartTag();
         if (_jspx_eval_c_forEach_6 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <h3>ABONADAS</h3>\n");
-            out.write("                    <img src=\"img-con/u42.jpg\" class=\"img-consultas\"/>\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <form action=\"ServletAbonada_insumos\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <h3>ABONADAS</h3>\r\n");
+            out.write("                    <img src=\"img-con/u42.jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <form action=\"ServletAbonada_insumos\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\" >\n");
+            out.write("\" >\r\n");
             out.write("                            <input type=\"text\" readonly=\"\" id=\"Abonada\" placeholder=\"$\"class=\"textbox\" value=\" $");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_abonada}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\" >    \n");
-            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\n");
-            out.write("                        </form>\n");
-            out.write("                    </div>\n");
-            out.write("\n");
+            out.write("\" >    \r\n");
+            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("                    </div>\r\n");
+            out.write("\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_6.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -451,9 +453,9 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_6.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_6);
       }
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("            <div class=\"class-consulta\">\n");
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_7 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -466,20 +468,20 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_7 = _jspx_th_c_forEach_7.doStartTag();
         if (_jspx_eval_c_forEach_7 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <h3>FUMIGAS</h3>\n");
-            out.write("                    <img src=\"img-con/u44.jpg\" class=\"img-consultas\"/>\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <form action=\"ServletFumigas\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <h3>FUMIGAS</h3>\r\n");
+            out.write("                    <img src=\"img-con/u44.jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <form action=\"ServletFumigas\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
+            out.write("\">\r\n");
             out.write("                            <input type=\"text\" readonly=\"\" id=\"Fumiga\" placeholder=\"$\"class=\"textbox\" name=\"total_f\" value=\"$");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_fumiga}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\">\n");
-            out.write("                            <input type=\"submit\" value=\"Ver Detalles\" class=\"detalles\"style=\"font-size: 15px; font-family: Times New Roman;\" />\n");
-            out.write("                        </form>\n");
-            out.write("                    </div>\n");
+            out.write("\">\r\n");
+            out.write("                            <input type=\"submit\" value=\"Ver Detalles\" class=\"detalles\"style=\"font-size: 15px; font-family: Times New Roman;\" />\r\n");
+            out.write("                        </form>\r\n");
+            out.write("                    </div>\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_7.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -497,10 +499,10 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_7.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_7);
       }
-      out.write("\n");
-      out.write("            </div>    \n");
-      out.write("\n");
-      out.write("            <div class=\"class-consulta\">\n");
+      out.write("\r\n");
+      out.write("            </div>    \r\n");
+      out.write("\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_8 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -513,21 +515,21 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_8 = _jspx_th_c_forEach_8.doStartTag();
         if (_jspx_eval_c_forEach_8 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <h3>DESPALILLE</h3>\n");
-            out.write("                    <img src=\"img-con/u56 (1).jpg\" class=\"img-consultas\"/>\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <form action=\"ServletDespalille\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <h3>DESPALILLE</h3>\r\n");
+            out.write("                    <img src=\"img-con/u56 (1).jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <form action=\"ServletDespalille\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
+            out.write("\">\r\n");
             out.write("                            <input type=\"text\" readonly=\"\" id=\"Despalille\" placeholder=\"$\"class=\"textbox\" value=\"$");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_despalille}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\">    \n");
-            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\n");
-            out.write("                        </form>\n");
-            out.write("                    </div>\n");
-            out.write("\n");
+            out.write("\">    \r\n");
+            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("                    </div>\r\n");
+            out.write("\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_8.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -545,9 +547,9 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_8.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_8);
       }
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("            <div class=\"class-consulta\">\n");
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_9 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -560,21 +562,21 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_9 = _jspx_th_c_forEach_9.doStartTag();
         if (_jspx_eval_c_forEach_9 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <h3>ENTRESAQUE</h3>\n");
-            out.write("                    <img src=\"img-con/u56 (1).jpg\" class=\"img-consultas\"/>\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <form action=\"ServletEntresaque\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <h3>ENTRESAQUE</h3>\r\n");
+            out.write("                    <img src=\"img-con/u56 (1).jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <form action=\"ServletEntresaque\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
+            out.write("\">\r\n");
             out.write("                            <input type=\"text\" readonly=\"\" id=\"Entresaque\" placeholder=\"$\"class=\"textbox\" value=\"$");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_entresaque}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\"> \n");
-            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\n");
-            out.write("                        </form>\n");
-            out.write("                    </div>\n");
-            out.write("\n");
+            out.write("\"> \r\n");
+            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("                    </div>\r\n");
+            out.write("\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_9.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -592,9 +594,9 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_9.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_9);
       }
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("            <div class=\"class-consulta\">\n");
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_10 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -607,21 +609,21 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_10 = _jspx_th_c_forEach_10.doStartTag();
         if (_jspx_eval_c_forEach_10 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <h3>MACHETEADA</h3>\n");
-            out.write("                    <img src=\"img-con/u56 (1).jpg\" class=\"img-consultas\"/>\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <form action=\"ServletMacheteada\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <h3>MACHETEADA</h3>\r\n");
+            out.write("                    <img src=\"img-con/u56 (1).jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <form action=\"ServletMacheteada\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
+            out.write("\">\r\n");
             out.write("                            <input type=\"text\" readonly=\"\" id=\"Macheteada\" placeholder=\"$\"class=\"textbox\" value=\"$");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_macheteada}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\"> \n");
-            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\n");
-            out.write("                        </form>\n");
-            out.write("                    </div>\n");
-            out.write("\n");
+            out.write("\"> \r\n");
+            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("                    </div>\r\n");
+            out.write("\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_10.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -639,9 +641,9 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_10.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_10);
       }
-      out.write("\n");
-      out.write("            </div>  \n");
-      out.write("            <div class=\"class-consulta\">\n");
+      out.write("\r\n");
+      out.write("            </div>  \r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_11 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -654,21 +656,21 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_11 = _jspx_th_c_forEach_11.doStartTag();
         if (_jspx_eval_c_forEach_11 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <h3>PAJAREO</h3>\n");
-            out.write("                    <img src=\"img-con/u62 (1).jpg\" class=\"img-consultas\"/>\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <form action=\"ServletPajareoCeladuria\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <h3>PAJAREO</h3>\r\n");
+            out.write("                    <img src=\"img-con/u62 (1).jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <form action=\"ServletPajareoCeladuria\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
+            out.write("\">\r\n");
             out.write("                            <input type=\"text\" readonly=\"\" id=\"Pajareo\" placeholder=\"$\"class=\"textbox\"value=\"$");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_pajareo}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\"> \n");
-            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\n");
-            out.write("                        </form>\n");
-            out.write("                    </div>\n");
-            out.write("\n");
+            out.write("\"> \r\n");
+            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("                    </div>\r\n");
+            out.write("\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_11.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -686,10 +688,10 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_11.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_11);
       }
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("\n");
-      out.write("            <div class=\"class-consulta\">\n");
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_12 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -702,21 +704,21 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_12 = _jspx_th_c_forEach_12.doStartTag();
         if (_jspx_eval_c_forEach_12 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write(" \n");
-            out.write("                    <h3>RIEGO</h3>\n");
-            out.write("                    <img src=\"img-con/u54.png\" class=\"img-consultas\"/>\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <form action=\"ServletRiego\" method=\"post\">\n");
+            out.write(" \r\n");
+            out.write("                    <h3>RIEGO</h3>\r\n");
+            out.write("                    <img src=\"img-con/u54.png\" class=\"img-consultas\"/>\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <form action=\"ServletRiego\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
+            out.write("\">\r\n");
             out.write("                            <input type=\"text\" readonly=\"\" id=\"Riego\" placeholder=\"$\"class=\"textbox\"value=\"$");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_riego}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\">\n");
-            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\n");
-            out.write("                        </form>\n");
-            out.write("                    </div>\n");
-            out.write("\n");
+            out.write("\">\r\n");
+            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("                    </div>\r\n");
+            out.write("\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_12.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -734,10 +736,10 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_12.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_12);
       }
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("\n");
-      out.write("            <div class=\"class-consulta\">\n");
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_13 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -750,21 +752,21 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_13 = _jspx_th_c_forEach_13.doStartTag();
         if (_jspx_eval_c_forEach_13 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <h3>CORTA BULTOS</h3>\n");
-            out.write("                    <img src=\"img-con/u48.jpg\" class=\"img-consultas\"/>\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <form action=\"ServletCortaBultos\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <h3>CORTA BULTOS</h3>\r\n");
+            out.write("                    <img src=\"img-con/u48.jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <form action=\"ServletCortaBultos\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
+            out.write("\">\r\n");
             out.write("                            <input type=\"text\" readonly=\"\" id=\"Bultos\" placeholder=\"$\"class=\"textbox\"  value=\"$");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_corta_bultos}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\"> \n");
-            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\n");
-            out.write("                        </form>\n");
-            out.write("                    </div>\n");
-            out.write("\n");
+            out.write("\"> \r\n");
+            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("                    </div>\r\n");
+            out.write("\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_13.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -782,10 +784,10 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_13.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_13);
       }
-      out.write("\n");
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("            <div class=\"class-consulta\">\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_14 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -798,20 +800,20 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_14 = _jspx_th_c_forEach_14.doStartTag();
         if (_jspx_eval_c_forEach_14 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <h3>CORTA GRANEL</h3>\n");
-            out.write("                    <img src=\"img-con/u49.jpg\" class=\"img-consultas\"/>\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <form action=\"ServletCortaGranel\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <h3>CORTA GRANEL</h3>\r\n");
+            out.write("                    <img src=\"img-con/u49.jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <form action=\"ServletCortaGranel\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
+            out.write("\">\r\n");
             out.write("                            <input type=\"text\" readonly=\"\" id=\"Granel\" placeholder=\"$\"class=\"textbox\"value=\"$");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_corta_granel}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\"> \n");
-            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\n");
-            out.write("                        </form>\n");
-            out.write("                    </div>\n");
+            out.write("\"> \r\n");
+            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("                    </div>\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_14.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -829,9 +831,9 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_14.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_14);
       }
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("            <div class=\"class-consulta\">\n");
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_15 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -844,21 +846,21 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_15 = _jspx_th_c_forEach_15.doStartTag();
         if (_jspx_eval_c_forEach_15 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <h3>MANTENIMIENTO</h3>\n");
-            out.write("                    <img src=\"img-con/u60.jpg\" class=\"img-consultas\"/>\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <form action=\"ServletMantenimiento\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <h3>MANTENIMIENTO</h3>\r\n");
+            out.write("                    <img src=\"img-con/u60.jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <form action=\"ServletMantenimiento\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
+            out.write("\">\r\n");
             out.write("                            <input type=\"text\" id=\"Mantenimiento\" readonly=\"\" placeholder=\"$\" class=\"textbox\" value=\"$");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_mntlote}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\"> \n");
-            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\n");
-            out.write("                        </form>\n");
-            out.write("                    </div>\n");
-            out.write("\n");
+            out.write("\"> \r\n");
+            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("                    </div>\r\n");
+            out.write("\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_15.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -876,11 +878,11 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_15.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_15);
       }
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("            <div class=\"class-consulta\">\n");
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
       out.write("                ");
       //  c:forEach
       org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_16 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
@@ -893,21 +895,21 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         int _jspx_eval_c_forEach_16 = _jspx_th_c_forEach_16.doStartTag();
         if (_jspx_eval_c_forEach_16 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
           do {
-            out.write("\n");
-            out.write("                    <h3>LIQUIDACIÓN</h3>\n");
-            out.write("                    <img src=\"img-con/u61.jpg\" class=\"img-consultas\"/>\n");
-            out.write("                    <div class=\"class-cont-consulta\">\n");
-            out.write("                        <form action=\"LiquidacionDetalles\" method=\"post\">\n");
+            out.write("\r\n");
+            out.write("                    <h3>LIQUIDACIÓN</h3>\r\n");
+            out.write("                    <img src=\"img-con/u61.jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <form action=\"LiquidacionDetalles\" method=\"post\">\r\n");
             out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
             out.print(lote);
-            out.write("\">\n");
+            out.write("\">\r\n");
             out.write("                            <input type=\"text\" readonly=\"\" id=\"liquidacion\" placeholder=\"$\" class=\"textbox\" value=\"$");
             out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.valor_total_liquidacion}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-            out.write("\"> \n");
-            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\n");
-            out.write("                        </form>\n");
-            out.write("                    </div>\n");
-            out.write("\n");
+            out.write("\"> \r\n");
+            out.write("                            <input type=\"submit\" value=\"Ver Detalles\" id=\"liquidacion\" class=\"detalles\" style=\"font-size: 15px; font-family: Times New Roman; text-align: center;\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("                    </div>\r\n");
+            out.write("\r\n");
             out.write("                ");
             int evalDoAfterBody = _jspx_th_c_forEach_16.doAfterBody();
             if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -925,60 +927,153 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
         _jspx_th_c_forEach_16.doFinally();
         _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_16);
       }
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("\n");
-      out.write("            <div class=\"class-consulta-total\">\n");
-      out.write("                <label class=\"lblCostos\">Gastos Totales</label><br/>\n");
-      out.write("                 ");
-      if (_jspx_meth_c_forEach_17(_jspx_page_context))
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("\r\n");
+      out.write("            <div class=\"class-consulta\">\r\n");
+      out.write("                ");
+      //  c:forEach
+      org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_17 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+      _jspx_th_c_forEach_17.setPageContext(_jspx_page_context);
+      _jspx_th_c_forEach_17.setParent(null);
+      _jspx_th_c_forEach_17.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${valor_arriendo}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+      _jspx_th_c_forEach_17.setVar("lista");
+      int[] _jspx_push_body_count_c_forEach_17 = new int[] { 0 };
+      try {
+        int _jspx_eval_c_forEach_17 = _jspx_th_c_forEach_17.doStartTag();
+        if (_jspx_eval_c_forEach_17 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+          do {
+            out.write("\r\n");
+            out.write("                    <h3>Arriendo</h3>\r\n");
+            out.write("                    <img src=\"imagenes/arriendo.jpg\" class=\"img-consultas\"/>\r\n");
+            out.write("                    <div class=\"class-cont-consulta\">\r\n");
+            out.write("                        <form action=\"LiquidacionDetalles\" method=\"post\">\r\n");
+            out.write("                            <input type=\"text\" name=\"num_lote\" hidden=\"\" value=\"");
+            out.print(lote);
+            out.write("\">\r\n");
+            out.write("                            <input type=\"text\" readonly=\"\" id=\"arriendo\" placeholder=\"$\" class=\"textbox\" value=\"$");
+            out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.valor_arriendo}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+            out.write("\"> \r\n");
+            out.write("                            <input style=\"font-size: 15px; font-family: Times New Roman;\" type=\"submit\" value=\"Ver Detalles\" class=\"detalles\">\r\n");
+            out.write("                        </form>\r\n");
+            out.write("                    </div>\r\n");
+            out.write("\r\n");
+            out.write("                ");
+            int evalDoAfterBody = _jspx_th_c_forEach_17.doAfterBody();
+            if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+              break;
+          } while (true);
+        }
+        if (_jspx_th_c_forEach_17.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+          return;
+        }
+      } catch (Throwable _jspx_exception) {
+        while (_jspx_push_body_count_c_forEach_17[0]-- > 0)
+          out = _jspx_page_context.popBody();
+        _jspx_th_c_forEach_17.doCatch(_jspx_exception);
+      } finally {
+        _jspx_th_c_forEach_17.doFinally();
+        _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_17);
+      }
+      out.write("\r\n");
+      out.write("            </div>\r\n");
+      out.write("                <div class=\"class-consulta-total\">\r\n");
+      out.write("                    <label class=\"lblCostos\">Gastos Totales</label><br/>\r\n");
+      out.write("                    ");
+      if (_jspx_meth_c_forEach_18(_jspx_page_context))
         return;
-      out.write("\n");
-      out.write("                <label class=\"lblCostos\">Gastos Por Hectarea</label><br/>\n");
-      out.write("                <input type=\"text\" id=\"valorTotal\" readonly=\"readonly\" class=\"\" value=\"\"><br/>\n");
-      out.write("                <label class=\"lblCostos\">Ganancias</label><br/>\n");
-      out.write("                <input type=\"text\" id=\"valorTotal\" readonly=\"readonly\" class=\"\" value=\"\"><br/>\n");
-      out.write("                <label class=\"lblCostos\">Costo Por Kilogramo</label><br/>\n");
-      out.write("                <input type=\"text\" id=\"valorTotal\" readonly=\"readonly\" class=\"\" value=\"\"><br/>\n");
-      out.write("                <label class=\"lblCostos\">Costo De Insumos</label><br/>\n");
-      out.write("                <input type=\"text\" id=\"valorTotal\" readonly=\"readonly\" class=\"\" value=\"\"><br/>\n");
-      out.write("                <label class=\"lblCostos\">Costos Por Mano De Obra</label><br/>\n");
-      out.write("                <input type=\"text\" id=\"valorTotal\" readonly=\"readonly\" class=\"\" value=\"\"><br/>\n");
-      out.write("                <input type=\"button\" id=\"botonvolver\" class=\"\" value=\"VOLVER\" onclick=\"location.href = 'Inicio.jsp'\">\n");
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("\n");
-      out.write("        </div>\n");
-      out.write("\n");
-      out.write("        <footer>\n");
-      out.write("            <!--Pie de Pagina-->\n");
-      out.write("            <div id=\"pie_paginaInicio\" align=\"center\">\n");
-      out.write("\n");
-      out.write("            </div>\n");
-      out.write("        </footer>\n");
-      out.write("        <script type=\"text/javascript\">\n");
-      out.write("            \n");
-      out.write("\n");
-      out.write("            miles(\"Quemaquimica\");\n");
-      out.write("            miles(\"Quemafisica\");\n");
-      out.write("            miles(\"Suelo\");\n");
-      out.write("            miles(\"Residuos\");\n");
-      out.write("            miles(\"Siembramecanizada\");\n");
-      out.write("            miles(\"Siembramanual\");\n");
-      out.write("            miles(\"Abonada\");\n");
-      out.write("            miles(\"Fumiga\");\n");
-      out.write("            miles(\"Despalille\");\n");
-      out.write("            miles(\"Entresaque\");\n");
-      out.write("            miles(\"Macheteada\");\n");
-      out.write("            miles(\"Pajareo\");\n");
-      out.write("            miles(\"Riego\");\n");
-      out.write("            miles(\"Bultos\");\n");
-      out.write("            miles(\"Granel\");\n");
-      out.write("            miles(\"Mantenimiento\");\n");
-      out.write("            miles(\"liquidacion\");\n");
-      out.write("            miles(\"valorTotal\");\n");
-      out.write("        </script>\n");
-      out.write("    </body>\n");
+      out.write("\r\n");
+      out.write("                    <label class=\"lblCostos\">Gastos En Insumos</label><br/>\r\n");
+      out.write("                    ");
+      if (_jspx_meth_c_forEach_19(_jspx_page_context))
+        return;
+      out.write("\r\n");
+      out.write("                    <label class=\"lblCostos\">Gastos En Mano De Obra</label><br/>\r\n");
+      out.write("                    ");
+      if (_jspx_meth_c_forEach_20(_jspx_page_context))
+        return;
+      out.write("\r\n");
+      out.write("                    <label class=\"lblCostos\">Otros Gastos</label><br/>\r\n");
+      out.write("                    ");
+      if (_jspx_meth_c_forEach_21(_jspx_page_context))
+        return;
+      out.write("\r\n");
+      out.write("                    <label class=\"lblCostos\">Costos Por Hectarea</label><br/>\r\n");
+      out.write("                    ");
+      if (_jspx_meth_c_forEach_22(_jspx_page_context))
+        return;
+      out.write("   \r\n");
+      out.write("                    <label class=\"lblCostos\">Costos Por Kilogramo</label><br/>\r\n");
+      out.write("                    ");
+      if (_jspx_meth_c_forEach_23(_jspx_page_context))
+        return;
+      out.write("\r\n");
+      out.write("                    <label class=\"lblCostos\">Resultado Económico</label><br/>\r\n");
+      out.write("                    ");
+      if (_jspx_meth_c_forEach_24(_jspx_page_context))
+        return;
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("                    \r\n");
+      out.write("                    <input type=\"button\"id=\"botonvolver\"  value=\"VOLVER\" onclick=\"location.href = 'Inicio.jsp'\" >\r\n");
+      out.write("                    <form action=\"graficas\" method=\"post\"> \r\n");
+      out.write("                        <input type=\"text\" value=\"");
+      out.print(lote);
+      out.write("\" name=\"num_lote\">\r\n");
+      out.write("                    <input type=\"submit\" id=\"botonvolver\"  value=\"VER EN GRAFICAS\" >\r\n");
+      out.write("                    </form>\r\n");
+      out.write("                    </div> \r\n");
+      out.write("        </div>\r\n");
+      out.write("    \r\n");
+      out.write("    <footer>\r\n");
+      out.write("        <!--Pie de Pagina-->\r\n");
+      out.write("        <div id=\"pie_paginaInicio\" align=\"center\">\r\n");
+      out.write("\r\n");
+      out.write("        </div>\r\n");
+      out.write("    </footer>\r\n");
+      out.write("    <script type=\"text/javascript\">\r\n");
+      out.write("        $(document).ready(function () {\r\n");
+      out.write("            var nStr = document.getElementById('valorGanancias').value;\r\n");
+      out.write("            if (nStr.indexOf(\"Usted Perdió\") !== -1) {\r\n");
+      out.write("                $('#valorGanancias').css('background-color', '#ef9a9a');\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("            } else {\r\n");
+      out.write("                $('#valorGanancias').css('background-color', '#AED581');\r\n");
+      out.write("            }\r\n");
+      out.write("        });\r\n");
+      out.write("    </script>\r\n");
+      out.write("    <script type=\"text/javascript\">\r\n");
+      out.write("\r\n");
+      out.write("        miles(\"arriendo\");\r\n");
+      out.write("        miles(\"Quemaquimica\");\r\n");
+      out.write("        miles(\"Quemafisica\");\r\n");
+      out.write("        miles(\"Suelo\");\r\n");
+      out.write("        miles(\"Residuos\");\r\n");
+      out.write("        miles(\"Siembramecanizada\");\r\n");
+      out.write("        miles(\"Siembramanual\");\r\n");
+      out.write("        miles(\"Abonada\");\r\n");
+      out.write("        miles(\"Fumiga\");\r\n");
+      out.write("        miles(\"Despalille\");\r\n");
+      out.write("        miles(\"Entresaque\");\r\n");
+      out.write("        miles(\"Macheteada\");\r\n");
+      out.write("        miles(\"Pajareo\");\r\n");
+      out.write("        miles(\"Riego\");\r\n");
+      out.write("        miles(\"Bultos\");\r\n");
+      out.write("        miles(\"Granel\");\r\n");
+      out.write("        miles(\"Mantenimiento\");\r\n");
+      out.write("        miles(\"liquidacion\");\r\n");
+      out.write("        miles(\"valorTotalt\");\r\n");
+      out.write("        miles(\"valorTotalhectareas\");\r\n");
+      out.write("        miles(\"valorGanancias\");\r\n");
+      out.write("        miles(\"valorkilogramo\");\r\n");
+      out.write("        miles(\"valorinsumo\");\r\n");
+      out.write("        miles(\"totalmano\");\r\n");
+      out.write("        miles(\"otros\");\r\n");
+      out.write("\r\n");
+      out.write("    </script>\r\n");
+      out.write("\r\n");
+      out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
@@ -993,41 +1088,275 @@ public final class consultar_jsp extends org.apache.jasper.runtime.HttpJspBase
     }
   }
 
-  private boolean _jspx_meth_c_forEach_17(PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_forEach_18(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:forEach
-    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_17 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
-    _jspx_th_c_forEach_17.setPageContext(_jspx_page_context);
-    _jspx_th_c_forEach_17.setParent(null);
-    _jspx_th_c_forEach_17.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${valor_total}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    _jspx_th_c_forEach_17.setVar("lista");
-    int[] _jspx_push_body_count_c_forEach_17 = new int[] { 0 };
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_18 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_18.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_18.setParent(null);
+    _jspx_th_c_forEach_18.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${valor_total}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_18.setVar("lista");
+    int[] _jspx_push_body_count_c_forEach_18 = new int[] { 0 };
     try {
-      int _jspx_eval_c_forEach_17 = _jspx_th_c_forEach_17.doStartTag();
-      if (_jspx_eval_c_forEach_17 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      int _jspx_eval_c_forEach_18 = _jspx_th_c_forEach_18.doStartTag();
+      if (_jspx_eval_c_forEach_18 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
-          out.write("\n");
-          out.write("                     <input type=\"text\" id=\"valorTotal\" readonly=\"readonly\" class=\"\" value=\"$");
+          out.write("\r\n");
+          out.write("                        <input type=\"text\" id=\"valorTotalt\" class=\"textbox\" readonly=\"readonly\" name=\"valor_total\" value=\"$");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.valor_total}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\"><br/>\n");
-          out.write("                ");
-          int evalDoAfterBody = _jspx_th_c_forEach_17.doAfterBody();
+          out.write("\"><br/>\r\n");
+          out.write("                    ");
+          int evalDoAfterBody = _jspx_th_c_forEach_18.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
         } while (true);
       }
-      if (_jspx_th_c_forEach_17.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      if (_jspx_th_c_forEach_18.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_c_forEach_17[0]-- > 0)
+      while (_jspx_push_body_count_c_forEach_18[0]-- > 0)
         out = _jspx_page_context.popBody();
-      _jspx_th_c_forEach_17.doCatch(_jspx_exception);
+      _jspx_th_c_forEach_18.doCatch(_jspx_exception);
     } finally {
-      _jspx_th_c_forEach_17.doFinally();
-      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_17);
+      _jspx_th_c_forEach_18.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_18);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_forEach_19(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_19 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_19.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_19.setParent(null);
+    _jspx_th_c_forEach_19.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${valor_insumos}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_19.setVar("lista");
+    int[] _jspx_push_body_count_c_forEach_19 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_19 = _jspx_th_c_forEach_19.doStartTag();
+      if (_jspx_eval_c_forEach_19 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\r\n");
+          out.write("                        <input type=\"text\" id=\"valorinsumo\" readonly=\"readonly\" name=\"gastos_insumos\"class=\"textbox\" value=\"$");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.valor_insumos}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\"><br/>\r\n");
+          out.write("                    ");
+          int evalDoAfterBody = _jspx_th_c_forEach_19.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_19.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_19[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_19.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_19.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_19);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_forEach_20(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_20 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_20.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_20.setParent(null);
+    _jspx_th_c_forEach_20.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${total_mano}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_20.setVar("lista");
+    int[] _jspx_push_body_count_c_forEach_20 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_20 = _jspx_th_c_forEach_20.doStartTag();
+      if (_jspx_eval_c_forEach_20 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\r\n");
+          out.write("                        <input type=\"text\" id=\"totalmano\" readonly=\"readonly\"  name=\"gastos_mano\"class=\"textbox\" value=\"$");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_mano}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\"><br/>\r\n");
+          out.write("                    ");
+          int evalDoAfterBody = _jspx_th_c_forEach_20.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_20.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_20[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_20.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_20.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_20);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_forEach_21(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_21 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_21.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_21.setParent(null);
+    _jspx_th_c_forEach_21.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${total_otros}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_21.setVar("lista");
+    int[] _jspx_push_body_count_c_forEach_21 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_21 = _jspx_th_c_forEach_21.doStartTag();
+      if (_jspx_eval_c_forEach_21 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\r\n");
+          out.write("                        <input type=\"text\" id=\"otros\" readonly=\"readonly\" name=\"otros\" class=\"textbox\" value=\"$");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_otros}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\"><br/>\r\n");
+          out.write("                    ");
+          int evalDoAfterBody = _jspx_th_c_forEach_21.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_21.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_21[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_21.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_21.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_21);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_forEach_22(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_22 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_22.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_22.setParent(null);
+    _jspx_th_c_forEach_22.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${total_gastos}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_22.setVar("lista");
+    int[] _jspx_push_body_count_c_forEach_22 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_22 = _jspx_th_c_forEach_22.doStartTag();
+      if (_jspx_eval_c_forEach_22 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\r\n");
+          out.write("                        <input type=\"text\" id=\"valorTotalhectareas\"  readonly=\"readonly\" class=\"textbox\" value=\"$");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.total_gastos}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\"><br/>     \r\n");
+          out.write("                    ");
+          int evalDoAfterBody = _jspx_th_c_forEach_22.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_22.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_22[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_22.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_22.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_22);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_forEach_23(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_23 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_23.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_23.setParent(null);
+    _jspx_th_c_forEach_23.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${valor_kilogramo}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_23.setVar("lista");
+    int[] _jspx_push_body_count_c_forEach_23 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_23 = _jspx_th_c_forEach_23.doStartTag();
+      if (_jspx_eval_c_forEach_23 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\r\n");
+          out.write("                        <input type=\"text\" id=\"valorkilogramo\" readonly=\"readonly\" class=\"textbox\" value=\"$");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.valor_kilogramo}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\"><br/>\r\n");
+          out.write("                    ");
+          int evalDoAfterBody = _jspx_th_c_forEach_23.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_23.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_23[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_23.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_23.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_23);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_forEach_24(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_24 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_24.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_24.setParent(null);
+    _jspx_th_c_forEach_24.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${valor_ganancia}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_24.setVar("lista");
+    int[] _jspx_push_body_count_c_forEach_24 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_24 = _jspx_th_c_forEach_24.doStartTag();
+      if (_jspx_eval_c_forEach_24 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\r\n");
+          out.write("                        <input type=\"text\" id=\"valorGanancias\" class=\"textbox\" readonly=\"readonly\" class=\"\" value=\"");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista.valor_ganancia}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\"><br/>\r\n");
+          out.write("                    ");
+          int evalDoAfterBody = _jspx_th_c_forEach_24.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_24.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_24[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_24.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_24.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_24);
     }
     return false;
   }

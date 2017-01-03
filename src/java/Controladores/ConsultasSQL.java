@@ -952,11 +952,11 @@ public boolean registrarGravedad ( String fecha, String tipo_riego, String lote,
            pst.setString(3, fecha);
            pst.setString(4, pesoNeto);
            pst.setString(5, pesoFinal);
-           pst.setString(6, bultos);
-           pst.setString(7, f24);
-           pst.setString(8, f4);
-           pst.setString(9, kilosVerde);
-           pst.setString(10, valorUnitario);
+           pst.setString(6, f24);
+           pst.setString(7, f4);
+           pst.setString(8,valorUnitario );
+           pst.setString(9, bultos);
+           pst.setString(10, kilosVerde);
            pst.setString(11, valor_total_liquidacion);
            pst.setString(12, Total_liquidacion);
            pst.setString(13, total_peso);

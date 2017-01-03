@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Servlets;
+
 import Controladores.Graficas_usuarios;
 import Controladores.ConexionBD;
 import java.io.IOException;
@@ -33,31 +34,46 @@ public class graficas extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-         
+
         String num_lote = request.getParameter("num_lote");
-        
-       ConexionBD con = null;
-       
-       try {
-          
+
+        ConexionBD con = null;
+
+        try {
+
             con = new ConexionBD();
+            Graficas_usuarios suma = new Graficas_usuarios();
             Graficas_usuarios datos = new Graficas_usuarios(con.getConnection());
             Graficas_usuarios d = datos.datos(num_lote);
-             out.print(num_lote);
+
+            Graficas_usuarios manoobra = datos.grafManoObra(num_lote);
+            Graficas_usuarios insumos = datos.grafValorInsumos(num_lote);
+            Graficas_usuarios otrosgastos = datos.GrafOtrosGastos(num_lote);
+            out.print(num_lote);
+
+            HttpSession session = request.getSession();
             if (d != null) {
-                 HttpSession session = request.getSession();
-                 session.setAttribute("datos", d);
-                 response.sendRedirect("graficas.jsp");
-                 
-                
-            }else{
-                 response.sendRedirect("inicio.jsp");
-             }
+                session.setAttribute("datos", d);
+
+                if (manoobra != null) {
+                    session.setAttribute("manoobra", manoobra);
+
+                    if (insumos != null) {
+                        session.setAttribute("insumos", insumos);
+                    }
+                    if (otrosgastos != null) {
+                        session.setAttribute("otrosgastos", otrosgastos);
+                    }
+                }
+                response.sendRedirect("graficas.jsp");
+
+            } else {
+                response.sendRedirect("inicio.jsp");
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        }
-    
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
