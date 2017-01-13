@@ -308,6 +308,10 @@
         <servlet-name>graficas</servlet-name>
         <servlet-class>Servlets.graficas</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GraficaAdministrador</servlet-name>
+        <servlet-class>Servlets.GraficaAdministrador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registrar_Abonadas</servlet-name>
         <url-pattern>/Abonadas</url-pattern>
@@ -615,6 +619,10 @@
     <servlet-mapping>
         <servlet-name>graficas</servlet-name>
         <url-pattern>/graficas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GraficaAdministrador</servlet-name>
+        <url-pattern>/GraficaAdministrador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

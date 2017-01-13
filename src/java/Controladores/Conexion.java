@@ -722,7 +722,20 @@ public class Conexion {
         try {
             resultado = Consultar(sql);
             while (resultado.next()) {
-                lista.add(new liquidacion(resultado.getString("n_tiquete_liquidacion"), resultado.getString("fecha_liquidacion"), resultado.getString("peso_neto_liquidacion"), resultado.getString("peso_final_liquidacion"), resultado.getString("f_24_liquidacion"), resultado.getString("f_4_liquidacion"), resultado.getString("valor_unitario_liquidacion"), resultado.getString("bultos_liquidacion"), resultado.getString("kls_verdes_liquidacion"), resultado.getString("valor_total_liquidacion"), resultado.getString("total_liquidacion"), resultado.getString("total_peso_final"), resultado.getString("total_kilos_verdes"), resultado.getString("total_valor_unitario")));
+                lista.add(new liquidacion(resultado.getString("n_tiquete_liquidacion"), 
+                        resultado.getString("fecha_liquidacion"), 
+                        resultado.getString("peso_neto_liquidacion"), 
+                        resultado.getString("peso_final_liquidacion"),
+                        resultado.getString("f_24_liquidacion"), 
+                        resultado.getString("f_4_liquidacion"), 
+                        resultado.getString("valor_unitario_liquidacion"),
+                        resultado.getString("bultos_liquidacion"),
+                        resultado.getString("kls_verdes_liquidacion"), 
+                        resultado.getString("valor_total_liquidacion"),
+                        resultado.getString("total_liquidacion"), 
+                        resultado.getString("total_peso_final"), 
+                        resultado.getString("total_kilos_verdes"), 
+                        resultado.getString("total_valor_unitario")));
 
             }
         } catch (Exception e) {
@@ -868,6 +881,4 @@ public class Conexion {
         }
         return lista;
     }
-    
-    
 }
