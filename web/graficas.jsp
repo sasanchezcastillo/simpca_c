@@ -84,6 +84,13 @@
                 
             </div>
         </div>
+                        <div style="margin-left: 45%; margin-top: 2%;">
+                        <form action="DetallesTotal" method="post" style="margin-top: 25px;">
+                                <br>
+                                <input type="text" name="num_lote" hidden="" value="<%=lote%>"/>
+                                <input class="agregar-insumo" style="margin-top: 10px;" type="submit" value="Volver"/>
+                            </form>
+                        </div>        
         <footer>
             <div class="pie_paginaInicio">
             </div>

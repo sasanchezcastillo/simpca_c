@@ -65,10 +65,9 @@
                 <div class="cuerpo">        
                     <div class="lote-atras">
                         <form method="post" action="lote" >
-                            <input type="image" title="Elegir Lote" src="imagenes/atrasX32.png" />   
-                            <h2 id="h2-elegir">N° Lote: <%=lote%></h2>
+                            <input type="image" title="Eliga Otro Lote" style="margin-left: 27%; cursor: pointer;"/><br><br>
+                            <h2 style="margin-left: 28%; margin-top: -5px;"id="h2-elegir">N° Lote: <%=lote%></h2>
                         </form>
-
                     </div>
 
                     <div class="cont-pl">

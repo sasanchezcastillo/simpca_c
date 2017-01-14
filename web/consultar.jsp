@@ -359,7 +359,7 @@
                     
                     <input type="button"id="botonvolver"  value="VOLVER" onclick="location.href = 'Inicio.jsp'" >
                     <form action="graficas" method="post"> 
-                        <input type="text" value="<%=lote%>" name="num_lote">
+                        <input type="hidden" value="<%=lote%>" name="num_lote">
                     <input type="submit" id="botonvolver"  value="VER EN GRAFICAS" >
                     </form>
                     </div> 
