@@ -1,0 +1,279 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+*{
+	padding:0;
+	margin:0;
+	}
+
+
+div#toplogo {
+  
+	position:fixed;
+	float:left;
+	z-index:1001;
+}
+
+div#toplogo h1#logo a {
+	display:block;
+        
+	text-indent:-10000px;
+	width:290px;
+	height:160px;
+	margin-left:0%;
+	background:url(../imagenes/logo.png) no-repeat center -4px;
+	-webkit-transition: background-position .2s ease;
+	-moz-transition: background-position .2s ease;
+	-o-transition: background-position .2s ease;
+	transition: background-position .2s ease;
+}
+
+div#toplogo h1#logo a:hover {
+	background-position:center top;
+}
+
+div#wrapper {
+	width:980px;
+	margin:0 auto;
+	min-height:400px; 
+} 
+
+.wrapper2 {
+	width:1000px;
+	height:100%;
+	margin:0 auto;
+}
+
+div#toplogo {
+	position:fixed;
+	float:left;
+	z-index:1001;
+}
+
+.fondo{
+	background:url(../imagenes/bg-body.jpg)  center top repeat-y;
+	position:absolute;
+	left:0px;
+	height:1500px;
+	width:100%;
+	margin:0px  auto;
+
+}
+
+
+.wrapper {
+	width:1200px;
+	height:100%;
+	margin:0px auto;
+	
+}
+
+.logo {
+	text-indent:-10000px;
+	width:290px ;
+	height:160px ;
+	position:fixed;
+	z-index:101;
+	left:150px;
+	}
+        
+    header {
+	background:url(../imagenes/bg-nav.png) repeat-x ;
+	min-height:70px;
+	width:100%;
+	position:fixed;
+	z-index:100;
+	left:0px;
+	}
+
+
+nav{
+	float:right;
+	color:white;
+	margin:11px 0;
+	height:30px;	
+	
+}
+nav ul{
+	 list-style:none outside;
+	 overflow:hidden;
+	
+}
+
+nav ul li {
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	text-decoration:none;
+	 
+}
+
+nav ul li a {
+	display:block;
+	padding:20px;
+	color:#FFF;
+	text-decoration:none;
+	font-size: 14px;
+	text-align: justify;
+    	
+}
+nav ul li :hover {
+	background:#CCC;
+	
+}
+#cuerpo{
+	height:100%;
+	padding-top:50%;
+	width:80%;
+	margin:15px;
+	text-align:center;
+	float:left;
+	
+}
+#contenedor { 
+        position: relative;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333;
+	border-color:#666;
+        border: solid;
+	background: RGBA(245,178,53,0.2);
+	margin-top: 420px;
+        margin-left: 270px;
+	width: 800px;
+	height: 800px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 50px;
+} 
+
+h3{
+	text-align:right;
+	margin-right:20%;
+	margin-top:5%;
+	margin-left:5%;
+	margin-bottom:5%;
+}
+
+H1{
+	text-align:center;
+	font-size:36px;
+}
+
+/*Quema Fisica Deiby*/
+
+#pie_pagina{ 
+        background:url(../imagenes/bg-footer.png) repeat-x;
+        margin-top: 15%;
+        height: 200px;
+}
+	
+.t{
+    text-align: center;
+    margin-left: 19%;
+    margin-top: 70%;
+}
+
+.table{
+    text-align: center;
+    margin-left: 6%;
+}
+#guardar{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+        
+}
+
+#cerrar{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+        
+}
+
+
+#tabla_contenedor {
+    margin-left: 38px;
+    width: 650px;
+    height: 150px;
+    margin-top: 40px;
+    border: 1px;
+}
+
+#fecha{
+        margin-top:5%;
+        margin-left:0%;
+	text-align:center;
+	font-weight: bold;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+ .agregar-insumo{ 
+      margin-top: 8%; 
+      margin-bottom:90px;
+      background-color: rgb(254, 177, 0);
+      color: white;
+      width: 20%;
+      border-radius: 5px;
+      border-color: rgb(255, 197, 0);
+      padding: 6px;
+      cursor: pointer;
+      
+  }
+  
+.pruebas-botones2{
+    margin-right: -2%;
+    text-align: center;    
+}
+.pruebas-botones2 input:first-of-type{
+    margin-right: 5em;
+}
+.pruebas-botones2 input:last-of-type{
+    margin-left:1em;
+}
+
+.textbox{
+  width: 65%;
+  margin-bottom: 50px;
+  position: relative;
+  border: 0;
+  display: flex;
+  font-size: 14px;
+  font-family: Arial, Verdana;
+  padding: 8px 30px 10px 10px;
+  border-radius: 5px;
+  background:url(../imagenes/input-bg.png) #fff;
+  background-color: #f9f9f9;
+  margin: auto;
+  border-bottom: 20px;
+  padding: 5px;
+   }
+   
+.textbox:focus{
+  color: #2E3133;
+  border-color: #FBFFAD;
+  }
+  
+  
+  .textbox-f-t{
+  width: 90%;
+  margin-bottom: 50px;
+  position: relative;
+  border: 0;
+  display: flex;
+  font-size: 14px;
+  font-family: Arial, Verdana;
+  padding: 8px 30px 10px 10px;
+  border-radius: 5px;
+  background:url(../imagenes/input-bg.png) #fff;
+  background-color: #f9f9f9;
+  margin: auto;
+  border-bottom: 20px;
+  padding: 5px;
+   }
+   
+.textbox-f-t:focus{
+  color: #2E3133;
+  border-color: #FBFFAD;
+  }
+  

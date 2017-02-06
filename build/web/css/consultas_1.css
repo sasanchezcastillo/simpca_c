@@ -1,0 +1,334 @@
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+/* Barra de navegacion*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'open sans';
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+body{
+    overflow-x:hidden;
+}
+div#toplogo {
+    position:fixed;
+    float:left;
+    z-index:1004;
+}
+
+div#toplogo h1#logo a {
+    display:block;
+    text-indent:-10000px;
+    width:290px;
+    height:160px;
+    margin-left:0%;
+    background:url(../imagenes/logo.png) no-repeat center -4px;
+    -webkit-transition: background-position .2s ease;
+    -moz-transition: background-position .2s ease;
+    -o-transition: background-position .2s ease;
+    transition: background-position .2s ease;
+}
+
+div#toplogo h1#logo a:hover {
+    background-position:center top;
+}
+
+body {
+    background-image: url(../imagenes/bg-body.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    font-family: 'open sans';
+    margin: 0px;
+    font-family: "Roboto"; 
+    position: absolute;
+}
+
+.logo {
+    text-indent:-10000px;
+    width:290px ;
+    height:160px ;
+    position:fixed;
+    z-index:101;
+    left:10px;
+}
+
+/*header {
+    width:100%;
+
+}
+
+header nav {
+    width:100%;
+    height: 60px;
+    max-width:1600px;
+    margin:0 auto;
+    background:#537849;
+    z-index: 1003;	
+    position:fixed;
+}
+
+.menu_bar {
+    float: right;
+    display:none;
+    z-index: 1004;
+}
+
+header nav ul {
+    overflow:hidden;
+    list-style:none;
+}
+
+header nav ul li {
+    float:right;
+}
+
+header nav ul li a {
+    color:#fff;
+    padding:20px;
+    display:block;
+    text-decoration:none;
+
+    z-index: 1006;
+}
+
+header nav ul li span {
+    margin-right:10px;
+}
+
+header nav ul li a:hover {
+    background:#037E8C;
+}
+
+section {
+    padding:20px;
+}
+
+@media screen and (max-width:800px ) {
+    div#toplogo h1#logo a {
+        background:none;
+    }
+    header nav {
+        width:70%;
+        height:100%;
+        left:-100%;
+        margin:0;
+        position: fixed;
+        background-color: #537849;
+        border: 1px solid;
+    }
+
+    header nav ul li {
+        display:block;
+        float:none;
+        border-bottom:1px solid rgba(255,255,255, .3);
+    }
+
+    .menu_bar {
+        display:block;
+        width:100%;
+        background:#537849;
+    }
+
+    .menu_bar .bt-menu {
+        display:block;
+        padding:20px;
+        background:#537849;
+        color:#ffffff;
+        text-decoration:none;
+        font-weight: bold;
+        font-size:25px;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+    }
+
+    .menu_bar span {
+        float:right;
+        font-size:40px;
+    }
+    #toplogo{
+        display: none;
+    }
+
+}*/
+
+.bt-menu{
+    color: #ffffff;
+    background-color: #ffffff;
+}
+/* Fin barra de navegación*/
+
+
+.cont-consultas{
+    background: white;
+    position: relative;
+    width: 96%;
+    height:auto;
+    margin-top: 20%;
+    margin-left: 2%;
+    /*    border: 1px solid black;*/
+    text-align: center;
+    padding:0px;
+}
+
+.cont-consultas h2{
+
+    font-size: 28px;
+    position: relative;
+    margin-left: 9%;
+}
+.class-consulta-total{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 40px auto;
+    border: 2px solid #9e9e9e;
+    border-color: black;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    width: 60%;
+    height: auto;
+    padding: 0px;
+}
+
+.class-consulta{
+
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 2px solid #9e9e9e;
+    border-color: black;
+    width: 30%;
+    border-radius: 10%;
+}
+.img-consultas{
+    width: 96%;
+    height: 200px;
+    margin-top: 5px; 
+    margin: 0 auto;
+    margin-left: 0.25%;
+    border-radius: 10px;
+}
+
+
+.class-cont-consulta{
+    margin: 0 auto;
+}
+
+.detalles{
+    text-align: center;
+    background-color: rgb(105, 138, 94);
+    margin: 0 auto;
+    margin-bottom: 5px;
+    color: white;
+    border-radius: 8px;
+    padding: 7px ;
+    display: flex;
+    width: 80%;
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+
+}
+
+#liquidacion{
+    text-align: center;
+}
+
+.textbox{
+    width: 80%;
+    text-align: center;
+    content: "$";
+    
+    margin-bottom: 10px;
+    border: 0;
+    font-size: 14px;
+    font-family: Arial, Verdana;
+    border-radius: 5px;
+    background:url(../imagenes/input-bg.png) #fff;
+    background-color: #f9f9f9;
+    padding: 5px;
+}
+
+.valorTotal{
+    width: 60%;
+    text-align: center;
+    content: "$";
+    margin-bottom: 10px;
+    border: 0;
+    font-size: 14px;
+    font-family: Arial, Verdana;
+    border-radius: 5px;
+    background:url(../imagenes/input-bg.png) #fff;
+    background-color: #f9f9f9;
+    padding: 5px;
+}
+.textbox:focus{
+    color: #2E3133;
+    border-color: #FBFFAD;
+}
+#pie_paginaInicio{
+    position: relative;
+    background:url(../imagenes/bg-footer.png) repeat-x;
+
+    height: 200px;
+    z-index: 10000;
+}
+#botonvolver{
+    text-align: center;
+    background-color: rgb(105, 138, 94);
+    margin: 10px auto;
+    color: white;
+    border-radius: 8px;
+    padding: 7px ;
+    display: flex;
+    width: 40%;
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+}
+
+.lblCostos{
+    font-size: 26px;
+}
+
+@media(max-width:600px){
+    .img-consultas{
+        height: 180px;
+    }
+    .class-consulta{
+        display: block;
+        width: 96%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-left: 2%; 
+    }
+    .detalles{
+        text-align: center;
+        width: 90%;
+    }
+    .class-consulta-total{
+        width: 100%;
+        border-radius: 10%;
+        /*      border-bottom-right-radius: 10%;*/
+    }
+    #valorTotal{
+        width: 90%;
+    }
+    #botonvolver{
+        width: 60%;
+    }
+    .cont-consultas{
+        margin-top: 40%;
+    }
+    #h2costosdeproduccion{
+        margin: 0 auto;
+        font-size: 20px;
+    }
+    .lblCostos{
+        font-size: 20px;
+    }
+}

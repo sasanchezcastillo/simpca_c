@@ -1,0 +1,233 @@
+@charset "utf-8";
+/* CSS Document */
+.fondo{
+
+	background:url(../imagenes/bg-body.jpg)  center top repeat-y;
+	position:absolute;
+	left:0px;
+	height:1400px;
+	width:100%;
+	margin:0px  auto;
+}
+
+#cuerpo{
+	height:90%;
+	padding-top:5%;
+	width:95%;
+	margin:15px;
+	text-align:center;
+	float:center;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#contenedor { 
+width:690px;
+height: 650px; 
+margin:15% auto;
+margin-top: 32%;
+background-color: RGBA(245,178,53,0.2);
+font-family:Arial, Helvetica, sans-serif;
+color:#333;
+border:#999;
+border:solid 1.5px;
+border-radius: 50px;
+
+} 
+
+.wrapper {
+	width:1200px;
+	height:100%;
+	margin:0 auto;
+	
+}
+
+    header {
+	background:url(../imagenes/bg-nav.png) repeat-x ;
+	min-height:70px;
+	width:100%;
+	position:fixed;
+	z-index:100;
+	left:0px;
+	}
+
+
+nav{
+	float:right;
+	color:white;
+	margin:11px 0;
+	height:30px;	
+	
+}
+nav ul{
+	 list-style:none outside;
+	 overflow:hidden;
+	
+}
+
+nav ul li {
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	text-decoration:none;
+	 
+}
+
+nav ul li a {
+	display:block;
+	padding:20px;
+	color:#FFF;
+	text-decoration:none;
+	font-size: 14px;
+	text-align: justify;
+    	
+}
+nav ul li :hover {
+	background:#CCC;
+	
+}
+div#footer{
+	background:url(../imagenes/bg-footer.png) repeat-x;
+	width:100%;
+	position:absolute;
+
+}
+
+h5{
+	text-align:right;
+	padding-right:160px;
+        
+}
+#fecha{
+	padding-top:70px;
+}
+
+#tabla{
+	padding-top:55px;
+}
+#tabla1{
+        margin-top: 50px;
+        text-align: center;
+        margin-left: 120px;
+}
+#footer{
+	position:absolute;
+	left:0%;
+	top:100%;
+	background:url(../imagenes/bg-footer.png) repeat-x;
+}
+#boton1{
+	margin-top:15%;
+	margin-left:32%;
+	text-align:center;
+	font-size:15px;
+
+}
+#boton2{
+	margin-top:-14%;
+	margin-left:62%;
+	text-align:center;
+	font-size:15px;
+}
+#guardar{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+#cerrar{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+.wrapper2{
+	width:1000px;
+	height:100%;
+	margin:0 auto;
+}
+
+
+div#toplogo {
+	position:fixed;
+	float:left;
+	z-index:1001;
+}
+
+div#toplogo h1#logo a {
+	display:block;
+	text-indent:-10000px;
+	width:290px;
+	height:160px;
+	margin-left:0%;
+	background:url(../imagenes/logo.png) no-repeat center -4px;
+	-webkit-transition: background-position .2s ease;
+	-moz-transition: background-position .2s ease;
+	-o-transition: background-position .2s ease;
+	transition: background-position .2s ease;
+}
+
+div#toplogo h1#logo a:hover {
+	background-position:center top;
+}
+
+#pie_paginaCM{ 
+        background:url(../imagenes/bg-footer.png) repeat-x;
+        margin-top: 10%;
+        height: 200px;
+}
+
+
+.textbox1{
+  width: 78%;
+  margin-bottom: 50px;
+  position: relative;
+  border: 0;
+  display: flex;
+  font-size: 14px;
+  font-family: Arial, Verdana;
+  padding: 8px 30px 10px 10px;
+  border-radius: 5px;
+  background:url(../imagenes/input-bg.png) #fff;
+  background-color: #f9f9f9;
+  margin: auto;
+  border-bottom: 20px;
+  padding: 5px;
+   }
+   
+.textbox1:focus{
+  color: #2E3133;
+  border-color: #FBFFAD;
+  }
+   
+  .cont-inputs{
+    margin-top: 120px;
+    text-align: center;  
+     margin-left: 8%;
+    position: relative;
+    padding-bottom: 20px;
+}
+.cont-inputs input:first-of-type{
+    margin-right: 5em;
+}
+.cont-inputs input:last-of-type{
+    margin-left:1em;
+}
+
+#Guardar{
+	background-color: rgb(254, 177, 0);
+      color: white;
+      border-radius: 5px;
+      border-color: rgb(255, 197, 0);
+      padding: 5px;
+      width: 20%;
+      cursor: pointer;
+}
+
+#Cerrar{
+    background-color: rgb(254, 177, 0);
+      color: white;
+      border-radius: 5px;
+      border-color: rgb(255, 197, 0);
+      padding: 5px;
+      width: 20%;
+      cursor: pointer;
+        
+}

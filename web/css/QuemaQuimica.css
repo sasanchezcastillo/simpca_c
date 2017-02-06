@@ -1,0 +1,279 @@
+@charset "utf-8";
+/* CSS Document */
+ .fondo{
+
+	background:url(../imagenes/bg-body.jpg)  center top repeat-y;
+	position:absolute;
+	left:0px;
+	height:1250px;
+	width:100%;
+	margin:0px  auto;
+}
+
+#cuerpo{
+	height:90%;
+	padding-top:5%;
+	width:95%;
+	margin:15px;
+	text-align:center;
+	float:center;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#contenedor { 
+width:880px;
+height:78%; 
+margin:15% auto;
+margin-top: 32%;
+background-color: RGBA(245,178,53,0.2);
+font-family:Arial, Helvetica, sans-serif;
+color:#333;
+border:#999;
+border:solid 1.5px;
+border-radius: 50px;
+
+} 
+
+.wrapper {
+	width:1200px;
+	height:100%;
+	margin:0 auto;
+	
+}
+
+    header {
+	background:url(../imagenes/bg-nav.png) repeat-x ;
+	min-height:70px;
+	width:100%;
+	position:fixed;
+	z-index:100;
+	left:0px;
+	}
+
+
+ nav{
+	float:right;
+	color:white;
+	margin:11px 0;
+	height:30px;	
+	
+}
+nav ul{
+	 list-style:none outside;
+	 overflow:hidden;
+	
+}
+
+nav ul li {
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	text-decoration:none;
+	 
+}
+
+nav ul li a {
+	display:block;
+	padding:20px;
+	color:#FFF;
+	text-decoration:none;
+	font-size: 14px;
+	text-align: justify;
+    	
+}
+nav ul li :hover {
+	background:#CCC;
+	
+}
+div#footer{
+	background:url(../imagenes/bg-footer.png) repeat-x;
+	width:100%;
+	position:absolute;
+}
+
+h5{
+	text-align:right;
+	padding-right:160px;
+}
+
+#fecha{
+	padding-top:70px;
+}
+
+#tabla{
+	padding-top:50px;
+}
+
+#tabla1{
+	padding-top:70px;   
+}
+
+#sumaTotal{
+    position: absolute;
+}
+
+#total{
+        position: absolute;
+	margin-top:60px;
+	margin-left: 38%;
+}
+
+#agregar{
+    margin-top: 2%;
+    width: 158px;
+    height: 25px;
+    background-color: aliceblue;
+    margin-left: 74%;
+    border-radius: 8px;
+    font-weight: bold;
+        
+}
+
+#agregar1{
+	margin-left:68%;
+        margin-top: 4%;  
+}
+
+#tabla2{
+    margin-left: 12%;
+    height: 170px;
+    overflow-x: auto;
+    margin-top: 8%;
+    width: 720px;  
+}
+
+.textbox{
+  width: 100%;
+  margin-bottom: 50px;
+  position: relative;
+  border: 0;
+  display: flex;
+  font-size: 14px;
+  font-family: Arial, Verdana;
+  padding: 8px 30px 10px 10px;
+  border-radius: 5px;
+  background:url(../imagenes/input-bg.png) #fff;
+  background-color: #f9f9f9;
+  margin: auto;
+  border-bottom: 20px;
+  padding: 5px;
+   }
+   
+   .textbox:focus{
+  color: #2E3133;
+  border-color: #FBFFAD;
+  }
+   
+   .textboxT{
+  width: 50%;
+  margin-bottom: 50px;
+  position: relative;
+  border: 0;
+  display: flex;
+  font-size: 14px;
+  font-family: Arial, Verdana;
+  padding: 8px 30px 10px 10px;
+  border-radius: 5px;
+  background:url(../imagenes/input-bg.png) #fff;
+  background-color: #f9f9f9;
+  margin: auto;
+  border-bottom: 20px;
+  padding: 5px;
+   }
+   
+   .textboxT:focus{
+  color: #2E3133;
+  border-color: #FBFFAD;
+  }
+  
+  
+   .textbox-f-t{
+  width: 75%;
+  margin-bottom: 50px;
+  position: relative;
+  border: 0;
+  display: flex;
+  font-size: 14px;
+  font-family: Arial, Verdana;
+  padding: 8px 30px 10px 10px;
+  border-radius: 5px;
+  background:url(../imagenes/input-bg.png) #fff;
+  background-color: #f9f9f9;
+  margin: auto;
+  border-bottom: 20px;
+  padding: 5px;
+   }
+   
+.textbox-f-t:focus{
+  color: #2E3133;
+  border-color: #FBFFAD;
+  }
+  
+  
+  .agregar-insumo{ 
+      margin-top: 90%; 
+      margin-bottom:90px;
+      background-color: rgb(254, 177, 0);
+      color: white;
+      width: 30%;
+      border-radius: 5px;
+      border-color: rgb(255, 197, 0);
+      padding: 6px;
+      cursor: pointer;
+      
+  }
+  
+  .agregar-insumo2{ 
+      background-color: rgb(254, 177, 0);
+      color: white;
+      border-radius: 5px;
+      border-color: rgb(255, 197, 0);
+      padding: 6px;
+      width: 30%;
+      cursor: pointer;
+      
+  }
+  .pruebas-botones{
+    margin-right: 12%;
+    text-align: center;    
+}
+.pruebas-botones input:first-of-type{
+    margin-right: 5em;
+}
+.pruebas-botones input:last-of-type{
+    margin-left:1em;
+}
+
+.cont-inputs{
+    margin-top: 50px;
+    margin-left: -413px;
+    text-align: center;
+    position: relative;
+}
+.cont-inputs input:first-of-type{
+    margin-right: 5em;
+}
+.cont-inputs input:last-of-type{
+    margin-left:1em;
+}
+
+.agregar-insumo{ 
+      margin-top: 10%;
+      background-color: rgb(254, 177, 0);
+      color: white;
+      width: 30%;
+      border-radius: 5px;
+      border-color: rgb(255, 197, 0);
+      padding: 6px;
+      cursor: pointer; 
+  }
+  
+  #insumos{
+	margin-top:6%;
+	margin-left: 10%;
+	text-align:center;
+	font-weight:bold;
+	font-size:15px;
+	font-family: Arial, Helvetica, sans-serif;
+}

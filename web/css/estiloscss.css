@@ -1,0 +1,272 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 9/08/2016, 03:07:19 PM
+    Author     : Administrador
+*/
+.wrapper {
+	width:1200px;
+	height:100%;
+	margin:0 auto;
+	
+}
+
+
+h1{
+	text-align:center;
+	font-size:36px;
+}
+
+h2{
+	text-align:center;
+	margin-top:7%;
+	font-size:24px;
+}
+
+select{
+	width:40%;
+	margin-left:5%;
+}
+
+#cerrar{
+	margin-top:90%;
+	margin-right:45%;
+}
+
+#guardar{
+	margin-top:77%;
+	margin-left:45%;
+}
+
+#valortotal{
+	margin-top:25%;
+}
+
+h5{
+	text-align:right;
+	padding-right:120px;
+        padding-top: -10px;
+}
+
+div#contenedor { 
+width:790px;  
+height:870px; 
+margin:32% auto;
+border:solid 1.5px;
+border-radius: 50px;
+background-color:#FFF;
+background:rgba(245,178,53,0.2);
+}
+
+#cuerpo{
+	height:90%;
+	padding-top:5%;
+	width:95%;
+	margin:15px;
+	text-align:center;
+	float:center;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#contenedorizq{
+	float:left;
+	background:#FFF;
+	padding:auto;
+	margin-top:100px;
+	width:355px;
+	height:40%;
+	margin-left:5%;
+	background:rgba(245,178,53,0.0);
+	
+}
+	
+#contenedorDer{
+	float:right;
+	padding:auto;
+	margin-top:100px;
+	width:355px;
+	height:40%; 
+	background:#FFF;
+	margin-right:5%;
+	background:rgba(245,178,53,0.0);
+}
+
+#fecha{
+	margin-top: -39%;
+        margin-left: 30%;
+}
+
+#PagoTotalObreros{
+	margin-top: 10%;
+        margin-left: 30%;
+}
+
+#ValorTotalSiembra{
+	margin-top: 12%;
+        margin-left: 30%;
+}
+
+#contenedorAb{
+	width:719px;
+	height:20%;
+	margin-top:5px;
+	background-color:#369;
+	float:center;
+}
+
+select#option{
+	width:120px;
+	height:20px;
+	margin-left:100px;	
+	 	}
+		
+#fechadat{
+	position:absolute;
+	left: 585px;
+	top: 443px;
+}
+
+#input {
+	left:10%;
+	top:448px;
+	width:120px;
+	height:30px;
+	font-style:normal;
+	text-align:left;
+	font-size:13px;
+	color:#000;
+	height:14px;
+	aglin:center;
+	left: 604px;
+		}
+                
+#input{
+        padding:1px 0px 1px 0px;
+	box-sizing:border-box;
+	color:#000;
+	background:#999;
+        height:20px;
+			
+}
+		
+#tablabotones{
+	margin-left:-5%;
+        margin-top: 70%;
+}
+
+input[name=slider]{
+        width:180px;
+        height:15px;
+        border-color:#000;
+        border-radius:10px;	
+        -webkit-border-radius:10px;
+        -moz-border-radius:10px;
+        -o-border-radius:10px;
+        margin-right:-1px;
+        background-color:#CCC;
+        margin-top:-10%;
+}
+
+#tablanombres{
+	margin-left:-3%;
+	margin-top:-2%;
+}
+
+input[type=button]:hover{
+	opacity:1;
+	background-color:#666;
+}
+
+#boton1{
+	margin-top:15%;
+	margin-left:0;
+	text-align:center;
+	font-size:15px;
+}
+
+#boton2{
+	margin-top:-20%;
+	margin-left:52%;
+	text-align:center;
+	font-size:15px;
+}
+
+#guardar{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+        margin-top: 1%;
+        margin-left: -5%;
+}
+
+#cerrar{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+        margin-top: 1%;
+}
+
+.cajaTextoTotal{
+	height:17px;
+	width:100px;
+        background: #CCC;
+}
+
+
+#TablaS{
+    margin-top: 80px;
+}
+
+#pie_paginaSM{
+        background:url(../imagenes/bg-footer.png) repeat-x;
+        margin-top: -15%;
+        height: 200px;
+}
+
+.cont-inputs{
+    margin-top: 50px;
+    margin-left: -400px;
+    text-align: center;
+    position: relative;
+}
+.cont-inputs input:first-of-type{
+    margin-right: 5em;
+}
+.cont-inputs input:last-of-type{
+    margin-left:1em;
+}
+
+.agregar-insumo{ 
+      margin-top: 10%;
+      background-color: rgb(254, 177, 0);
+      color: white;
+      width: 30%;
+      border-radius: 5px;
+      border-color: rgb(255, 197, 0);
+      padding: 6px;
+      cursor: pointer; 
+  }
+  
+ .textbox-f-tM{
+  width: auto;
+  margin-bottom: 50px;
+  position: relative;
+  border: 0;
+  display: flex;
+  font-size: 14px;
+  font-family: Arial, Verdana;
+  padding: 8px 30px 10px 10px;
+  border-radius: 5px;
+  background:url(../imagenes/input-bg.png) #fff;
+  background-color: #f9f9f9;
+  margin: auto;
+  border-bottom: 20px;
+  padding: 5px;
+   }
+   
+.textbox-f-tM:focus{
+  color: #2E3133;
+  border-color: #FBFFAD;
+  }

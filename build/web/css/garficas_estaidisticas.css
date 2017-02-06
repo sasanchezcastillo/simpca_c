@@ -1,0 +1,39 @@
+
+
+
+
+.cont-graficas{
+    width: 100%;
+    height: auto;
+    margin-top: 14%;
+    position: absolute;
+    display: inline-block;
+
+}
+.torta{
+
+    width: 20%;
+    position: relative;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 5%;
+    right: 20%;
+    margin-bottom: 30px;
+
+    
+}
+.legend span 
+{
+    width: 33.333333%;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+}
+.cont-graficas{
+    width: 100%;
+    background: none;
+    position: relative;
+}
+
+

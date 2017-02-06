@@ -1,0 +1,397 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+*{
+	padding:0;
+	margin:0;
+	}
+
+
+.fondo{
+	background-image: url();
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    font-family: 'open sans';
+    margin: 0px;
+
+}
+
+.contenedor { 
+width:880px;
+height:auto; 
+margin:15% auto;
+margin-top: 32%;
+background-color: RGBA(245,178,53,0.2);
+font-family:Arial, Helvetica, sans-serif;
+color:#333;
+border:#999;
+border:solid 1.5px;
+border-radius: 50px;
+} 
+.wrapper {
+	width:1200px;
+	height:100%;
+	margin:0 auto;
+	
+}
+
+.logo {
+	text-indent:-10000px;
+	width:290px ;
+	height:160px ;
+	position:fixed;
+	z-index:101;
+	left:150px;
+	}
+    header {
+	background:url(../imagenes/bg-nav.png) repeat-x ;
+	min-height:70px;
+	width:100%;
+	position:fixed;
+	z-index:100;
+	left:0px;
+	}
+
+
+nav{
+	float:right;
+	color:white;
+	margin:11px 0;
+	height:30px;	
+	
+}
+nav ul{
+	 list-style:none outside;
+	 overflow:hidden;
+	
+}
+
+nav ul li {
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	text-decoration:none;
+	 
+}
+
+nav ul li a {
+	display:block;
+	padding:20px;
+	color:#FFF;
+	text-decoration:none;
+	font-size: 14px;
+	text-align: justify;
+    	
+}
+nav ul li :hover {
+	background:#CCC;
+	
+}
+
+/* ConsultarDetalles*/
+
+#contenedor      {
+	background-color:#FFF;
+	margin:10px;
+	height:500%;
+	width:55%;
+	margin-left:200px;
+	border-style:solid;
+	border-width:1px;
+	font:Arial;
+	border-radius:70px;
+        margin-left: 100px;
+        margin-top: 10%;
+	position: absolute;
+}
+#cortabultosyriego{
+    background-color:#FFF;
+	margin:10px;
+	height:500%;
+	width:70%;
+	margin-left:200px;
+	border-style:solid;
+	border-width:1px;
+	font:Arial;
+	border-radius:70px;
+        margin-left: 100px;
+        margin-top: 10%;
+	position: absolute;
+        
+}
+
+#contenedordetalles{
+            background-color:#FFF;
+	margin:10px;
+	height:500%;
+	width:60%;
+	margin-left:200px;
+	border-style:solid;
+	border-width:1px;
+	font:Arial;
+	border-radius:70px;
+        margin-left: 100px;
+        margin-top: 10%;
+	position: absolute;
+        }
+#contenedorR{
+    background-color:#FFF;
+	margin:10px;
+	height:400%;
+	width:75%;
+	margin-left:200px;
+	border-style:solid;
+	border-width:1px;
+	font:Arial;
+	border-radius:70px;
+        margin-left: 100px;
+        margin-top: 10%;
+	position: absolute;
+}
+
+footer {
+	background:url(../imagenes/bg-footer.png) repeat-x;
+	position:relative;
+	float:left;
+	display:block;
+	height:200px;
+	width:100%;
+	top:100%;
+	
+}
+
+#tdc {
+	text-align:center;
+}
+
+.button:hover {
+	background-color:green ;
+	width:12%;
+	height:30px;
+	border-radius:10px;
+}
+
+#Bultos{
+    border: 0;
+    text-align: center;
+    
+}
+#Abonada{
+    border: 0;
+     text-align: center;
+}
+#Granel{
+    border: black;
+     text-align: center;
+}
+#Despalille{
+    border: 0;
+     text-align: center;
+}
+.entresaque{
+     text-align: center;
+     border-collapse: collapse;
+}
+#Entresaque{
+    border: 0;
+         text-align: center;
+
+    
+}
+#Fumiga{
+    border: 0;
+     text-align: center;
+}
+#Macheteada{
+    border: 0;
+     text-align: center;
+}
+#Mantenimiento{
+     border: 0;
+     text-align: center;
+     border-collapse: collapse;
+}
+#Pajareo{
+     text-align: center;
+     border: 0;
+}
+#Suelo{
+     text-align: center;
+     border: 0;
+}
+#Quemafisica{
+     text-align: center;
+     border: 0;
+}
+#Quemaquimica{
+     text-align: center;
+     border: 0;
+}
+#Quemaquimica1{
+    text-align: center;
+     border: 0;
+     font-size: 200%;
+     width: 50%;
+}
+#Residuos{
+     text-align: center;
+     border: 0;
+}
+#Siembramanual{
+     text-align: center;
+     border: 0;
+}
+#Siembramecanizada{
+    
+     text-align: center;
+     border: 0;
+}
+#Riego{
+     text-align: center;
+     border: 0;
+}
+#tabla_bultos{
+    text-align: center;
+    font-size: 100%;
+    position: static;
+   
+    
+}
+#bultos{
+     text-align: center;
+    font-size: 100%;
+}
+.abonada{
+    position: relative;
+    font-size: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-color: black;
+    border-collapse: collapse;
+}
+#granel{
+      font-size: 100%;
+    text-align: center;
+}
+.despalille{
+     font-size: 99%;
+    text-align: center;
+    margin-top: 10%;
+    border-collapse: collapse;
+}
+#entresaque{
+     font-size: 99%;
+    text-align: center;
+    margin-top: 19%;
+}
+.fumiga{
+    font-size: 90%;
+    text-align: center;
+    margin-top: 19%;
+      border-collapse: collapse;
+}
+#macheteada{
+       font-size: 100%;
+    text-align: center;
+    margin-top: 19%;
+}
+.detalles{
+       font-size: 100%;
+    text-align: center;
+    margin-top: 10%;
+    border-collapse: collapse;
+}
+.preparacion{
+     font-size: 100%;
+    text-align: center;
+    margin-top: 19%;
+     border-collapse:  collapse;
+    
+}
+.pajareo{
+     font-size: 99%;
+    text-align: center;
+    margin-top: 10%;
+    border-collapse:  collapse;
+}
+.quemafisica{
+     font-size: 90%;
+    text-align: center;
+    margin-top: 10%;
+    border-collapse:  collapse;
+    
+    
+}
+.quimica{
+  font-size: 99%;
+ text-align: center;
+margin-top: 10%;
+ border-collapse:  collapse;
+       
+}
+.residuos{
+      font-size: 100%;
+    text-align: center;
+    margin-top: 10%;
+        border-collapse:  collapse;
+}
+.consulta{
+    border-style: solid;
+    border-collapse: collapse;
+}
+.tabla-riego{
+    font-size: 99%;
+ text-align: center;
+margin-top: 5%;
+ border-collapse:  collapse;
+}
+.manual{
+  font-size: 99%;
+ text-align: center;
+margin-top: 10%;
+ border-collapse:  collapse;    
+}
+.mecanizada{
+    font-size: 99%;
+ text-align: center;
+margin-top: 10%;
+ border-collapse:  collapse;
+}
+.macheteada{
+     font-size: 99%;
+ text-align: center;
+margin-top: 10%;
+ border-collapse:  collapse;
+}
+.tabla_bultos{
+ font-size: 85%;
+ text-align: center;
+margin-top: 5%;
+ border-collapse:  collapse;
+ max-width: 98%;
+ width: 150%;
+}
+.granel{
+     font-size: 99%;
+ text-align: center;
+margin-top: 5%;
+ border-collapse:  collapse;
+}
+#insumosquemaquimica{
+    text-align: center;
+     border: 0;
+}
+#insumoslote{
+    text-align: center;
+     border: 0;
+}
+#insumos_abonada{
+    text-align: center;
+     border: 0;
+}
+#insumos_fumiga{
+    text-align: center;
+     border: 0;
+}

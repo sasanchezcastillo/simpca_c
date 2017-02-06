@@ -1,0 +1,140 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/08/2016, 01:56:57 PM
+    Author     : LENOVO
+*/
+*{
+	padding:0;
+	margin:0;
+	}
+
+
+.fondo{
+	background:url(../imagenes/bg-body.jpg)  center top repeat-y;
+	position:absolute;
+	left:0px;
+	height:1400px;
+	width:100%;
+	margin:0px  auto;
+}
+
+.wrapper {
+	width:1200px;
+	height:100%;
+	margin:0 auto;	
+}
+
+.logo {
+	text-indent:-10000px;
+	width:290px ;
+	height:160px ;
+	position:fixed;
+	z-index:101;
+	left:150px;
+}
+	
+header {
+	background:url(../imagenes/bg-nav.png) repeat-x ;
+	min-height:70px;
+	width:100%;
+	position:fixed;
+	z-index:100;
+	left:0px;
+}
+
+nav{
+	float:right;
+	color:white;
+	margin:11px 0;
+	height:30px;	
+}
+
+nav ul{
+	 list-style:none outside;
+	 overflow:hidden;	
+}
+
+nav ul li {
+	float:left;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	text-decoration:none;
+}
+
+nav ul li a {
+	display:block;
+	padding:20px;
+	color:#FFF;
+	text-decoration:none;
+	font-size: 14px;
+	text-align: justify;
+}
+
+nav ul li :hover {
+	background:#CCC;	
+}
+
+.wrapper-preparacion{
+width:60%;
+height: 830px;
+margin: auto;
+padding: 20px;
+border: 1.5px solid ;
+margin-top: 30%;
+margin-left: 20%;
+position: absolute;
+text-align: center;
+background: white;
+}
+
+.cont-general1{
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 50px;
+    position: relative;
+    display: inline-block;    
+}
+
+.cont-general2{
+    margin-top: 70px;  
+    position: relative;
+    display: inline-block;
+    letter-spacing: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.conte-imagenes{
+    position:relative;
+    display: inline-block;
+    float: next;    
+    text-align: center;
+    background-color: rgb(66, 132, 36);
+    padding-bottom:  0px;
+    width: 25%;
+    height: 5%;
+    cursor: pointer;
+    border:solid 1px;
+    border-color: rgb(255, 149, 0);
+}
+
+.imput-general{     
+      margin-top: 30px; 
+      margin-bottom:40px;
+      background-color: rgb(255, 149, 0);
+      color: white;
+      border-radius: 5px;
+      border-color: rgb(255, 149, 0);
+      padding: 7px;
+      cursor: pointer;  
+  }
+
+#pie_paginaCosecha{
+        background:url(../imagenes/bg-footer.png) repeat-x;
+        margin-top: 100%;
+        height: 200px;
+}

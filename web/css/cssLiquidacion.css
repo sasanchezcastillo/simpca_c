@@ -1,0 +1,131 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8/08/2016, 01:57:31 PM
+    Author     : SENA
+*/
+div#contenedor{
+	width:1200px;
+	height:860px;
+	margin:32% auto;
+	background-color:RGBA(245,178,53,0.2);
+        border: solid 1.5px;
+        border-radius: 20px;
+}
+
+#contenedor2 {
+        margin-top: 20%;
+	width:1115px;
+	height:200px;
+	top:auto;
+        overflow-x: 14px;
+}
+
+div#contenedor3 {
+	float:top;
+	margin-top:-80px;
+	width:1000px;
+	height:220px;
+}
+
+*{
+	padding:0;
+	margin:0;
+	}
+
+.fondo{
+	background:url(../imagenes/bg-body.jpg)  center top repeat-y;
+	position:absolute;
+	left:0px;
+	height:1000px;
+	width:100%;
+	margin:0px  auto;
+
+}
+
+.wrapper {
+	width:1200px;
+	height:100%;
+	margin:0 auto;	
+}
+
+.logo {
+	text-indent:-10000px;
+	width:290px ;
+	height:160px ;
+	position:fixed;
+	z-index:101;
+	left:150px;
+	margin:0 auto;
+	min-height:70px;
+	}
+
+#footer {
+	background: url(../imagenes/bg-footer.png) repeat-x;
+	position:absolute;
+	width:100%;
+	top:100%;
+	height:200px;
+	z-index:102;
+        margin-top: 300px;
+}
+
+.tabla2{
+    margin-top: -2%;
+    margin-left: 5%;
+    height: 300px;
+    overflow-x: auto;
+    width: 1500;  
+}
+
+.cont-inputsL{
+    margin-top: 120px;
+    text-align: center;  
+    margin-left: 3%;
+    position: relative;
+    padding-bottom: 20px;
+}
+.cont-inputsL input:first-of-type{
+    margin-right: 5em;
+}
+.cont-inputsL input:last-of-type{
+    margin-left:1em;
+}
+
+.agregar-insumoL{ 
+      margin-top: 8%; 
+      margin-bottom:90px;
+      background-color: rgb(254, 177, 0);
+      color: white;
+      width: 20%;
+      border-radius: 5px;
+      border-color: rgb(255, 197, 0);
+      padding: 6px;
+      cursor: pointer;
+  }
+
+.pruebas-botonesL{
+    margin-left: 1%;
+    text-align: center;    
+}
+.pruebas-botonesL input:first-of-type{
+    margin-right: 5em;
+}
+.pruebas-botonesL input:last-of-type{
+    margin-left:1em;
+}
+
+.agregar-insumoL{ 
+      margin-top: 8%; 
+      margin-bottom:90px;
+      background-color: rgb(254, 177, 0);
+      color: white;
+      width: 20%;
+      border-radius: 5px;
+      border-color: rgb(255, 197, 0);
+      padding: 6px;
+      cursor: pointer;
+  }

@@ -1,0 +1,275 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29/08/2016, 03:32:37 PM
+    Author     : LUIS
+*/
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	padding:0;
+	margin:0;
+	}
+        
+
+div#toplogo {
+	position:fixed;
+	float:left;
+	z-index:1001;
+}
+
+div#toplogo h1#logo a {
+	display:block;
+	text-indent:-10000px;
+	width:290px;
+	height:160px;
+	margin-left:0%;
+	background:url(../imagenes/logo.png) no-repeat center -4px;
+	-webkit-transition: background-position .2s ease;
+	-moz-transition: background-position .2s ease;
+	-o-transition: background-position .2s ease;
+	transition: background-position .2s ease;
+}
+
+div#toplogo h1#logo a:hover {
+	background-position:center top;
+}
+
+div#wrapper {
+	width:980px;
+	margin:0 auto;
+	min-height:400px; 
+} 
+
+.wrapper2 {
+	width:1000px;
+	height:100%;
+	margin:0 auto;
+}
+
+div#toplogo {
+	position:fixed;
+	float:left;
+	z-index:1001;
+}
+
+
+.logo {
+	text-indent:-10000px;
+	width:290px ;
+	height:160px ;
+	position:fixed;
+	z-index:101;
+	left:150px;
+	}
+        
+    header {
+	background:url(../imagenes/bg-nav.png) repeat-x ;
+	min-height:70px;
+	width:100%;
+	position:fixed;
+	z-index:100;
+	left:0px;
+	}
+
+
+nav{
+	float:right;
+	color:white;
+	margin:11px 0;
+	height:30px;	
+	
+}
+nav ul{
+	 list-style:none outside;
+	 overflow:hidden;
+	
+}
+
+nav ul li {
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	text-decoration:none;
+	 
+}
+
+nav ul li a {
+	display:block;
+	padding:20px;
+	color:#FFF;
+	text-decoration:none;
+	font-size: 14px;
+	text-align: justify;
+    	
+}
+nav ul li :hover {
+	background:#CCC;
+	
+}
+        
+.fondo{
+
+	background:url(../imagenes/bg-body.jpg)  center top repeat-y;
+	position:absolute;
+	left:0px;
+	height:1400px;
+	width:100%;
+	margin:0px  auto;
+
+}
+#cuerpo{
+	height:90%;
+	padding-top:5%;
+	width:95%;
+	margin:15px;
+	text-align:center;
+	float:center;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#contenedor { 
+width:790px;
+height:64%; 
+margin:15% auto;
+margin-top: -15%;
+background-color: RGBA(245,178,53,0.2);
+font-family:Arial, Helvetica, sans-serif;
+color:#333;
+border:#999;
+border:solid;
+border-top-left-radius:200px;
+border-top-right-radius:200px;
+border-bottom-left-radius:200px;
+border-bottom-right-radius:200px;
+
+} 
+
+#fecha{
+	padding-top:70px;
+}
+
+#tabla{
+	padding-top:55px;
+}
+#tabla1{
+	padding-top:70px;
+        text-align: center;
+        margin-left: 16%;
+}
+#footer{
+	position:absolute;
+	left:0%;
+	top:100%;
+	background:url(../imagenes/bg-footer.png) repeat-x;
+}
+#boton1{
+	margin-top:27%;
+	margin-left:32%;
+	text-align:center;
+	font-size:15px;
+
+}
+#boton2{
+	margin-top:-14%;
+	margin-left:62%;
+	text-align:center;
+	font-size:15px;
+}
+#guardar{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+#cerrar{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+div#wrapper22{
+	width:980px;
+	margin:0 auto;
+	min-height:400px;
+}
+.wrapper2{
+	width:1000px;
+	height:100%;
+	margin:0 auto;
+}
+div#toplogo{
+	position:fixed;
+	float:left;
+	z-index:1001;
+}
+
+div#toplogo h1#logo a:hover{
+	background-position:center top;
+}
+
+.imput-general{     
+      margin-top: 30px; 
+      margin-bottom:40px;
+      background-color: rgb(255, 149, 0);
+      color: white;
+      border-radius: 5px;
+      border-color: rgb(255, 149, 0);
+      padding: 7px;
+      cursor: pointer; 
+  }
+
+.wrapper-preparacion{
+width:50%;
+margin: auto;
+padding: 20px;
+border: 1.5px solid ;
+margin-top: 32%;
+margin-left: 25%;
+position: absolute;
+text-align: center;
+background: white;
+}
+
+.cont-general1{
+    width: 120%;
+    margin-top: 20px;
+    margin-left: -55px;
+    text-align: center;
+    letter-spacing: 50px;
+    position: relative;
+    display: inline-block;
+    font-family: Times New Roman;    
+}
+
+.cont-general2{
+    width: 120%;
+    margin-top: 90px;
+    margin-left: -55px;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.conte-imagenes{
+    position:relative;
+    display: inline-block;
+    float: next;    
+    text-align: center;
+    background-color: rgb(66, 132, 36);
+    padding-bottom:  0px;
+    width: 25%;
+    height: 5%;
+    cursor: pointer;
+    border:solid 1px;
+    border-color: rgb(255, 149, 0);
+}
+
+#pie_paginaIF{
+        background:url(../imagenes/bg-footer.png) repeat-x;
+        margin-top: 100%;
+        height: 200px;
+}
