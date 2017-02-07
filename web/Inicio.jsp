@@ -65,7 +65,7 @@
                 <div class="cuerpo">        
                     <div class="lote-atras">
                         <form method="post" action="lote" >
-                            <input type="image" title="Eliga Otro Lote" style="margin-left: 27%; cursor: pointer;"/><br><br>
+                            <input type="image" src="imagenes/BOTON FLECHA.png" title="Eliga Otro Lote" style="margin-left: 27%; cursor: pointer;"/><br><br>
                             <h2 style="margin-left: 28%; margin-top: -5px;"id="h2-elegir">N° Lote: <%=lote%></h2>
                         </form>
                     </div>
