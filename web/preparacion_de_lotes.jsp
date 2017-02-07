@@ -87,7 +87,7 @@
                     </a>
                 </div>
             </div>  
-            <input type="image" src="imagenes/BOTON FLECHA.png" width="72" height="60" onclick="location.href='Inicio.jsp'" /><br>
+            <input type="image" src="imagenes/BOTON FLECHA.png" width="66" height="66" onclick="location.href='Inicio.jsp'" /><br>
                 <font color="#000000">REGRESAR</font>
         </div>
         <footer>
