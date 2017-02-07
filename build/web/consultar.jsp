@@ -362,6 +362,10 @@
                         <input type="hidden" value="<%=lote%>" name="num_lote">
                     <input type="submit" id="botonvolver"  value="VER EN GRAFICAS" >
                     </form>
+                    <form action="" method="post"> 
+                        <input type="hidden" value="<%=lote%>" name="num_lote">
+                    <input type="submit" id="botonvolver"  value="INICIAR NUEVA COSECHA " >
+                    </form>
                     </div> 
         </div>
     
