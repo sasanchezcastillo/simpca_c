@@ -72,7 +72,7 @@ public class Conexion {
     public Conexion() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/simpca?user=root&password=9510");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/simpca?user=root&password=senaapp");
             consulta = conexion.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
