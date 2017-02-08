@@ -3,11 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/proyecto/web/administrador/agregarAdministrador.jsp</file>
             <file>file:/D:/proyecto/nbproject/build-impl.xml</file>
             <file>file:/D:/proyecto/src/java/Controladores/ConexionBD.java</file>
+            <file>file:/D:/proyecto/web/administrador/index.html</file>
+            <file>file:/D:/proyecto/web/Inicio.jsp</file>
+            <file>file:/D:/proyecto/web/corta.jsp</file>
+            <file>file:/D:/proyecto/web/preparacion_de_lotes.jsp</file>
             <file>file:/D:/proyecto/web/seleccione_lote.jsp</file>
             <file>file:/D:/proyecto/web/restablecerC.jsp</file>
             <file>file:/D:/proyecto/src/java/Controladores/Conexion.java</file>
+            <file>file:/D:/proyecto/web/cosecha.jsp</file>
         </group>
     </open-files>
 </project-private>

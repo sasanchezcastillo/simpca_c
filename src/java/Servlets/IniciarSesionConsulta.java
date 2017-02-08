@@ -7,10 +7,13 @@ package Servlets;
 
 import Controladores.ConsultasSQL;
 import Controladores.seleccionLote;
+import static Servlets.IniciarSesion.CedulaSeleccion;
+import static Servlets.IniciarSesion.ContrasenaSeleccion;
 import controlador_admin.registrosAdministrador;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,9 +22,9 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author LENOVO
+ * @author P SENA1
  */
-public class IniciarSesion extends HttpServlet {
+public class IniciarSesionConsulta extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,62 +35,31 @@ public class IniciarSesion extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    public static String CedulaSeleccion;
-    public static String ContrasenaSeleccion;
-    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();        
-        
+        PrintWriter out = response.getWriter();
+
         String cedula = request.getParameter("cedula");
-        String aux = cedula;
-        CedulaSeleccion = aux;
         String contraseña = request.getParameter("pass");
-        ContrasenaSeleccion = contraseña;
-        ArrayList<String> lo = null;  
+        String num_lote = (String) request.getSession().getAttribute("lote");
+        System.out.println("esta es la variable de sesion " + num_lote);
 
         ConsultasSQL co = new ConsultasSQL();
-        registrosAdministrador r = new registrosAdministrador();
-        
-        if (co.ingresar(cedula, contraseña)) {
-           // String tipo_get = request.getParameter("tipo");
+        System.out.println("cedula del login " + co.cedulaLogin);
+        System.out.println("contraseña del login " + co.passLogin);
+        if (co.cedulaLogin.equals(cedula) & co.passLogin.equals(contraseña)) {
+            // String tipo_get = request.getParameter("tipo");
             //System.out.println("Esto es el tipo de usuario "+tipo_get);
-            
-            if (co.getTipo().equals("Usuario")) {
 
-                seleccionLote lote = new seleccionLote();
-                lo = lote.getContactos(cedula);
+            request.setAttribute("numero_lote", num_lote);
+            RequestDispatcher objRequestDispatcher = request.getRequestDispatcher("/DetallesTotal");
+            objRequestDispatcher.forward(request, response);
 
-                if (lo.isEmpty() == false) {
-                    String nombre = co.getNombre();
-                    HttpSession objSession = request.getSession();
-                    objSession.setAttribute("cedula", cedula);
-                    objSession.setAttribute("nombre", nombre);
-
-                    request.setAttribute("lista", new Controladores.seleccionLote().getContactos(cedula));
-                    request.getRequestDispatcher("seleccione_lote.jsp").forward(request, response);
-                    
-                } //response.sendRedirect("seleccione_lote.jsp");
-                else {
-                    String nombre = co.getNombre();
-                    HttpSession objSession = request.getSession();
-                    objSession.setAttribute("cedula", cedula);
-                    objSession.setAttribute("nombre", nombre);
-                    request.getRequestDispatcher("registro_lote.jsp").forward(request, response);
-
-                }
-            } else {
-                String nombre = co.getNombre();
-                HttpSession session = request.getSession();
-                session.setAttribute("nombre", nombre);
-                response.sendRedirect("administrador/BootstrapMenuAdministrador.jsp");
-            }
         } else {
             request.setAttribute("_mensajeErrorInicio", "El usuario o contraseña son incorrectos");
             request.getRequestDispatcher("Inicio_sesion.jsp").forward(request, response);
         }
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

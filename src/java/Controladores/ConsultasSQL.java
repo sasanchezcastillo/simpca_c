@@ -1318,6 +1318,8 @@ public boolean registrarGravedad ( String fecha, String tipo_riego, String lote,
      * @param contraseña
      * @return boolean
      */
+    public static String cedulaLogin;
+    public static String passLogin;
      public boolean ingresar(String cedula, String contraseña ){
         PreparedStatement pst = null;
         ResultSet rs = null;
@@ -1330,7 +1332,9 @@ public boolean registrarGravedad ( String fecha, String tipo_riego, String lote,
             rs = pst.executeQuery();             
             while(rs.next()){
             this.setNombre(rs.getString("nombre"));
+            cedulaLogin = rs.getString("cedula");
             this.setTipo(rs.getString("tipo"));
+            passLogin = rs.getString("contraseña");
             }
                      
             if (rs.absolute(1)) {

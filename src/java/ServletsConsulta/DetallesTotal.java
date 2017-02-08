@@ -38,9 +38,10 @@ public class DetallesTotal extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         
-        
-   String num_lote = request.getParameter("num_lote");
+   String num_lote = (String)request.getAttribute("numero_lote");
+        System.out.println("variable de sesion del servlet detalles consulta "+num_lote);
         
         
         if(con.getTotalAbonada(num_lote) != null){

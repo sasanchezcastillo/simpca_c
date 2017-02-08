@@ -102,16 +102,132 @@
                     <div class="cont-ct">
 
                         <div class="form-consultar">
-                            <form action="DetallesTotal" method="post" style="margin-top: 25px;">
+                            <form action="DetallesTotal" method="post" style="margin-top: -5px;">
                                 <a class="htitulos">CONSULTAR LOTE</a>
                                 <br>
                                 <input type="text" name="num_lote" hidden="" value="<%=lote%>"/>
-                                <input class="agregar-insumo" style="margin-top: 10px;" type="submit" value="Consultar"/>
-
+                                <input class="agregar-insumo" style="margin-top: 10px;" type="button" onclick="consulta('TextCedula');" value="Consultar"/>
                             </form>
 
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function consulta(idelemento) {
+                window.location = '#miNodo';
+                document.getElementById(idelemento).focus();
+                var a = document.getElementById('TextCedula');
+                a.value = "";
+                a.focus();
+            }
+        </script>
+        <style>
+            /**/
+            #usuarioModal{
+                width: 80%;
+                height: 30px;
+                border-radius: 10px;
+                margin-top: 10px;
+                margin-left: 10%;
+                padding: 15px;
+
+            }
+            #modal-bar p{
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            /* definicon  contenedor de ventana modal con fonfo oscuro*/
+            .modal{
+                position: fixed;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                background: rgba(0,0,0,0.8);
+                z-index: 999;
+                opacity: 0;
+                pointer-events: none;
+                transition: all 1s;
+            }
+
+            /* ventana modal , con fondo blanco y centrada */
+            .modal-content{
+                background-color: #fff;
+                position: relative;
+                width: 400px;
+                height: 180px;
+                margin: 10% auto;
+                box-shadow: 1px 2px 3px #000;
+                font-family: Times New Roman;
+                border-radius: 10px;
+            }
+
+            /* barra de boton de cerrado*/
+            .modal-bar{
+                font-family: arial;
+                text-align: center;
+                color: white;
+                margin-bottom: 3px;
+                background-color: rgb(105, 138, 94);
+                padding: 5px;
+                border-top: 10px;
+            }
+
+            /* boton de cerrado*/
+            .modal-bar>a{
+                color: #000;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: inline-block;
+                background-color: #fff;
+                text-align: center;
+                text-decoration: none;
+                box-shadow: 1px 1px 1px #000;
+            }
+
+            /* hover sobre boton de cerrado*/
+            .modal-close >a:hover{
+                color: #1976D2;
+            }
+
+            /*  contenido del mensaje de la ventanda modal*/
+            .modal-text{
+                padding: 10px;
+            }
+
+            /* activar el elemtno modal , con el evento click */
+            #miNodo:target{
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            #inputModal{
+                width: 35%;
+                height: 30px;
+                color:white;
+                border: none;
+                cursor: pointer;
+                margin-top: 10px;
+                margin-left: 10%;
+                border-radius: 5px;
+                background-color: #D38400;
+            }
+        </style>
+        <div id="miNodo" class="modal">
+            <div class="modal-content">
+                <div class="modal-bar">Confirmar Inicio de Sesión</div>
+                <div class="modal-text">
+                    <form method="post" action="SesionConsulta">
+                        <input type="text" name="cedula"  placeholder="Usuario 'Cédula'" autofocus id="usuarioModal" id="TextCedula"/><br/>
+                        <input type="password" name="pass" placeholder="Contraseña" id="usuarioModal"/>
+                        <input type="button" value="Cancelar" onclick="window.location = '#'" id="inputModal"/>
+                        <input type="submit" value="Aceptar" id="inputModal"/>
+
+                    </form> 
                 </div>
             </div>
         </div>
