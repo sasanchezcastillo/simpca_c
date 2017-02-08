@@ -68,7 +68,11 @@
                         </div>
                     <br><br>
                     <input id="ver" type="submit"   value="INGRESAR" />
+<<<<<<< HEAD
                      v                    <input type="button"  value="CANCELAR" onclick="location.href='InicioCoagronorte.jsp'"/>
+=======
+                    <input type="button"  value="CANCELAR" onclick="location.href='InicioCoagronorte.jsp'"/>
+>>>>>>> c5ebec0ecd993e9b7a465c6ebb080ac3ab015227
             <script src="Js/formulario.js"></script>
         </form>
     </div>

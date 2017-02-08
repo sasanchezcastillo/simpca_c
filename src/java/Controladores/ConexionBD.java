@@ -57,7 +57,10 @@ public class ConexionBD {
     
     public static void main(String[] args) {
         ConexionBD con = new ConexionBD();
+<<<<<<< HEAD
         System.out.println(con);
+=======
+>>>>>>> c5ebec0ecd993e9b7a465c6ebb080ac3ab015227
     }
     
 }

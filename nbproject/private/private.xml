@@ -3,7 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/P%20SENA2/Desktop/simpca_c-master/web/consultar.jsp</file>
+=======
+            <file>file:/D:/proyecto/web/administrador/agregarAdministrador.jsp</file>
+            <file>file:/D:/proyecto/nbproject/build-impl.xml</file>
+            <file>file:/D:/proyecto/src/java/Controladores/ConexionBD.java</file>
+            <file>file:/D:/proyecto/web/administrador/index.html</file>
+            <file>file:/D:/proyecto/web/Inicio.jsp</file>
+            <file>file:/D:/proyecto/web/corta.jsp</file>
+            <file>file:/D:/proyecto/web/preparacion_de_lotes.jsp</file>
+            <file>file:/D:/proyecto/web/seleccione_lote.jsp</file>
+            <file>file:/D:/proyecto/web/restablecerC.jsp</file>
+            <file>file:/D:/proyecto/src/java/Controladores/Conexion.java</file>
+            <file>file:/D:/proyecto/web/cosecha.jsp</file>
+>>>>>>> c5ebec0ecd993e9b7a465c6ebb080ac3ab015227
         </group>
     </open-files>
 </project-private>

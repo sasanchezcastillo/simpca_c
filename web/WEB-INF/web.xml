@@ -312,6 +312,13 @@
         <servlet-name>GraficaAdministrador</servlet-name>
         <servlet-class>Servlets.GraficaAdministrador</servlet-class>
     </servlet>
+<<<<<<< HEAD
+=======
+    <servlet>
+        <servlet-name>IniciarSesionConsulta</servlet-name>
+        <servlet-class>Servlets.IniciarSesionConsulta</servlet-class>
+    </servlet>
+>>>>>>> c5ebec0ecd993e9b7a465c6ebb080ac3ab015227
     <servlet-mapping>
         <servlet-name>Registrar_Abonadas</servlet-name>
         <url-pattern>/Abonadas</url-pattern>
@@ -624,6 +631,13 @@
         <servlet-name>GraficaAdministrador</servlet-name>
         <url-pattern>/GraficaAdministrador</url-pattern>
     </servlet-mapping>
+<<<<<<< HEAD
+=======
+    <servlet-mapping>
+        <servlet-name>IniciarSesionConsulta</servlet-name>
+        <url-pattern>/SesionConsulta</url-pattern>
+    </servlet-mapping>
+>>>>>>> c5ebec0ecd993e9b7a465c6ebb080ac3ab015227
     <session-config>
         <session-timeout>
             60

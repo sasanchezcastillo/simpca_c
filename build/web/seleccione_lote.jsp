@@ -42,10 +42,14 @@
         </header>
         <img src="ImagenesR/Sesion-1.png" style="width: 100%; height: 400px; position: absolute">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 01e41b19a96a7c5c86520633aaab13ca1604f535
+=======
+
+>>>>>>> c5ebec0ecd993e9b7a465c6ebb080ac3ab015227
         <div class="contenedor-formulario" style="position: absolute;">
             <div class="wrap" style="position: relative;">
                 <form  class="formulario" name="formulario_registro" action="Lotes" method="post">

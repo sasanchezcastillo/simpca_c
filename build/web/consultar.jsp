@@ -68,7 +68,11 @@
                 <h3>QUEMA QUÍMICA</h3>
                 <c:forEach items="${total_quema_quimica}" var="lista">
                     <div class="class-cont-consulta">
+<<<<<<< HEAD
                         <img src="img-con/quema_fi.jpg" class="img-consultas"/>
+=======
+                        <img src="img-con/u56.jpg" class="img-consultas"/>
+>>>>>>> c5ebec0ecd993e9b7a465c6ebb080ac3ab015227
 
                         <form action="ServletQuemaQuimica" method="post">
                             <input type="text" id="Quemaquimica"  value="$${lista.valor_total_quemaq}" readonly=""  placeholder="$ 0.0"class="textbox" > 
@@ -83,7 +87,11 @@
                 <h3>QUEMA FÍSICA</h3>
                 <c:forEach items="${total_quema_fisica}" var="lista">
                     <div class="class-cont-consulta">
+<<<<<<< HEAD
                         <img src="img-con/u56.jpg" class="img-consultas"/>
+=======
+                        <img src="img-con/quema_fi.jpg" class="img-consultas"/>
+>>>>>>> c5ebec0ecd993e9b7a465c6ebb080ac3ab015227
 
 
                         <form action="ServletQuemaFisica" method="post">
@@ -128,7 +136,11 @@
             <div class="class-consulta">
                 <c:forEach items="${total_siembra_mecanizada}" var="lista">
                     <h3>SIEMBRA MECANIZADA</h3>
+<<<<<<< HEAD
                     <img src="img-con/u60.jpg" class="img-consultas"/>
+=======
+                    <img src="img-con/siembramecanizada.jpg" class="img-consultas"/>
+>>>>>>> c5ebec0ecd993e9b7a465c6ebb080ac3ab015227
                     <div class="class-cont-consulta">
                         <form action="ServletSiembraMecanizada" method="post">
                             <input type="text" name="num_lote" hidden="" value="<%=lote%>">
@@ -362,9 +374,15 @@
                         <input type="hidden" value="<%=lote%>" name="num_lote">
                     <input type="submit" id="botonvolver"  value="VER EN GRAFICAS" >
                     </form>
+<<<<<<< HEAD
                      <form action="" method="post"> 
                         <input type="hidden" value="<%=lote%>" name="num_lote">
                     <input type="submit" id="botonvolver"  value="INICIAR NUEVO CICLO" >
+=======
+                    <form action="" method="post"> 
+                        <input type="hidden" value="<%=lote%>" name="num_lote">
+                    <input type="submit" id="botonvolver"  value="INICIAR NUEVA COSECHA " >
+>>>>>>> c5ebec0ecd993e9b7a465c6ebb080ac3ab015227
                     </form>
                     </div> 
         </div>
