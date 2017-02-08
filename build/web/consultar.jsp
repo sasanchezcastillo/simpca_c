@@ -68,7 +68,7 @@
                 <h3>QUEMA QUÍMICA</h3>
                 <c:forEach items="${total_quema_quimica}" var="lista">
                     <div class="class-cont-consulta">
-                        <img src="img-con/quema_fi.jpg" class="img-consultas"/>
+                        <img src="img-con/u56.jpg" class="img-consultas"/>
 
                         <form action="ServletQuemaQuimica" method="post">
                             <input type="text" id="Quemaquimica"  value="$${lista.valor_total_quemaq}" readonly=""  placeholder="$ 0.0"class="textbox" > 
@@ -83,7 +83,7 @@
                 <h3>QUEMA FÍSICA</h3>
                 <c:forEach items="${total_quema_fisica}" var="lista">
                     <div class="class-cont-consulta">
-                        <img src="img-con/u56.jpg" class="img-consultas"/>
+                        <img src="img-con/quema_fi.jpg" class="img-consultas"/>
 
 
                         <form action="ServletQuemaFisica" method="post">
@@ -128,7 +128,7 @@
             <div class="class-consulta">
                 <c:forEach items="${total_siembra_mecanizada}" var="lista">
                     <h3>SIEMBRA MECANIZADA</h3>
-                    <img src="img-con/u60.jpg" class="img-consultas"/>
+                    <img src="img-con/siembramecanizada.jpg" class="img-consultas"/>
                     <div class="class-cont-consulta">
                         <form action="ServletSiembraMecanizada" method="post">
                             <input type="text" name="num_lote" hidden="" value="<%=lote%>">
